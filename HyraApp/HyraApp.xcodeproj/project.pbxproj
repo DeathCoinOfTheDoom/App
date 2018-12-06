@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16281D1021B9259500507EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16281D0F21B9259500507EFE /* AppDelegate.swift */; };
+		16281D1221B9259500507EFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16281D1121B9259500507EFE /* ViewController.swift */; };
+		16281D1521B9259500507EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16281D1321B9259500507EFE /* Main.storyboard */; };
+		16281D1721B9259600507EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16281D1621B9259600507EFE /* Assets.xcassets */; };
+		16281D1A21B9259600507EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16281D1821B9259600507EFE /* LaunchScreen.storyboard */; };
+		16281D2521B9259600507EFE /* HyraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16281D2421B9259600507EFE /* HyraAppTests.swift */; };
+		16281D3021B9259600507EFE /* HyraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16281D2F21B9259600507EFE /* HyraAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16281D2121B9259600507EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16281D0421B9259500507EFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16281D0B21B9259500507EFE;
+			remoteInfo = HyraApp;
+		};
+		16281D2C21B9259600507EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16281D0421B9259500507EFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16281D0B21B9259500507EFE;
+			remoteInfo = HyraApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16281D0C21B9259500507EFE /* HyraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16281D0F21B9259500507EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16281D1121B9259500507EFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16281D1421B9259500507EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16281D1621B9259600507EFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16281D1921B9259600507EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16281D1B21B9259600507EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16281D2021B9259600507EFE /* HyraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16281D2421B9259600507EFE /* HyraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyraAppTests.swift; sourceTree = "<group>"; };
+		16281D2621B9259600507EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16281D2B21B9259600507EFE /* HyraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16281D2F21B9259600507EFE /* HyraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyraAppUITests.swift; sourceTree = "<group>"; };
+		16281D3121B9259600507EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16281D0921B9259500507EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D1D21B9259600507EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D2821B9259600507EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16281D0321B9259500507EFE = {
+			isa = PBXGroup;
+			children = (
+				16281D0E21B9259500507EFE /* HyraApp */,
+				16281D2321B9259600507EFE /* HyraAppTests */,
+				16281D2E21B9259600507EFE /* HyraAppUITests */,
+				16281D0D21B9259500507EFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16281D0D21B9259500507EFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16281D0C21B9259500507EFE /* HyraApp.app */,
+				16281D2021B9259600507EFE /* HyraAppTests.xctest */,
+				16281D2B21B9259600507EFE /* HyraAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16281D0E21B9259500507EFE /* HyraApp */ = {
+			isa = PBXGroup;
+			children = (
+				16281D0F21B9259500507EFE /* AppDelegate.swift */,
+				16281D1121B9259500507EFE /* ViewController.swift */,
+				16281D1321B9259500507EFE /* Main.storyboard */,
+				16281D1621B9259600507EFE /* Assets.xcassets */,
+				16281D1821B9259600507EFE /* LaunchScreen.storyboard */,
+				16281D1B21B9259600507EFE /* Info.plist */,
+			);
+			path = HyraApp;
+			sourceTree = "<group>";
+		};
+		16281D2321B9259600507EFE /* HyraAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				16281D2421B9259600507EFE /* HyraAppTests.swift */,
+				16281D2621B9259600507EFE /* Info.plist */,
+			);
+			path = HyraAppTests;
+			sourceTree = "<group>";
+		};
+		16281D2E21B9259600507EFE /* HyraAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16281D2F21B9259600507EFE /* HyraAppUITests.swift */,
+				16281D3121B9259600507EFE /* Info.plist */,
+			);
+			path = HyraAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16281D0B21B9259500507EFE /* HyraApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16281D3421B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraApp" */;
+			buildPhases = (
+				16281D0821B9259500507EFE /* Sources */,
+				16281D0921B9259500507EFE /* Frameworks */,
+				16281D0A21B9259500507EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyraApp;
+			productName = HyraApp;
+			productReference = 16281D0C21B9259500507EFE /* HyraApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16281D1F21B9259600507EFE /* HyraAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16281D3721B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraAppTests" */;
+			buildPhases = (
+				16281D1C21B9259600507EFE /* Sources */,
+				16281D1D21B9259600507EFE /* Frameworks */,
+				16281D1E21B9259600507EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16281D2221B9259600507EFE /* PBXTargetDependency */,
+			);
+			name = HyraAppTests;
+			productName = HyraAppTests;
+			productReference = 16281D2021B9259600507EFE /* HyraAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16281D2A21B9259600507EFE /* HyraAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16281D3A21B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraAppUITests" */;
+			buildPhases = (
+				16281D2721B9259600507EFE /* Sources */,
+				16281D2821B9259600507EFE /* Frameworks */,
+				16281D2921B9259600507EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16281D2D21B9259600507EFE /* PBXTargetDependency */,
+			);
+			name = HyraAppUITests;
+			productName = HyraAppUITests;
+			productReference = 16281D2B21B9259600507EFE /* HyraAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16281D0421B9259500507EFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = hyra;
+				TargetAttributes = {
+					16281D0B21B9259500507EFE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					16281D1F21B9259600507EFE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 16281D0B21B9259500507EFE;
+					};
+					16281D2A21B9259600507EFE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 16281D0B21B9259500507EFE;
+					};
+				};
+			};
+			buildConfigurationList = 16281D0721B9259500507EFE /* Build configuration list for PBXProject "HyraApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16281D0321B9259500507EFE;
+			productRefGroup = 16281D0D21B9259500507EFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16281D0B21B9259500507EFE /* HyraApp */,
+				16281D1F21B9259600507EFE /* HyraAppTests */,
+				16281D2A21B9259600507EFE /* HyraAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16281D0A21B9259500507EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16281D1A21B9259600507EFE /* LaunchScreen.storyboard in Resources */,
+				16281D1721B9259600507EFE /* Assets.xcassets in Resources */,
+				16281D1521B9259500507EFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D1E21B9259600507EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D2921B9259600507EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16281D0821B9259500507EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16281D1221B9259500507EFE /* ViewController.swift in Sources */,
+				16281D1021B9259500507EFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D1C21B9259600507EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16281D2521B9259600507EFE /* HyraAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16281D2721B9259600507EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16281D3021B9259600507EFE /* HyraAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16281D2221B9259600507EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16281D0B21B9259500507EFE /* HyraApp */;
+			targetProxy = 16281D2121B9259600507EFE /* PBXContainerItemProxy */;
+		};
+		16281D2D21B9259600507EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16281D0B21B9259500507EFE /* HyraApp */;
+			targetProxy = 16281D2C21B9259600507EFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16281D1321B9259500507EFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16281D1421B9259500507EFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16281D1821B9259600507EFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16281D1921B9259600507EFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16281D3221B9259600507EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16281D3321B9259600507EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16281D3521B9259600507EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16281D3621B9259600507EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16281D3821B9259600507EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyraApp.app/HyraApp";
+			};
+			name = Debug;
+		};
+		16281D3921B9259600507EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyraApp.app/HyraApp";
+			};
+			name = Release;
+		};
+		16281D3B21B9259600507EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyraApp;
+			};
+			name = Debug;
+		};
+		16281D3C21B9259600507EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HyraAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HyraAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyraApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16281D0721B9259500507EFE /* Build configuration list for PBXProject "HyraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16281D3221B9259600507EFE /* Debug */,
+				16281D3321B9259600507EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16281D3421B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16281D3521B9259600507EFE /* Debug */,
+				16281D3621B9259600507EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16281D3721B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16281D3821B9259600507EFE /* Debug */,
+				16281D3921B9259600507EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16281D3A21B9259600507EFE /* Build configuration list for PBXNativeTarget "HyraAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16281D3B21B9259600507EFE /* Debug */,
+				16281D3C21B9259600507EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16281D0421B9259500507EFE /* Project object */;
+}

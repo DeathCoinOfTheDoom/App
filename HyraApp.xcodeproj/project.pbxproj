@@ -13,7 +13,6 @@
 		09B7FC5F21B92C6800E51D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B7FC5E21B92C6800E51D5C /* Assets.xcassets */; };
 		09B7FC6221B92C6800E51D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B7FC6021B92C6800E51D5C /* LaunchScreen.storyboard */; };
 		09B7FC6D21B92C6900E51D5C /* HyraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B7FC6C21B92C6900E51D5C /* HyraAppTests.swift */; };
-		09B7FC7821B92C6900E51D5C /* HyraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B7FC7721B92C6900E51D5C /* HyraAppUITests.swift */; };
 		520B5F3E03C8F699473857CA /* Pods_HyraAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493E199E463484EF8D2A2B89 /* Pods_HyraAppUITests.framework */; };
 		E562BB050A0004124502FF06 /* Pods_HyraApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB60AAB8E51996C1AD20DD6B /* Pods_HyraApp.framework */; };
 		F889DF2B20ED80FAACE5EAA8 /* Pods_HyraAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F9F847FA7C0605034AFCFC /* Pods_HyraAppTests.framework */; };
@@ -48,8 +47,6 @@
 		09B7FC6C21B92C6900E51D5C /* HyraAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyraAppTests.swift; sourceTree = "<group>"; };
 		09B7FC6E21B92C6900E51D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09B7FC7321B92C6900E51D5C /* HyraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09B7FC7721B92C6900E51D5C /* HyraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyraAppUITests.swift; sourceTree = "<group>"; };
-		09B7FC7921B92C6900E51D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10506E1697FA3C0BF5D5685E /* Pods-HyraAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyraAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HyraAppUITests/Pods-HyraAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		493E199E463484EF8D2A2B89 /* Pods_HyraAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyraAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F9F847FA7C0605034AFCFC /* Pods_HyraAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyraAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +91,6 @@
 			children = (
 				09B7FC5621B92C6800E51D5C /* HyraApp */,
 				09B7FC6B21B92C6900E51D5C /* HyraAppTests */,
-				09B7FC7621B92C6900E51D5C /* HyraAppUITests */,
 				09B7FC5521B92C6800E51D5C /* Products */,
 				E22ED49F5D5B6195849B8582 /* Pods */,
 				17723E63019532DC41A5BA33 /* Frameworks */,
@@ -131,15 +127,6 @@
 				09B7FC6E21B92C6900E51D5C /* Info.plist */,
 			);
 			path = HyraAppTests;
-			sourceTree = "<group>";
-		};
-		09B7FC7621B92C6900E51D5C /* HyraAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				09B7FC7721B92C6900E51D5C /* HyraAppUITests.swift */,
-				09B7FC7921B92C6900E51D5C /* Info.plist */,
-			);
-			path = HyraAppUITests;
 			sourceTree = "<group>";
 		};
 		17723E63019532DC41A5BA33 /* Frameworks */ = {
@@ -410,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09B7FC7821B92C6900E51D5C /* HyraAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,6 +26,16 @@
 		576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */; };
 		576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */; };
 		576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E6121FF6CF30069CFBB /* Folder.swift */; };
+		BCD2D2C42200889400B528D1 /* proximanova-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCD2D2C22200889400B528D1 /* proximanova-bold.otf */; };
+		BCD2D2C52200889400B528D1 /* proximanova-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCD2D2C32200889400B528D1 /* proximanova-regular.otf */; };
+		BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2C6220088CF00B528D1 /* Colors.swift */; };
+		BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2C82200894A00B528D1 /* FilledButton.swift */; };
+		BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CA220089EB00B528D1 /* Fonts.swift */; };
+		BCD2D2CD22008A2E00B528D1 /* EmptyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */; };
+		BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */; };
+		BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D022008A9D00B528D1 /* InputLabel.swift */; };
+		BCD2D2D322008AD100B528D1 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D222008AD100B528D1 /* Input.swift */; };
+		BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */; };
 		CD366D10A8B381059FA5B28E /* Pods_BobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +88,16 @@
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		B84973F502FCB0AC37347625 /* Pods-Bob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD2D2C22200889400B528D1 /* proximanova-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold.otf"; sourceTree = "<group>"; };
+		BCD2D2C32200889400B528D1 /* proximanova-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular.otf"; sourceTree = "<group>"; };
+		BCD2D2C6220088CF00B528D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BCD2D2C82200894A00B528D1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
+		BCD2D2CA220089EB00B528D1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyButton.swift; sourceTree = "<group>"; };
+		BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		BCD2D2D022008A9D00B528D1 /* InputLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLabel.swift; sourceTree = "<group>"; };
+		BCD2D2D222008AD100B528D1 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationLabel.swift; sourceTree = "<group>"; };
 		C104B1DAA414E2E1D004CFCF /* Pods-Bob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +154,8 @@
 		576C5E1D21FF65870069CFBB /* Bob */ = {
 			isa = PBXGroup;
 			children = (
+				BCD2D2D422008CC100B528D1 /* Style */,
+				BCD2D2C12200884A00B528D1 /* Fonts */,
 				576C5E5121FF66C30069CFBB /* Models */,
 				576C5E5021FF66BC0069CFBB /* Extensions */,
 				576C5E4F21FF66B60069CFBB /* Views */,
@@ -212,6 +234,46 @@
 				B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCD2D2C12200884A00B528D1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2D2C22200889400B528D1 /* proximanova-bold.otf */,
+				BCD2D2C32200889400B528D1 /* proximanova-regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BCD2D2D422008CC100B528D1 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2D2D622008CD700B528D1 /* Components */,
+				BCD2D2D522008CCB00B528D1 /* Constants */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		BCD2D2D522008CCB00B528D1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2D2C6220088CF00B528D1 /* Colors.swift */,
+				BCD2D2CA220089EB00B528D1 /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BCD2D2D622008CD700B528D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2D2C82200894A00B528D1 /* FilledButton.swift */,
+				BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */,
+				BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */,
+				BCD2D2D022008A9D00B528D1 /* InputLabel.swift */,
+				BCD2D2D222008AD100B528D1 /* Input.swift */,
+				BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C0F77A9A6C00C145E5A51CED /* Pods */ = {
@@ -341,8 +403,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				576C5E2C21FF658A0069CFBB /* LaunchScreen.storyboard in Resources */,
+				BCD2D2C42200889400B528D1 /* proximanova-bold.otf in Resources */,
 				576C5E2921FF658A0069CFBB /* Assets.xcassets in Resources */,
 				576C5E2421FF65870069CFBB /* Main.storyboard in Resources */,
+				BCD2D2C52200889400B528D1 /* proximanova-regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,17 +584,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				576C5E5C21FF6BA50069CFBB /* FolderDetails.swift in Sources */,
+				BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */,
 				576C5E5821FF67C90069CFBB /* StepTwoVC.swift in Sources */,
 				576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */,
+				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
 				16E2CB0621FFD09500499B89 /* TextFieldDeleteEmpty.swift in Sources */,
+				BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */,
 				576C5E5521FF679B0069CFBB /* StepOneVC.swift in Sources */,
+				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
+				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
+				BCD2D2CD22008A2E00B528D1 /* EmptyButton.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
 				576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */,
+				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				576C5E5321FF67650069CFBB /* LoginVC.swift in Sources */,
 				576C5E2721FF65870069CFBB /* Bob.xcdatamodeld in Sources */,
+				BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

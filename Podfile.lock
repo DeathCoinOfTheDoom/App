@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.7.2)
+  - PhoneNumberKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
+    - PhoneNumberKit/UIKit (= 2.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
+  - PhoneNumberKit/UIKit (2.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+
+DEPENDENCIES:
+  - Alamofire
+  - PhoneNumberKit
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+
+PODFILE CHECKSUM: c33985df57245725aecb652cf9928f27d7c6e1b4
+
+COCOAPODS: 1.4.0

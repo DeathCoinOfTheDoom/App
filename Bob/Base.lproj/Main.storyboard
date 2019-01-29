@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aJ-R5-jvV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aJ-R5-jvV" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="16" y="298" width="40" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="vTF-vH-rug"/>
@@ -27,20 +27,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon numéro de téléphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-cM-OFA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon numéro de téléphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-cM-OFA" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="64" y="298" width="295" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue chez BoB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVM-wn-WAR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue chez BoB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVM-wn-WAR" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oML-mN-r9q">
-                                <rect key="frame" x="164.5" y="577" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oML-mN-r9q" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="577" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,7 +49,7 @@
                                     <segue destination="xH0-rI-8xw" kind="show" id="Hp9-ih-IrU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez votre numéro de téléphone pour vous identifier. C'est facile et sécus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR3-0y-b9e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez votre numéro de téléphone pour vous identifier. C'est facile et sécus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR3-0y-b9e" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="16" y="380.5" width="343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -85,12 +85,13 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83553594409999998" green="0.38655379220000002" blue="0.1052024569" alpha="0.69694456339999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="STF-zg-afU" firstAttribute="top" secondItem="Shi-cM-OFA" secondAttribute="bottom" constant="6" id="1sk-xN-XYJ"/>
                             <constraint firstItem="STF-zg-afU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5q1-Z0-MQJ"/>
                             <constraint firstAttribute="trailing" secondItem="SR3-0y-b9e" secondAttribute="trailing" constant="16" id="62L-UE-Crq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Shi-cM-OFA" secondAttribute="trailing" constant="16" id="8eg-00-YU9"/>
+                            <constraint firstItem="oML-mN-r9q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BxN-cc-D4U"/>
                             <constraint firstItem="HVM-wn-WAR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="DGo-aB-hJh"/>
                             <constraint firstItem="STF-zg-afU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E7Y-6y-0vt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STF-zg-afU" secondAttribute="trailing" constant="16" id="IqG-rX-Q9A"/>
@@ -98,6 +99,7 @@
                             <constraint firstItem="STF-zg-afU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SKm-xe-aD0"/>
                             <constraint firstItem="SR3-0y-b9e" firstAttribute="top" secondItem="STF-zg-afU" secondAttribute="bottom" constant="32" id="Sn8-1B-4AX"/>
                             <constraint firstItem="HVM-wn-WAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a24-Ke-1fJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oML-mN-r9q" secondAttribute="trailing" constant="16" id="cNH-XT-UYf"/>
                             <constraint firstItem="Shi-cM-OFA" firstAttribute="leading" secondItem="3aJ-R5-jvV" secondAttribute="trailing" constant="8" id="czA-YZ-qgt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HVM-wn-WAR" secondAttribute="trailing" constant="16" id="g4s-Pn-gVA"/>
                             <constraint firstItem="SR3-0y-b9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pIV-vS-otm"/>
@@ -121,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez içi le code que vous avez reçu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-3q-WOD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisissez içi le code que vous avez reçu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-3q-WOD" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -219,7 +221,7 @@
                                     <constraint firstItem="GOZ-sq-WnS" firstAttribute="top" secondItem="YZb-3t-icw" secondAttribute="top" id="zWU-rk-1ei"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-C0-a09">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-C0-a09" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="171.5" y="484" width="32" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.94117647059999998" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,7 +231,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3921568627" green="0.4823529412" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cfE-7b-yqA" firstAttribute="trailing" secondItem="B3m-3q-WOD" secondAttribute="trailing" constant="16" id="0dH-Tw-jc3"/>
                             <constraint firstItem="8TN-C0-a09" firstAttribute="centerX" secondItem="i1O-Tx-JYw" secondAttribute="centerX" id="CRF-mh-7rb"/>
@@ -262,7 +264,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPg-vo-VVs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPg-vo-VVs" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="171.5" y="318.5" width="32" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.94117647059999998" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,7 +274,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.51416219559999998" green="0.83938270810000004" blue="0.53199260569999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IPg-vo-VVs" firstAttribute="centerX" secondItem="v3x-Eh-C1F" secondAttribute="centerX" id="6E7-7w-J7w"/>
                             <constraint firstItem="IPg-vo-VVs" firstAttribute="centerY" secondItem="v3x-Eh-C1F" secondAttribute="centerY" id="GHF-1X-JlS"/>

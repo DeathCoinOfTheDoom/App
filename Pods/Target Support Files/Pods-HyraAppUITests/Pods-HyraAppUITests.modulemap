@@ -1,6 +1,0 @@
-framework module Pods_HyraAppUITests {
-  umbrella header "Pods-HyraAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

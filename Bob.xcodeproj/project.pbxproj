@@ -18,7 +18,6 @@
 		576C5E2C21FF658A0069CFBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C5E2A21FF658A0069CFBB /* LaunchScreen.storyboard */; };
 		576C5E3721FF658A0069CFBB /* BobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E3621FF658A0069CFBB /* BobTests.swift */; };
 		576C5E4221FF658A0069CFBB /* BobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E4121FF658A0069CFBB /* BobUITests.swift */; };
-		576C5E5321FF67650069CFBB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5221FF67650069CFBB /* LoginVC.swift */; };
 		576C5E5521FF679B0069CFBB /* StepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5421FF679B0069CFBB /* StepOneVC.swift */; };
 		576C5E5821FF67C90069CFBB /* StepTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5721FF67C90069CFBB /* StepTwoVC.swift */; };
 		576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5921FF68F10069CFBB /* FolderCell.swift */; };
@@ -78,7 +77,6 @@
 		576C5E3D21FF658A0069CFBB /* BobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		576C5E4121FF658A0069CFBB /* BobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BobUITests.swift; sourceTree = "<group>"; };
 		576C5E4321FF658A0069CFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		576C5E5221FF67650069CFBB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		576C5E5421FF679B0069CFBB /* StepOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneVC.swift; sourceTree = "<group>"; };
 		576C5E5721FF67C90069CFBB /* StepTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoVC.swift; sourceTree = "<group>"; };
 		576C5E5921FF68F10069CFBB /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 		576C5E5621FF67A00069CFBB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				576C5E5221FF67650069CFBB /* LoginVC.swift */,
 				576C5E5421FF679B0069CFBB /* StepOneVC.swift */,
 				576C5E5721FF67C90069CFBB /* StepTwoVC.swift */,
 			);
@@ -600,7 +597,6 @@
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
-				576C5E5321FF67650069CFBB /* LoginVC.swift in Sources */,
 				576C5E2721FF65870069CFBB /* Bob.xcdatamodeld in Sources */,
 				BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */,
 			);

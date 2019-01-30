@@ -24,6 +24,7 @@ class FoldersVC: UIViewController {
 }
 
 extension FoldersVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.tmpTab.count
     }
@@ -32,7 +33,7 @@ extension FoldersVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "FolderCell", for: indexPath) as! FolderCell
         
         cell.titleLabel.text = self.tmpTab[indexPath.row].title
-        cell.backgroundColor = .red
+        cell.backgroundColor = .white
         
         return cell
     }

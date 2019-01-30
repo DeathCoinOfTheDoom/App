@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StepTwoVC: UIViewController, PinTexFieldDelegate {
+class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     
     // index of the selected item in collectionOfTextField
     var actualStep = 0
@@ -17,9 +17,12 @@ class StepTwoVC: UIViewController, PinTexFieldDelegate {
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
         inputEnable(actualStep: actualStep)
-        checkFieldsAreFull()
+        if (checkFieldsAreFull()) {
+            let test = codeConcatValues(inputValues: collectionOfTextField)
+            print("Envois du code")
+        }
     }
-    func didPressBackspace(textField: PinTextField) {
+    func didPressBackspace(textField: AuthCodeTextField) {
         if (collectionOfTextField[actualStep].text == "") {
             decreaseActualStep()
             inputEnable(actualStep: actualStep)
@@ -37,16 +40,9 @@ class StepTwoVC: UIViewController, PinTexFieldDelegate {
         }
     }
     
-    func checkFieldsAreFull() {
-        let areFieldsFull = collectionOfTextField.map { (elementOfCollection) -> Bool in
-            if ( elementOfCollection.text?.count == 1) {
-                return true
-            }
-            else {
-                return false
-            }
-        }
-        print(areFieldsFull)
+    func checkFieldsAreFull() -> Bool {
+        let areFieldsFull = collectionOfTextField.allSatisfy { $0.text?.count == 1 }
+        return areFieldsFull
     }
     
     override func viewDidLoad() {

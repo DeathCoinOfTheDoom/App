@@ -9,10 +9,7 @@
 import UIKit
 
 class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    var test: UIImage?
-    var yo: String = "yoooooo"
-    
-   
+
     func chooseImage() {
      
         let imagePickerController = UIImagePickerController()
@@ -44,9 +41,9 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
-        print("image", image)
-        test = image
-        print("test0", test)
+        
+        didSelectImage(image: image)
+        
         picker.dismiss(animated: true, completion: nil)
     }
     
@@ -54,4 +51,7 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         picker.dismiss(animated: true, completion: nil)
     }
     
+    func didSelectImage(image: UIImage) {
+        
+    }
 }

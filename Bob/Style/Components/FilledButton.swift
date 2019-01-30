@@ -20,7 +20,7 @@ class FilledButton : UIButton {
         self.backgroundColor = ColorConstant.Primary.DARK
         self.tintColor = UIColor.white
         self.titleLabel?.font =  UIFont(name: Fonts.proximaBold, size: 18)
-        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 5), left: (screenScale * 3), bottom: (screenScale * 5), right: (screenScale * 3))
+        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 8), left: (screenScale * 3), bottom: (screenScale * 8), right: (screenScale * 3))
         
     }
     

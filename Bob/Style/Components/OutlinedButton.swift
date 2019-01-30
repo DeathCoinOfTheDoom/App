@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class EmptyButton : UIButton {
+class OutlinedButton : UIButton {
     required init?(coder aDecoder: NSCoder) {
         let screenScale = UIScreen.main.scale
         super.init(coder: aDecoder)

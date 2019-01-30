@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5o-sO-alX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -398,10 +398,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDc-1N-fWf" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="193" width="343" height="30"/>
+                                <state key="normal" title="Add Picture"/>
+                                <connections>
+                                    <action selector="addDocument:" destination="Dbl-9m-uLL" eventType="touchUpInside" id="yz9-uw-Ah1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K3B-GN-Rrb" firstAttribute="centerX" secondItem="mDs-lZ-mBT" secondAttribute="centerX" id="2MN-ze-Lyh"/>
+                            <constraint firstItem="vDc-1N-fWf" firstAttribute="leading" secondItem="QEs-de-LGg" secondAttribute="leading" constant="16" id="Eqk-os-TI1"/>
+                            <constraint firstItem="QEs-de-LGg" firstAttribute="trailing" secondItem="vDc-1N-fWf" secondAttribute="trailing" constant="16" id="Hja-A0-29A"/>
+                            <constraint firstItem="K3B-GN-Rrb" firstAttribute="top" secondItem="vDc-1N-fWf" secondAttribute="bottom" constant="100" id="ImO-F6-Co7"/>
+                            <constraint firstItem="vDc-1N-fWf" firstAttribute="centerX" secondItem="mDs-lZ-mBT" secondAttribute="centerX" id="Wlk-Ux-0hx"/>
                             <constraint firstItem="K3B-GN-Rrb" firstAttribute="centerY" secondItem="mDs-lZ-mBT" secondAttribute="centerY" id="y9c-av-Olr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QEs-de-LGg"/>
@@ -520,7 +531,7 @@
                                 <rect key="frame" x="16" y="531" width="343" height="30"/>
                                 <state key="normal" title="Connexion"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-ra-AAr" customClass="EmptyButton" customModule="Bob" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-ra-AAr" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="16" y="577" width="343" height="30"/>
                                 <state key="normal" title="Inscription"/>
                                 <connections>

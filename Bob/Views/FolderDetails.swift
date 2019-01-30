@@ -8,8 +8,13 @@
 
 import UIKit
 
-class FolderDetails: UIViewController {
+class FolderDetails: ImagePickerViewController {
 
+    @IBAction func addDocument(_ sender: Any) {
+        chooseImage()
+        print("test", test)
+        print("YOOO", yo)
+    }
     @IBOutlet weak var titleLabel: UILabel!
     
     var folderTitle:String = ""

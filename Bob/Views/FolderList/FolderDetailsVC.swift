@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FolderDetails: ImagePickerViewController {
+class FolderDetailsVC: ImagePickerViewController {
 
     @IBAction func addDocument(_ sender: Any) {
         chooseImage()

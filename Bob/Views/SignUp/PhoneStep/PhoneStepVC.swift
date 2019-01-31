@@ -16,10 +16,8 @@ class PhoneStepVc: UIViewController {
     @IBAction func PhoneSendButton(_ sender: Any) {
         if let PhoneValue = PhoneInput.text {
             do {
-                print("-------", PhoneValue)
                 let phoneNumber = try phoneNumberKit.parse(PhoneValue)
                 let test = phoneNumberKit.format(phoneNumber, toType: .international)
-                print("test", test)
             }
             catch {
                 print("Generic parser error")

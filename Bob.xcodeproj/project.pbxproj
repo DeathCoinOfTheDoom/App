@@ -33,11 +33,14 @@
 		BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2C6220088CF00B528D1 /* Colors.swift */; };
 		BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2C82200894A00B528D1 /* FilledButton.swift */; };
 		BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CA220089EB00B528D1 /* Fonts.swift */; };
-		BCD2D2CD22008A2E00B528D1 /* EmptyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */; };
+		BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CC22008A2E00B528D1 /* OutlinedButton.swift */; };
 		BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */; };
 		BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D022008A9D00B528D1 /* InputLabel.swift */; };
 		BCD2D2D322008AD100B528D1 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D222008AD100B528D1 /* Input.swift */; };
 		BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */; };
+		BCD2D2DB2200A8C000B528D1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */; };
+		BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */; };
+		BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */; };
 		CD366D10A8B381059FA5B28E /* Pods_BobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,11 +100,14 @@
 		BCD2D2C6220088CF00B528D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BCD2D2C82200894A00B528D1 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
 		BCD2D2CA220089EB00B528D1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyButton.swift; sourceTree = "<group>"; };
+		BCD2D2CC22008A2E00B528D1 /* OutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedButton.swift; sourceTree = "<group>"; };
 		BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		BCD2D2D022008A9D00B528D1 /* InputLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLabel.swift; sourceTree = "<group>"; };
 		BCD2D2D222008AD100B528D1 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationLabel.swift; sourceTree = "<group>"; };
+		BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		C104B1DAA414E2E1D004CFCF /* Pods-Bob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +207,7 @@
 		576C5E1D21FF65870069CFBB /* Bob */ = {
 			isa = PBXGroup;
 			children = (
+				BCD2D2D92200A88D00B528D1 /* Controllers */,
 				BCD2D2D422008CC100B528D1 /* Style */,
 				BCD2D2C12200884A00B528D1 /* Fonts */,
 				576C5E5121FF66C30069CFBB /* Models */,
@@ -268,6 +275,8 @@
 			children = (
 				160BDC9D2200A929005DF133 /* AuthCode */,
 				160BDC9C2200A5AD005DF133 /* PhoneStep */,
+				BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */,
+				BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -313,13 +322,21 @@
 			isa = PBXGroup;
 			children = (
 				BCD2D2C82200894A00B528D1 /* FilledButton.swift */,
-				BCD2D2CC22008A2E00B528D1 /* EmptyButton.swift */,
+				BCD2D2CC22008A2E00B528D1 /* OutlinedButton.swift */,
 				BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */,
 				BCD2D2D022008A9D00B528D1 /* InputLabel.swift */,
 				BCD2D2D222008AD100B528D1 /* Input.swift */,
 				BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BCD2D2D92200A88D00B528D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C0F77A9A6C00C145E5A51CED /* Pods */ = {
@@ -559,17 +576,20 @@
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
 				576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */,
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
+				BCD2D2DB2200A8C000B528D1 /* ImagePickerViewController.swift in Sources */,
 				BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */,
 				576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */,
 				160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */,
+				BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
-				BCD2D2CD22008A2E00B528D1 /* EmptyButton.swift in Sources */,
+				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
 				160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */,
 				576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
+				BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				16C680C62202001F0099AA15 /* AddCollectionViewCell.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,

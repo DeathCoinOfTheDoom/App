@@ -8,8 +8,11 @@
 
 import UIKit
 
-class FolderDetailsVC: UIViewController {
+class FolderDetails: ImagePickerViewController {
 
+    @IBAction func addDocument(_ sender: Any) {
+        chooseImage()
+    }
     @IBOutlet weak var titleLabel: UILabel!
     
     var folderTitle:String = ""
@@ -20,5 +23,16 @@ class FolderDetailsVC: UIViewController {
         navigationItem.setLeftBarButton(backButton, animated: false)
         self.navigationController?.isNavigationBarHidden = false
         self.titleLabel.text = folderTitle
+    }
+    
+    //Mark: - Image picker selection
+    
+    override func didSelectImage(image: UIImage) {
+        print("Youpi j'ai mon image")
+        
+        if let data = image.pngData() {
+            // ici on a l'image (en PNG) au format binaire
+            // on peut ensuite l'envoyer via un multipart request 🥳
+        }
     }
 }

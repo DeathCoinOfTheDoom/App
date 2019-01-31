@@ -10,6 +10,8 @@
 		0431643760406C739AC07136 /* Pods_Bob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4657F039091ACD2F5D8AEFD8 /* Pods_Bob.framework */; };
 		160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */; };
 		160BDCA42201AD21005DF133 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA32201AD21005DF133 /* FolderCard.swift */; };
+		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
+		16C680C62202001F0099AA15 /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C680C52202001F0099AA15 /* AddCollectionViewCell.swift */; };
 		515E3B8EDA0E659F60FC3432 /* Pods_BobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E85B3BF5B9B7F5B4F05906F /* Pods_BobTests.framework */; };
 		576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E1E21FF65870069CFBB /* AppDelegate.swift */; };
 		576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E2021FF65870069CFBB /* FoldersVC.swift */; };
@@ -22,7 +24,7 @@
 		576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5421FF679B0069CFBB /* PhoneStepVC.swift */; };
 		576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */; };
 		576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5921FF68F10069CFBB /* FolderCell.swift */; };
-		576C5E5C21FF6BA50069CFBB /* FolderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5B21FF6BA50069CFBB /* FolderDetails.swift */; };
+		576C5E5C21FF6BA50069CFBB /* FolderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */; };
 		576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */; };
 		576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */; };
 		576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E6121FF6CF30069CFBB /* Folder.swift */; };
@@ -61,6 +63,8 @@
 		0F7776081B8C46D28AE7C40A /* Pods-BobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests.release.xcconfig"; sourceTree = "<group>"; };
 		160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeTextField.swift; sourceTree = "<group>"; };
 		160BDCA32201AD21005DF133 /* FolderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
+		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		16C680C52202001F0099AA15 /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E1C5C2591C8105D6FC6911 /* Pods-BobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobTests/Pods-BobTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E4C4FBA0A8B70980579AE11 /* Pods-BobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobTests/Pods-BobTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3915202BAB1964E6617138B5 /* Pods-BobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		576C5E5421FF679B0069CFBB /* PhoneStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneStepVC.swift; sourceTree = "<group>"; };
 		576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeVC.swift; sourceTree = "<group>"; };
 		576C5E5921FF68F10069CFBB /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
-		576C5E5B21FF6BA50069CFBB /* FolderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetails.swift; sourceTree = "<group>"; };
+		576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailsVC.swift; sourceTree = "<group>"; };
 		576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedTextFieldValues.swift; sourceTree = "<group>"; };
 		576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
@@ -140,8 +144,8 @@
 		160BDC9D2200A929005DF133 /* AuthCode */ = {
 			isa = PBXGroup;
 			children = (
+				160BDCA82201ED8F005DF133 /* component */,
 				576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */,
-				160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */,
 			);
 			path = AuthCode;
 			sourceTree = "<group>";
@@ -150,10 +154,26 @@
 			isa = PBXGroup;
 			children = (
 				576C5E2021FF65870069CFBB /* FoldersVC.swift */,
-				576C5E5B21FF6BA50069CFBB /* FolderDetails.swift */,
+				576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */,
 				160BDCA32201AD21005DF133 /* FolderCard.swift */,
 			);
 			path = FolderList;
+			sourceTree = "<group>";
+		};
+		160BDCA52201EC95005DF133 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		160BDCA82201ED8F005DF133 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 		576C5E1221FF65870069CFBB = {
@@ -218,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				160BDCA02201A6AF005DF133 /* FolderList */,
+				160BDCA52201EC95005DF133 /* LaunchScreen */,
 				576C5E5621FF67A00069CFBB /* SignUp */,
 			);
 			path = Views;
@@ -237,6 +258,7 @@
 			children = (
 				576C5E5921FF68F10069CFBB /* FolderCell.swift */,
 				576C5E6121FF6CF30069CFBB /* Folder.swift */,
+				16C680C52202001F0099AA15 /* AddCollectionViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,7 +347,6 @@
 				576C5E1821FF65870069CFBB /* Frameworks */,
 				576C5E1921FF65870069CFBB /* Resources */,
 				1704F73BF67743C45829CB18 /* [CP] Embed Pods Frameworks */,
-				308D2FD1CDA6D4278047EB49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,8 +365,6 @@
 				576C5E2E21FF658A0069CFBB /* Sources */,
 				576C5E2F21FF658A0069CFBB /* Frameworks */,
 				576C5E3021FF658A0069CFBB /* Resources */,
-				84D09DB2947EA14EF1032FEE /* [CP] Embed Pods Frameworks */,
-				074D9BEECD0F27B482037D45 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,8 +384,6 @@
 				576C5E3921FF658A0069CFBB /* Sources */,
 				576C5E3A21FF658A0069CFBB /* Frameworks */,
 				576C5E3B21FF658A0069CFBB /* Resources */,
-				A2DDA8699006504C2136F421 /* [CP] Embed Pods Frameworks */,
-				691E1B67A329BDD0916900FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -469,21 +486,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		074D9BEECD0F27B482037D45 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BobTests/Pods-BobTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1704F73BF67743C45829CB18 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,12 +494,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bob/Pods-Bob-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FlagPhoneNumber/FlagPhoneNumber.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlagPhoneNumber.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,66 +526,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		308D2FD1CDA6D4278047EB49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bob/Pods-Bob-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		691E1B67A329BDD0916900FA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		84D09DB2947EA14EF1032FEE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BobTests/Pods-BobTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2DDA8699006504C2136F421 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2322EB8CC8789FA4B635590 /* [CP] Check Pods Manifest.lock */ = {
@@ -607,7 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576C5E5C21FF6BA50069CFBB /* FolderDetails.swift in Sources */,
+				576C5E5C21FF6BA50069CFBB /* FolderDetailsVC.swift in Sources */,
 				160BDCA42201AD21005DF133 /* FolderCard.swift in Sources */,
 				BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */,
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
@@ -621,9 +567,11 @@
 				BCD2D2CD22008A2E00B528D1 /* EmptyButton.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
+				160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */,
 				576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
+				16C680C62202001F0099AA15 /* AddCollectionViewCell.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				576C5E2721FF65870069CFBB /* Bob.xcdatamodeld in Sources */,
 				BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */,

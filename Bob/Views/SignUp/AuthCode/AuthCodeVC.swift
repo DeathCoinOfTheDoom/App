@@ -19,7 +19,7 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
         inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
             let test = codeConcatValues(inputValues: collectionOfTextField)
-            print("Envois du code")
+            print("Envois du code", test)
         }
     }
     func didPressBackspace(textField: AuthCodeTextField) {

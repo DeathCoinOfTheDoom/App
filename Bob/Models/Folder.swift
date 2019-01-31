@@ -9,12 +9,10 @@
 import UIKit
 
 class Folder {
-    var title:String!
+    let title:String!
     //var image:UIImage!
     
     init(title:String) {
         self.title = title
     }
-    
-    
 }

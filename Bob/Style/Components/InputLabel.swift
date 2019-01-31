@@ -13,7 +13,7 @@ class InputLabel: UILabel {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.font = UIFont(name: Fonts.proximaRegular, size: 17)
+        self.font = UIFont(name: Fonts.proximaRegular, size: 20)
         self.textColor = ColorConstant.Neutral.DARKEST
     }
     

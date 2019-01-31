@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5o-sO-alX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Bh-HP-rpR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -136,10 +136,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YZb-3t-icw">
-                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="325" width="343" height="17"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-N2-3Ai" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-N2-3Ai" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -153,8 +153,8 @@
                                             <action selector="onChangeInput:" destination="xH0-rI-8xw" eventType="editingChanged" id="vmO-bf-qvE"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOZ-sq-WnS" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="0.0" width="62.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOZ-sq-WnS" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="0.0" width="62.5" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -168,8 +168,8 @@
                                             <action selector="onChangeInput:" destination="xH0-rI-8xw" eventType="editingChanged" id="tKp-B2-r94"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-Cw-2ug" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="140.5" y="0.0" width="62" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-Cw-2ug" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="140.5" y="0.0" width="62" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -183,8 +183,8 @@
                                             <action selector="onChangeInput:" destination="xH0-rI-8xw" eventType="editingChanged" id="Yxe-E3-KJ0"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-Lj-ufi" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="210.5" y="0.0" width="62.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-Lj-ufi" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="210.5" y="0.0" width="62.5" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -198,8 +198,8 @@
                                             <action selector="onChangeInput:" destination="xH0-rI-8xw" eventType="editingChanged" id="7BJ-RP-flD"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-3X-VUK" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="281" y="0.0" width="62" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-3X-VUK" customClass="AuthCodeTextField" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="281" y="0.0" width="62" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -251,6 +251,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfw-Kl-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="591" y="130"/>
+        </scene>
+        <!--Name View Controller-->
+        <scene sceneID="Aaa-yo-AWx">
+            <objects>
+                <viewController id="0Bh-HP-rpR" customClass="NameViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STi-ef-ATu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quel est votre nom ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-Kv-Hge" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="70" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdg-z2-tq0" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="151" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIB-rL-9Gv" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="223" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Charlotte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHR-6J-ZD7" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="258" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bul-M3-7Oh" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="577" width="343" height="30"/>
+                                <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <segue destination="Mu4-dv-0Z2" kind="show" id="MU7-qb-9xb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Smith" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SXj-aM-yjd" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="186" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="rdg-z2-tq0" secondAttribute="trailing" constant="16" id="Aqe-MH-n3U"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="SXj-aM-yjd" secondAttribute="trailing" constant="16" id="CCR-J6-VxL"/>
+                            <constraint firstItem="rdg-z2-tq0" firstAttribute="top" secondItem="KBs-Kv-Hge" secondAttribute="bottom" constant="60" id="EAq-e0-TO2"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="sIB-rL-9Gv" secondAttribute="trailing" constant="16" id="Ohd-Fu-fgz"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="Bul-M3-7Oh" secondAttribute="trailing" constant="16" id="RHV-zk-E51"/>
+                            <constraint firstItem="cHR-6J-ZD7" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="U43-ri-Ze7"/>
+                            <constraint firstItem="sIB-rL-9Gv" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="Y1L-7G-a0L"/>
+                            <constraint firstItem="KBs-Kv-Hge" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="aJT-zP-DgP"/>
+                            <constraint firstItem="rdg-z2-tq0" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="cuG-OF-Tla"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="KBs-Kv-Hge" secondAttribute="trailing" constant="16" id="hI3-k4-I3u"/>
+                            <constraint firstItem="sIB-rL-9Gv" firstAttribute="top" secondItem="SXj-aM-yjd" secondAttribute="bottom" constant="20" id="i1S-Yk-UG5"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="trailing" secondItem="cHR-6J-ZD7" secondAttribute="trailing" constant="16" id="mdc-bX-BWV"/>
+                            <constraint firstItem="KBs-Kv-Hge" firstAttribute="centerX" secondItem="STi-ef-ATu" secondAttribute="centerX" id="nq0-Gq-RDW"/>
+                            <constraint firstItem="SXj-aM-yjd" firstAttribute="top" secondItem="rdg-z2-tq0" secondAttribute="bottom" constant="14" id="p24-QF-aRD"/>
+                            <constraint firstItem="cHR-6J-ZD7" firstAttribute="top" secondItem="sIB-rL-9Gv" secondAttribute="bottom" constant="14" id="qqk-32-soe"/>
+                            <constraint firstItem="S7D-aj-m6I" firstAttribute="bottom" secondItem="Bul-M3-7Oh" secondAttribute="bottom" constant="60" id="r9z-dY-1lL"/>
+                            <constraint firstItem="SXj-aM-yjd" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="rj3-Hx-dYd"/>
+                            <constraint firstItem="KBs-Kv-Hge" firstAttribute="top" secondItem="S7D-aj-m6I" secondAttribute="top" constant="50" id="t8h-LQ-lpI"/>
+                            <constraint firstItem="Bul-M3-7Oh" firstAttribute="leading" secondItem="S7D-aj-m6I" secondAttribute="leading" constant="16" id="xVR-Vp-W2m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S7D-aj-m6I"/>
+                    </view>
+                    <connections>
+                        <outlet property="FirstName" destination="cHR-6J-ZD7" id="205-6H-3JR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9S8-pF-iBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279.2" y="124.58770614692655"/>
+        </scene>
+        <!--Birthday View Controller-->
+        <scene sceneID="GyL-pW-QvV">
+            <objects>
+                <viewController id="Mu4-dv-0Z2" customClass="BirthdayViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="viY-mp-ADV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enchanté jo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-Ja-DF5" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="70" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="23 octobre 1993" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SlD-VE-sC3" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="150.5" width="343" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yxp-AX-F9L" firstAttribute="trailing" secondItem="mEk-Ja-DF5" secondAttribute="trailing" constant="16" id="1yO-Jy-eIN"/>
+                            <constraint firstItem="Yxp-AX-F9L" firstAttribute="trailing" secondItem="SlD-VE-sC3" secondAttribute="trailing" constant="16" id="7Yk-ex-QMY"/>
+                            <constraint firstItem="SlD-VE-sC3" firstAttribute="top" secondItem="mEk-Ja-DF5" secondAttribute="bottom" constant="60" id="RVs-Tz-Zc8"/>
+                            <constraint firstItem="mEk-Ja-DF5" firstAttribute="leading" secondItem="Yxp-AX-F9L" secondAttribute="leading" constant="16" id="VHp-f1-MBG"/>
+                            <constraint firstItem="SlD-VE-sC3" firstAttribute="leading" secondItem="Yxp-AX-F9L" secondAttribute="leading" constant="16" id="Wzo-cD-2C1"/>
+                            <constraint firstItem="mEk-Ja-DF5" firstAttribute="top" secondItem="Yxp-AX-F9L" secondAttribute="top" constant="50" id="zr4-Si-n8g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yxp-AX-F9L"/>
+                    </view>
+                    <connections>
+                        <outlet property="BirthdayPicker" destination="SlD-VE-sC3" id="Djf-IU-rCY"/>
+                        <outlet property="BirthdayTitle" destination="mEk-Ja-DF5" id="mqv-oJ-fWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec4-oP-hoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T1S-QF-Bd5">

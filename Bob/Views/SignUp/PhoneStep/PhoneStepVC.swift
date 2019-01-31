@@ -8,16 +8,19 @@
 
 import UIKit
 import PhoneNumberKit
+import FlagPhoneNumber
 
 class PhoneStepVc: UIViewController {
     let phoneNumberKit = PhoneNumberKit()
 
-    @IBOutlet weak var PhoneInput: Input!
-    @IBAction func PhoneSendButton(_ sender: Any) {
-        if let PhoneValue = PhoneInput.text {
+    @IBOutlet weak var phoneInput: FPNTextField!
+    @IBAction func phoneSendButton(_ sender: Any) {
+        if let phoneValue = phoneInput.text {
             do {
-                let phoneNumber = try phoneNumberKit.parse(PhoneValue)
+                print("phoneValue", phoneValue)
+                let phoneNumber = try phoneNumberKit.parse(phoneValue)
                 let test = phoneNumberKit.format(phoneNumber, toType: .international)
+                print("test", test)
             }
             catch {
                 print("Generic parser error")

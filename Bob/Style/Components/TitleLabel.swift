@@ -13,7 +13,7 @@ class TitleLabel: UILabel {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.font = UIFont(name: Fonts.futuraMedium, size: 24)
+        self.font = UIFont(name: Fonts.futuraMedium, size: 20)
         self.textColor = ColorConstant.Neutral.DARKEST
     }
     

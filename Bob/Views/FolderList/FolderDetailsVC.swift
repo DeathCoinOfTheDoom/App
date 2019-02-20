@@ -19,18 +19,18 @@ class FolderDetailsVC: ImagePickerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backButton = UIBarButtonItem(title: "Custom", style: .plain, target: self, action: nil)
-        navigationItem.setLeftBarButton(backButton, animated: false)
-        self.navigationController?.isNavigationBarHidden = false
         self.titleLabel.text = folderTitle
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     //Mark: - Image picker selection
     
     override func didSelectImage(image: UIImage) {
-        print("Youpi j'ai mon image")
-        
         if let data = image.pngData() {
+            print("oui l'image", data)
             // ici on a l'image (en PNG) au format binaire
             // on peut ensuite l'envoyer via un multipart request 🥳
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FolderCell: UICollectionViewCell {
-    
-    @IBOutlet weak var titleLabel: UILabel!
+class FolderCell: UITableViewCell {
+    @IBOutlet weak var descriptionTableCell: UILabel!
+    @IBOutlet weak var titleTableCell: UILabel!
 }

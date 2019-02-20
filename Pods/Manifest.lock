@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - FlagPhoneNumber (0.7.1):
+    - libPhoneNumber-iOS
+  - libPhoneNumber-iOS (0.9.13)
   - PhoneNumberKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 2.1.0)
     - PhoneNumberKit/UIKit (= 2.1.0)
@@ -9,12 +12,22 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FlagPhoneNumber
   - PhoneNumberKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FlagPhoneNumber
+    - libPhoneNumber-iOS
+    - PhoneNumberKit
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FlagPhoneNumber: d1ca8296b3d7f29b505dc55bfd1608d411c9d636
+  libPhoneNumber-iOS: e444379ac18bbfbdefad571da735b2cd7e096caa
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
 
-PODFILE CHECKSUM: c33985df57245725aecb652cf9928f27d7c6e1b4
+PODFILE CHECKSUM: 4764c4df464506a55f28cb2064c4c9728540f04b
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

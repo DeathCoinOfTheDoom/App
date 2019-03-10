@@ -413,19 +413,19 @@
                                                             <rect key="frame" x="120" y="14" width="191" height="82.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN1-SK-ZKk">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Ici vous pouvez trouver tout vos documents nécessaires" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-y6-pud">
-                                                                    <rect key="frame" x="0.0" y="23.5" width="191" height="33.5"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="191" height="33.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-SW-DMs">
-                                                                    <rect key="frame" x="0.0" y="65" width="80" height="5"/>
+                                                                    <rect key="frame" x="0.0" y="64.5" width="80" height="5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="80" id="5fC-NS-AAQ"/>
                                                                         <constraint firstAttribute="height" constant="5" id="tEH-DE-aYT"/>
@@ -557,11 +557,11 @@
             </objects>
             <point key="canvasLocation" x="3796" y="129.98500749625188"/>
         </scene>
-        <!--Item-->
+        <!--Accueil-->
         <scene sceneID="00H-0U-pz5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DPy-BU-Rfr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rgI-Ep-Tjn"/>
+                    <tabBarItem key="tabBarItem" title="Accueil" id="rgI-Ep-Tjn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1rI-Wq-wNy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -592,11 +592,11 @@
             </objects>
             <point key="canvasLocation" x="5873" y="573"/>
         </scene>
-        <!--Item-->
+        <!--Créer un dossier-->
         <scene sceneID="EhA-ef-qOU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Jz-LQ-zfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BbL-OA-Zpc"/>
+                <navigationController title="Créer un dossier" automaticallyAdjustsScrollViewInsets="NO" id="6Jz-LQ-zfy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Créer un dossier" id="BbL-OA-Zpc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zeg-ek-YpY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

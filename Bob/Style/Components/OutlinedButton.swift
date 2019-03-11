@@ -18,7 +18,7 @@ class OutlinedButton : UIButton {
         self.layer.borderWidth = 1.5
         self.tintColor = ColorConstant.Primary.DARK
         self.titleLabel?.font =  UIFont(name: Fonts.proximaBold, size: 18)
-        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 5), left: 0, bottom: (screenScale * 5), right: 0)
+        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 5.5), left: 0, bottom: (screenScale * 5.5), right: 0)
         
     }
     

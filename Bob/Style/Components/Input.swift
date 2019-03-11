@@ -23,11 +23,9 @@ class Input : UITextField, UITextFieldDelegate {
     
     @objc func onFocusIn(textField: UITextField) {
         applyColor(color: ColorConstant.Primary.DARKEST)
-        print("innn")
     }
     @objc func onFocusOut(textField: UITextField) {
         applyColor(color: ColorConstant.Neutral.LIGHT)
-        print("kiki")
     }
     
     

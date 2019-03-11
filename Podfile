@@ -8,6 +8,7 @@ target 'Bob' do
   # Pods for Bob
   pod 'Alamofire'
   pod 'PhoneNumberKit'
+  pod "FlagPhoneNumber"
 
   target 'BobTests' do
     inherit! :search_paths

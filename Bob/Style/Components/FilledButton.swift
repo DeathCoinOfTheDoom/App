@@ -12,18 +12,14 @@ import UIKit
 
 class FilledButton : UIButton {
     required init?(coder aDecoder: NSCoder) {
-        let screenScale = UIScreen.main.scale
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = 8.0
-        self.layer.borderColor = ColorConstant.Primary.DARK.cgColor
+        self.layer.cornerRadius = 10.0
+        self.layer.borderColor = ColorConstant.Primary.BASE.cgColor
         self.layer.borderWidth = 1.5
-        self.backgroundColor = ColorConstant.Primary.DARK
+        self.backgroundColor = ColorConstant.Primary.BASE
         self.tintColor = UIColor.white
-        self.titleLabel?.font =  UIFont(name: Fonts.proximaBold, size: 18)
-        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 5.5), left: (screenScale * 3), bottom: (screenScale * 5.5), right: (screenScale * 3))
-        
+        self.titleLabel?.font =  UIFont(name: Fonts.poppinsBold, size: 18)
+        self.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
-    
-    
 }
 

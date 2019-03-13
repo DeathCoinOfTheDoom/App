@@ -12,60 +12,42 @@ import UIKit
 class Input : UITextField, UITextFieldDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         self.addTarget(self, action: #selector(onFocusIn), for: UIControl.Event.editingDidBegin)
         self.addTarget(self, action: #selector(onFocusOut), for: UIControl.Event.editingDidEnd)
-        
-        self.font = UIFont(name: Fonts.proximaRegular, size: 18)
-        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = ColorConstant.Border.BASE.cgColor
+        self.layer.cornerRadius = 10
+        self.font = UIFont(name: Fonts.poppinsMedium, size: 18)
+        self.tintColor = ColorConstant.Neutral.DARKEST
         self.textColor = ColorConstant.Neutral.DARKEST
     }
     
     @objc func onFocusIn(textField: UITextField) {
-        applyColor(color: ColorConstant.Primary.DARKEST)
+        applyColor(color: ColorConstant.Primary.BASE)
     }
     @objc func onFocusOut(textField: UITextField) {
-        applyColor(color: ColorConstant.Neutral.LIGHT)
+        applyColor(color: ColorConstant.Neutral.DARKEST)
     }
     
-    
-    var bottomBorder = UIView()
     
     func applyColor(color: UIColor) {
-        bottomBorder.backgroundColor = color  // Set Border-Color
+        self.layer.borderColor = color.cgColor  // Set Border-Color
     }
-    
-    override func awakeFromNib() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        applyColor(color: ColorConstant.Neutral.LIGHT)
-        bottomBorder.translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(bottomBorder)
-        
-        bottomBorder.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        bottomBorder.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        bottomBorder.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        bottomBorder.heightAnchor.constraint(equalToConstant: 1.5).isActive = true // Set Border-Strength
-    }
-    
     
     @IBInspectable var hasError: Bool = false {
         didSet {
-            
             if (hasError) {
-                
-                bottomBorder.backgroundColor = UIColor.red
+                self.layer.borderColor = UIColor.red.cgColor
                 
             } else {
-                
-                bottomBorder.backgroundColor = ColorConstant.Neutral.LIGHT
+                self.layer.borderColor = ColorConstant.Neutral.LIGHT.cgColor
             }
         }
     }
     
     //Padding input
     
-    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 0)
+    let padding = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)

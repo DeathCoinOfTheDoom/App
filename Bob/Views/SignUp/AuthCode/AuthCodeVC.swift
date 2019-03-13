@@ -13,6 +13,8 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     // index of the selected item in collectionOfTextField
     var actualStep = 0
     // events
+    @IBOutlet weak var helpTip: UILabel!
+    @IBOutlet weak var resendAuthCode: UIButton!
     @IBOutlet var collectionOfTextField: Array<UITextField> = []
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
@@ -47,6 +49,7 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        additionalStyle()
         inputEnable(actualStep: actualStep)
         let code = codeConcatValues(inputValues: collectionOfTextField)
         for item in collectionOfTextField {
@@ -70,5 +73,14 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
             accumulator + nextInputValue.text!
         })
         return codeValues
+    }
+    func additionalStyle() {
+        // helpTip
+        helpTip.font =  UIFont(name: Fonts.poppinsSemiBold, size: 14)
+        helpTip.textColor = ColorConstant.Neutral.LIGHT
+        // resendAuthCode
+        resendAuthCode.tintColor = ColorConstant.Primary.BASE
+        resendAuthCode.titleLabel?.textColor = ColorConstant.Primary.LIGHT
+        resendAuthCode.titleLabel?.font = UIFont(name: Fonts.poppinsSemiBold, size: 14)
     }
 }

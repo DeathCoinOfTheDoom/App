@@ -14,13 +14,10 @@ class OutlinedButton : UIButton {
         let screenScale = UIScreen.main.scale
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 8.0
-        self.layer.borderColor = ColorConstant.Primary.DARK.cgColor
+        self.layer.borderColor = ColorConstant.Primary.BASE.cgColor
         self.layer.borderWidth = 1.5
-        self.tintColor = ColorConstant.Primary.DARK
-        self.titleLabel?.font =  UIFont(name: Fonts.proximaBold, size: 18)
-        self.contentEdgeInsets = UIEdgeInsets(top: (screenScale * 5.5), left: 0, bottom: (screenScale * 5.5), right: 0)
-        
+        self.tintColor = ColorConstant.Primary.BASE
+        self.titleLabel?.font =  UIFont(name: Fonts.poppinsBold, size: 18)
+        self.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
-    
-    
 }

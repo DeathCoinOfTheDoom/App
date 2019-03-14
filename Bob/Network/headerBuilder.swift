@@ -9,9 +9,12 @@
 import Foundation
 import Alamofire
 
-class HeaderBuilder {
-    let headers: HTTPHeaders = [
+class HeaderBuilderBob {
+    static var headers: HTTPHeaders = [
         "Content-Type": "application/json",
         "Accept": "application/json"
     ]
+    static func setToken(token: String){
+        headers["Authorization"] = "Bearer token:\(token)"
+    }
 }

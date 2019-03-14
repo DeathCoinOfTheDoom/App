@@ -1,18 +1,18 @@
 //
-//  LoginLayer.swift
+//  FolderLayer.swift
 //  Bob
 //
-//  Created by Gérome Lacaux on 13/03/2019.
+//  Created by Gérome Lacaux on 14/03/2019.
 //  Copyright © 2019 Bob. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-typealias CallbackUser = (_ movies: [User], _ error: Error?) -> Void
+typealias CallbackAllCategory = (_ categories: [Category], _ error: Error?) -> Void
 
-class LoginService {
-    static func login(query: String, header: HTTPHeaders, callback: @escaping CallbackUser) {
+class CategoryService {
+    static func all(query: String, header: HTTPHeaders, callback: @escaping CallbackAllCategory) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url).responseData { (response) in
             switch response.result {
@@ -21,9 +21,7 @@ class LoginService {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 do {
-                    // on parse les data pour obtenir un objet de type ResultMovie
-                    let result = try jsonDecoder.decode(User.self, from: data)
-                    print("result", result)
+                    let result = try jsonDecoder.decode(Category.self, from: data)
                 } catch let error {
                     // Erreur de parsing
                     callback([], error)

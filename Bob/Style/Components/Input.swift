@@ -15,9 +15,9 @@ class Input : UITextField, UITextFieldDelegate {
         self.addTarget(self, action: #selector(onFocusIn), for: UIControl.Event.editingDidBegin)
         self.addTarget(self, action: #selector(onFocusOut), for: UIControl.Event.editingDidEnd)
         self.layer.borderWidth = 1
-        self.layer.borderColor = ColorConstant.Border.BASE.cgColor
+        self.layer.borderColor = ColorConstant.Border.LIGHT.cgColor
         self.layer.cornerRadius = 10
-        self.font = UIFont(name: Fonts.poppinsMedium, size: 18)
+        self.font = UIFont(name: Fonts.poppinsMedium, size: 16)
         self.tintColor = ColorConstant.Neutral.DARKEST
         self.textColor = ColorConstant.Neutral.DARKEST
     }
@@ -26,7 +26,7 @@ class Input : UITextField, UITextFieldDelegate {
         applyColor(color: ColorConstant.Primary.BASE)
     }
     @objc func onFocusOut(textField: UITextField) {
-        applyColor(color: ColorConstant.Neutral.DARKEST)
+        applyColor(color: ColorConstant.Border.LIGHT)
     }
     
     
@@ -37,7 +37,7 @@ class Input : UITextField, UITextFieldDelegate {
     @IBInspectable var hasError: Bool = false {
         didSet {
             if (hasError) {
-                self.layer.borderColor = UIColor.red.cgColor
+                self.layer.borderColor = ColorConstant.Error.ERROR.cgColor
                 
             } else {
                 self.layer.borderColor = ColorConstant.Neutral.LIGHT.cgColor

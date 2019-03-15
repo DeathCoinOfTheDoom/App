@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class FoldersVC: UIViewController {
 
@@ -14,15 +15,16 @@ class FoldersVC: UIViewController {
     @IBOutlet weak var titleFolderList: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var categories = [Category]()
-    let tmpTab:[Folder] = [Folder(title: "Identité", description: "I am a description I am a description I am a description one"), Folder(title: "Garant", description: "I am a description I am a description I am a description two"), Folder(title: "Emploi", description: "I am a description I am a description I am a description three"), Folder(title: "Domicile", description: "I am a description I am a description I am a description four")]
+    lazy var categoriesTab = [Category]()
     let cellSpacingHeight: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let headers = HeaderBuilderBob.setToken(token: "ouep")
-        CategoryService.all(query: "/category", header: HeaderBuilderBob.headers) { (categories, error) in
-            print("ouep", categories)
+        HeaderBuilderBob.setToken(token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE1MThkOWNlMDBjZDkwNTQ3ODFiZTU3YTM5ZGRmZTA4YjFhZTBmZmQ1ZjhhZjVmNzhjZTRhNzJjZDQ5MjI1YjhlYjNjZWYzZTFlNzE4YWUwIn0.eyJhdWQiOiIxIiwianRpIjoiMTUxOGQ5Y2UwMGNkOTA1NDc4MWJlNTdhMzlkZGZlMDhiMWFlMGZmZDVmOGFmNWY3OGNlNGE3MmNkNDkyMjViOGViM2NlZjNlMWU3MThhZTAiLCJpYXQiOjE1NTI0ODU1OTAsIm5iZiI6MTU1MjQ4NTU5MCwiZXhwIjoxNTg0MTA3OTkwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.DfqctIg9ov8_QpY7iIGiHCjwsNHn3vZbE64mHZjA045lo_qdS8eEz2gTXw6zaea4wMmkRJjCK4yy9Wl51QElirW0lxKhrBPdpEv4PSKY7LjCQyiYtVIzGWiKH2-mSgm-h1zDtFzOoT8Ee-cvXd5sUkbQrhQ43gGlWTvhgPVf9oFM11nukgpplbKb5OAFIqgzDVcIBqRme2Bb5I8h8zAOiAjP0Z7aaD8dNpUM5TWw37Aobr6m-NgUUChs41soQletnigrokx1NTKvlD33_G-FlDEWkAIRpfy8SqkniQkXU4HyasbnDfUCHFlJkkQKt6d2N76w_gxcxxeNhDC7MFzcBXtuqX_ywLpBVoWZz6M-BHlTw4z74i4JVq97aw9ZTKu6ZZfXFIRnlRt9v0f7iV6gkuIqeOvpK1-2k_pU0a3EQ670jOljiGaikUMID94oZuD_l3jykgVHF5-xF8wpJXSsHiSrBPjysJnp5hBnfx3iAkn41hq-6a2vvBhRYrVkfnzlG00wIYmfVQGM8h01vguoTPw0FlueYtt2_SyDFTHiV04aS5Y3yPVNXApzPg4PNaX51dqN3qBivnqwi3wySpZmQSAACE-wlEcVmFVTmN9H5MXX8AB9A2J__AVWqEH-DF-Mb6SpN8-Vv7sy5Dp9sEhzsNqX3_wX3i9udv56LvN7aoM")
+        CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
+            self.categoriesTab.removeAll()
+            self.categoriesTab.append(contentsOf: categories)
+            self.tableView.reloadData()
         }
         self.styleFolderList()
         self.tableView.delegate = self
@@ -41,7 +43,7 @@ class FoldersVC: UIViewController {
 
 extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.tmpTab.count
+        return self.categoriesTab.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,8 +62,10 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! FolderCell
-        tableCell.titleTableCell.text = self.tmpTab[indexPath.section].title
-        tableCell.descriptionTableCell.text = self.tmpTab[indexPath.section].description
+        tableCell.titleTableCell.text = self.categoriesTab[indexPath.section].attributes.title
+        tableCell.descriptionTableCell.text = self.categoriesTab[indexPath.section].attributes.description
+        let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!
+        tableCell.imageTableCell.af_setImage(withURL: urlImage)
         // style part
         tableCell.layer.cornerRadius = 8
         tableCell.clipsToBounds = true
@@ -71,7 +75,7 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "FolderDetails") as! FolderDetailsVC
-        nextViewController.folderTitle = tmpTab[indexPath.row].title
+        nextViewController.folderTitle = categoriesTab[indexPath.row].attributes.title
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

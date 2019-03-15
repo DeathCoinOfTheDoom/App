@@ -437,7 +437,6 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-Hx-baG">
                                                             <rect key="frame" x="24" y="16" width="80" height="80.5"/>
-                                                            <color key="backgroundColor" red="0.026851819200000002" green="1" blue="0.94382401230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="80" id="AdB-gN-Jy6"/>
                                                                 <constraint firstAttribute="width" constant="80" id="rEO-NI-gEP"/>
@@ -508,6 +507,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionTableCell" destination="Fvg-y6-pud" id="y8r-WN-ya1"/>
+                                            <outlet property="imageTableCell" destination="3Jy-Hx-baG" id="Am5-Cl-afx"/>
                                             <outlet property="titleTableCell" destination="mN1-SK-ZKk" id="fUS-7A-G5j"/>
                                         </connections>
                                     </tableViewCell>

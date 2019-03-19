@@ -24,6 +24,15 @@ class FoldersVC: UIViewController {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+            present(onboardingViewController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension FoldersVC: UITableViewDelegate, UITableViewDataSource {

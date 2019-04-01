@@ -20,7 +20,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
     weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
     
     var pageHeadings = ["STEP 1", "STEP 2", "STEP 3", "STEP 4", "STEP 5", "STEP 6"]
-    var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3", "onboarding-4", "onboarding-5", "onboarding-6"]
+    var pageImages = ["Logo", "onboarding-2", "onboarding-3", "onboarding-4", "onboarding-5", "onboarding-6"]
     var pageSubHeadings = ["Bob le portefeuille sécurisé de vos documents", "Qui vous guide et accompagne ", "Expliquez les catégories (Ajoutez vos documents...)", "Expliquez la creation de dossier (En quelques cliques Bob vous guide afin de créer votre dossier...)", "Envoi du dossier (Envoyez vos dossiers simplement)", "Commencez maintenant"]
     
     var currentIndex = 0

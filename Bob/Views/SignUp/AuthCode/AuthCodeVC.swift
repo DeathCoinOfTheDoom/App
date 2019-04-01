@@ -56,6 +56,8 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
             item.delegate = self
         }
     }
+    
+    
     func inputEnable(actualStep: Int){
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {

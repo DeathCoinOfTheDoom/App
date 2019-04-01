@@ -51,6 +51,10 @@
 		BCD2D2DB2200A8C000B528D1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */; };
 		BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */; };
 		BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */; };
+		BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF5F1292241A239007876C9 /* Onboarding.storyboard */; };
+		BCF5F12C2241AA65007876C9 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12B2241AA65007876C9 /* OnboardingContentViewController.swift */; };
+		BCF5F12E2241ACAA007876C9 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12D2241ACAA007876C9 /* OnboardingPageViewController.swift */; };
+		BCF5F1302241ADC9007876C9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12F2241ADC9007876C9 /* OnboardingViewController.swift */; };
 		CD366D10A8B381059FA5B28E /* Pods_BobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +132,10 @@
 		BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		BCF5F1292241A239007876C9 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		BCF5F12B2241AA65007876C9 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		BCF5F12D2241ACAA007876C9 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		BCF5F12F2241ADC9007876C9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		C104B1DAA414E2E1D004CFCF /* Pods-Bob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +275,7 @@
 				576C5E2A21FF658A0069CFBB /* LaunchScreen.storyboard */,
 				576C5E2D21FF658A0069CFBB /* Info.plist */,
 				576C5E2521FF65870069CFBB /* Bob.xcdatamodeld */,
+				BCF5F1292241A239007876C9 /* Onboarding.storyboard */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -389,6 +398,9 @@
 			isa = PBXGroup;
 			children = (
 				BCD2D2DA2200A8C000B528D1 /* ImagePickerViewController.swift */,
+				BCF5F12B2241AA65007876C9 /* OnboardingContentViewController.swift */,
+				BCF5F12D2241ACAA007876C9 /* OnboardingPageViewController.swift */,
+				BCF5F12F2241ADC9007876C9 /* OnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -520,6 +532,7 @@
 				BCCA5E23221D92D7003513F6 /* poppins-Regular.ttf in Resources */,
 				BCCA5E22221D92D7003513F6 /* poppins-Light.ttf in Resources */,
 				BCCA5E24221D92D7003513F6 /* poppins-SemiBold.ttf in Resources */,
+				BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */,
 				576C5E2921FF658A0069CFBB /* Assets.xcassets in Resources */,
 				576C5E2421FF65870069CFBB /* Main.storyboard in Resources */,
 			);
@@ -640,6 +653,8 @@
 				160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */,
 				BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */,
 				16EDFDE6221DAA5300A00F2A /* FolderDetailsCard.swift in Sources */,
+				BCF5F12E2241ACAA007876C9 /* OnboardingPageViewController.swift in Sources */,
+				BCF5F1302241ADC9007876C9 /* OnboardingViewController.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
 				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
 				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
@@ -658,6 +673,7 @@
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				1681CD092236ADBB00165029 /* Tip.swift in Sources */,
 				576C5E2721FF65870069CFBB /* Bob.xcdatamodeld in Sources */,
+				BCF5F12C2241AA65007876C9 /* OnboardingContentViewController.swift in Sources */,
 				BCD2D2CF22008A6F00B528D1 /* TitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

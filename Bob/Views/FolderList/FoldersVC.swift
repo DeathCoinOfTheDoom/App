@@ -10,13 +10,21 @@ import UIKit
 
 class FoldersVC: UIViewController {
 
+    @IBOutlet weak var subTitleFolderList: UILabel!
+    @IBOutlet weak var titleFolderList: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var categories = [Category]()
     let tmpTab:[Folder] = [Folder(title: "Identité", description: "I am a description I am a description I am a description one"), Folder(title: "Garant", description: "I am a description I am a description I am a description two"), Folder(title: "Emploi", description: "I am a description I am a description I am a description three"), Folder(title: "Domicile", description: "I am a description I am a description I am a description four")]
     let cellSpacingHeight: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let headers = HeaderBuilderBob.setToken(token: "ouep")
+        CategoryService.all(query: "/category", header: HeaderBuilderBob.headers) { (categories, error) in
+            print("ouep", categories)
+        }
+        self.styleFolderList()
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -32,6 +40,11 @@ class FoldersVC: UIViewController {
         if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
             present(onboardingViewController, animated: true, completion: nil)
         }
+      
+    func styleFolderList() {
+        titleFolderList.font = UIFont(name: Fonts.poppinsBold, size: 22)
+        titleFolderList.textColor = ColorConstant.Neutral.DARKEST
+        subTitleFolderList.font = UIFont(name: Fonts.poppinsRegular, size: 14)
     }
 }
 
@@ -64,8 +77,6 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
         tableCell.backgroundColor = .white
         return tableCell
     }
-    
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "FolderDetails") as! FolderDetailsVC

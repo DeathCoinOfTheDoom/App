@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireImage
 
+
 typealias CallbackAllCategory = (_ categories: [Category], _ error: Error?) -> Void
 
 class CategoryService {

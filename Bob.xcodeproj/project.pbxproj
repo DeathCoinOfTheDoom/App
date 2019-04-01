@@ -12,7 +12,13 @@
 		160BDCA42201AD21005DF133 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA32201AD21005DF133 /* FolderCard.swift */; };
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
+		1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0B223947ED00165029 /* UrlBuilder.swift */; };
+		1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0E22394ECE00165029 /* LoginLayer.swift */; };
+		1681CD1122394F1F00165029 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD1022394F1F00165029 /* User.swift */; };
+		1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD12223962D500165029 /* HeaderBuilder.swift */; };
 		16EDFDE6221DAA5300A00F2A /* FolderDetailsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EDFDE5221DAA5300A00F2A /* FolderDetailsCard.swift */; };
+		16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F341D7223A9262003A35C4 /* CategoryLayer.swift */; };
+		16F341DA223A98DB003A35C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F341D9223A98DB003A35C4 /* Category.swift */; };
 		515E3B8EDA0E659F60FC3432 /* Pods_BobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E85B3BF5B9B7F5B4F05906F /* Pods_BobTests.framework */; };
 		576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E1E21FF65870069CFBB /* AppDelegate.swift */; };
 		576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E2021FF65870069CFBB /* FoldersVC.swift */; };
@@ -72,7 +78,13 @@
 		160BDCA32201AD21005DF133 /* FolderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		1681CD0B223947ED00165029 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
+		1681CD0E22394ECE00165029 /* LoginLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
+		1681CD1022394F1F00165029 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1681CD12223962D500165029 /* HeaderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		16EDFDE5221DAA5300A00F2A /* FolderDetailsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailsCard.swift; sourceTree = "<group>"; };
+		16F341D7223A9262003A35C4 /* CategoryLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLayer.swift; sourceTree = "<group>"; };
+		16F341D9223A98DB003A35C4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		18E1C5C2591C8105D6FC6911 /* Pods-BobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobTests/Pods-BobTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E4C4FBA0A8B70980579AE11 /* Pods-BobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobTests/Pods-BobTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3915202BAB1964E6617138B5 /* Pods-BobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +201,25 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		1681CD0A223947BB00165029 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1681CD0D22394EA500165029 /* Layers */,
+				1681CD0B223947ED00165029 /* UrlBuilder.swift */,
+				1681CD12223962D500165029 /* HeaderBuilder.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1681CD0D22394EA500165029 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				1681CD0E22394ECE00165029 /* LoginLayer.swift */,
+				16F341D7223A9262003A35C4 /* CategoryLayer.swift */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
 		16EDFDE2221DA7C600A00F2A /* FolderDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +254,7 @@
 		576C5E1D21FF65870069CFBB /* Bob */ = {
 			isa = PBXGroup;
 			children = (
+				1681CD0A223947BB00165029 /* Network */,
 				BCD2D2D92200A88D00B528D1 /* Controllers */,
 				BCD2D2D422008CC100B528D1 /* Style */,
 				BCD2D2C12200884A00B528D1 /* Fonts */,
@@ -282,6 +314,8 @@
 			children = (
 				576C5E5921FF68F10069CFBB /* FolderCell.swift */,
 				576C5E6121FF6CF30069CFBB /* Folder.swift */,
+				1681CD1022394F1F00165029 /* User.swift */,
+				16F341D9223A98DB003A35C4 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -600,21 +634,27 @@
 				576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */,
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
 				BCD2D2DB2200A8C000B528D1 /* ImagePickerViewController.swift in Sources */,
+				16F341DA223A98DB003A35C4 /* Category.swift in Sources */,
 				BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */,
 				576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */,
 				160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */,
 				BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */,
 				16EDFDE6221DAA5300A00F2A /* FolderDetailsCard.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
+				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
+				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
+				1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
 				160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */,
+				1681CD1122394F1F00165029 /* User.swift in Sources */,
 				576C5E2121FF65870069CFBB /* FoldersVC.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
+				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				1681CD092236ADBB00165029 /* Tip.swift in Sources */,
 				576C5E2721FF65870069CFBB /* Bob.xcdatamodeld in Sources */,

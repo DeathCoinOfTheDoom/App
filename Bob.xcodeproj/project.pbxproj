@@ -114,7 +114,6 @@
 		576C5E5421FF679B0069CFBB /* PhoneStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneStepVC.swift; sourceTree = "<group>"; };
 		576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeVC.swift; sourceTree = "<group>"; };
 		576C5E5921FF68F10069CFBB /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
-		576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FolderDetailsVC.swift; path = ../FolderList/FolderDetailsVC.swift; sourceTree = "<group>"; };
 		576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedTextFieldValues.swift; sourceTree = "<group>"; };
 		576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
@@ -237,8 +236,8 @@
 		16EDFDE2221DA7C600A00F2A /* FolderDetails */ = {
 			isa = PBXGroup;
 			children = (
-				576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */,
 				16EDFDE5221DAA5300A00F2A /* FolderDetailsCard.swift */,
+				576C5E5B21FF6BA50069CFBB /* FolderDetailsVC.swift */,
 			);
 			path = FolderDetails;
 			sourceTree = "<group>";

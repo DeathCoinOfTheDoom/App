@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -401,10 +401,10 @@
             </objects>
             <point key="canvasLocation" x="1927" y="125"/>
         </scene>
-        <!--FoldersVC-->
+        <!--CategoryVC-->
         <scene sceneID="ZqA-My-THG">
             <objects>
-                <viewController id="jTJ-zE-K4n" customClass="FoldersVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jTJ-zE-K4n" customClass="CategoryVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wO4-tH-NAU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,7 +432,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-Ch-hId" customClass="FolderCard" customModule="Bob" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-Ch-hId" customClass="CategoryCard" customModule="Bob" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="375" height="112.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-Hx-baG">
@@ -582,7 +582,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-CZ-Ez3" customClass="FolderDetailsCard" customModule="Bob" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-CZ-Ez3" customClass="CategoryDetailsCard" customModule="Bob" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcS-sD-nH3">
@@ -714,10 +714,10 @@
             </objects>
             <point key="canvasLocation" x="4900" y="-147.07646176911544"/>
         </scene>
-        <!--View Controller-->
+        <!--Folder ListVC-->
         <scene sceneID="hrf-i3-ufo">
             <objects>
-                <viewController id="5Vf-xA-z3F" sceneMemberID="viewController">
+                <viewController id="5Vf-xA-z3F" customClass="FolderListVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JzD-8z-J1j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -933,6 +933,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="191" height="140"/>
-        <image name="chevron_right" width="36" height="36"/>
+        <image name="chevron_right" width="18" height="18"/>
     </resources>
 </document>

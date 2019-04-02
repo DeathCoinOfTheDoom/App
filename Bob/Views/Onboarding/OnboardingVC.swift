@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController, OnboardingPageViewControllerDelegate {
+class OnboardingVC: UIViewController, OnboardingPageVCDelegate {
         
         // MARK: - Outlets
         
@@ -20,7 +20,7 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
         
         // MARK: - Properties
         
-        var onboardingPageViewController: OnboardingPageViewController?
+        var onboardingPageViewController: OnboardingPageVC?
         
         // MARK: - Actions
         
@@ -120,7 +120,7 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
         // In a storyboard-based application, you will often want to do a little preparation before navigation
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destination = segue.destination
-            if let pageViewController = destination as? OnboardingPageViewController {
+            if let pageViewController = destination as? OnboardingPageVC {
                 onboardingPageViewController = pageViewController
                 onboardingPageViewController?.onboardingDelegate = self
             }

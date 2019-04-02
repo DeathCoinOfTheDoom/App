@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class FoldersVC: UIViewController {
+class CategoryVC: UIViewController {
 
     @IBOutlet weak var subTitleFolderList: UILabel!
     @IBOutlet weak var titleFolderList: UILabel!
@@ -43,7 +43,7 @@ class FoldersVC: UIViewController {
 }
 
 
-extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
+extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.categoriesTab.count
     }

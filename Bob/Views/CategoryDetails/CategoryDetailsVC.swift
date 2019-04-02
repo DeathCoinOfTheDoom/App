@@ -1,6 +1,6 @@
 import UIKit
 
-class CategoryDetailsVC: ImagePickerViewController {
+class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     
     @IBOutlet weak var completeIcon: UIView!
     @IBOutlet weak var titleFolderDetails: TitleLabel!

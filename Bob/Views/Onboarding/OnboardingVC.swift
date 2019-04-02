@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController, OnboardingPageViewControllerDelegate {
+class OnboardingVC: UIViewController, OnboardingPageViewControllerDelegate {
         
         // MARK: - Outlets
         

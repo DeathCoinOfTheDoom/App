@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding View Controller-->
+        <!--OnboardingVC-->
         <scene sceneID="SFh-yN-dqF">
             <objects>
-                <viewController id="d8F-Cc-Pgr" customClass="OnboardingViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d8F-Cc-Pgr" customClass="OnboardingVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJY-NL-BxH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0H6-jJ-a2C">
@@ -28,26 +24,26 @@
                                 <rect key="frame" x="0.0" y="466" width="375" height="202"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sqa-e8-1vA">
-                                        <rect key="frame" x="24" y="16" width="327" height="37"/>
+                                        <rect key="frame" x="24" y="16" width="552" height="37"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" red="0.25098039215686274" green="0.76470588235294112" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPU-UK-tvt" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="69" width="327" height="30"/>
+                                        <rect key="frame" x="24" y="69" width="552" height="30"/>
                                         <state key="normal" title="S'inscrire"/>
                                         <connections>
                                             <action selector="signupAction:" destination="d8F-Cc-Pgr" eventType="touchUpInside" id="gBb-y8-Iib"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUa-al-vAh">
-                                        <rect key="frame" x="24" y="159.5" width="327" height="30"/>
+                                        <rect key="frame" x="24" y="159.5" width="552" height="30"/>
                                         <state key="normal" title="Connectez-vous"/>
                                         <connections>
                                             <action selector="loginAction:" destination="d8F-Cc-Pgr" eventType="touchUpInside" id="YL4-jq-3nd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez déjà un compte ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6E-Ij-9U1" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="131" width="327" height="20.5"/>
+                                        <rect key="frame" x="24" y="131" width="552" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

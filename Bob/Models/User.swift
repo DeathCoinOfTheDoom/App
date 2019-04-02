@@ -22,3 +22,21 @@ struct UserAttr : Codable {
     var createdAt: String
     var updatedAt: String
 }
+
+struct UserFolder: Codable {
+    var data: [UserFolderData]
+}
+
+struct UserFolderData: Codable {
+    var type: String
+    var id: String
+    var attributes: UserFolderAttr
+    //TODO FILES ARRAY
+}
+
+struct UserFolderAttr: Codable {
+    var title: String
+    var createdAt: String
+    var updatedAt: String
+}
+

@@ -76,7 +76,7 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "FolderDetails") as! FolderDetailsVC
+        let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "CategoryDetails") as! CategoryDetailsVC
         nextViewController.folderCategory = categoriesTab[indexPath.row]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }

@@ -1,20 +1,18 @@
 //
-//  FolderLayer.swift
+//  TypeLayer.swift
 //  Bob
 //
-//  Created by Gérome Lacaux on 14/03/2019.
+//  Created by Gérome Lacaux on 02/04/2019.
 //  Copyright © 2019 Bob. All rights reserved.
 //
 
 import Foundation
 import Alamofire
-import AlamofireImage
 
+typealias CallbackGetType =  (_ type: TypeData?, _ error: Error?) -> Void
 
-typealias CallbackAllCategory = (_ categories: [CategoryData], _ error: Error?) -> Void
-
-class CategoryService {
-    static func all(query: String, header: HTTPHeaders, callback: @escaping CallbackAllCategory) {
+class TypeService {
+    static func getType(query: String, header: HTTPHeaders, callback: @escaping CallbackGetType) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
             switch response.result {
@@ -22,17 +20,17 @@ class CategoryService {
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
-                    let result = try jsonDecoder.decode(Category.self, from: data)
+                    let result = try jsonDecoder.decode(Type.self, from: data)
                     callback(result.data, nil)
                 } catch let error {
                     print("Erreur de parsing", error)
                     // Erreur de parsing
-                    callback([], error)
+                    callback(nil, error)
                 }
             case .failure(let error) :
                 print("Erreur de la requête")
                 // Erreur de la requête
-                callback([], error)
+                callback(nil, error)
             }
         }
     }

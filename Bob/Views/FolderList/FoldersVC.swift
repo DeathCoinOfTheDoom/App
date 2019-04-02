@@ -15,7 +15,7 @@ class FoldersVC: UIViewController {
     @IBOutlet weak var titleFolderList: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var categoriesTab = [Category]()
+    lazy var categoriesTab = [CategoryData]()
     let cellSpacingHeight: CGFloat = 10
     
     override func viewDidLoad() {
@@ -77,7 +77,7 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "FolderDetails") as! FolderDetailsVC
-        nextViewController.folderTitle = categoriesTab[indexPath.row].attributes.title
+        nextViewController.folderCategory = categoriesTab[indexPath.row]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

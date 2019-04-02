@@ -35,18 +35,13 @@ class FoldersVC: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
-            present(onboardingViewController, animated: true, completion: nil)
-        }
-    }
     func styleFolderList() {
         titleFolderList.font = UIFont(name: Fonts.poppinsBold, size: 22)
         titleFolderList.textColor = ColorConstant.Neutral.DARKEST
         subTitleFolderList.font = UIFont(name: Fonts.poppinsRegular, size: 14)
     }
 }
+
 
 extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,3 +81,4 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="do9-0y-rVq">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bienvenue-->
+        <scene sceneID="NVk-C7-Csl">
+            <objects>
+                <viewController storyboardIdentifier="root_login_identifier" id="do9-0y-rVq" customClass="PhoneStepVc" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FVS-uk-CUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue chez BoB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-Wp-arM" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="435" width="382" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon numéro de téléphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-Mj-SPy" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="493.5" width="366" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0631610956" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuL-CG-f0v" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                                <rect key="frame" x="24" y="524" width="366" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWu-NP-NaX" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="772" width="366" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="phoneSendButton:" destination="do9-0y-rVq" eventType="touchUpInside" id="ci8-dk-7l6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2i-8o-OdU" customClass="Tip" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="565" width="366" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJC-4Q-yMA" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="6" width="342" height="39"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Saisissez votre numéro de téléphone pour vous identifier. C'est facile et sécus">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="cellTitle"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3500000000000001" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AJC-4Q-yMA" firstAttribute="top" secondItem="X2i-8o-OdU" secondAttribute="top" constant="6" id="OyG-qA-wmT"/>
+                                    <constraint firstItem="AJC-4Q-yMA" firstAttribute="leading" secondItem="X2i-8o-OdU" secondAttribute="leading" constant="12" id="PDV-YZ-xXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="AJC-4Q-yMA" secondAttribute="bottom" constant="14" id="fyM-hc-pIB"/>
+                                    <constraint firstAttribute="trailing" secondItem="AJC-4Q-yMA" secondAttribute="trailing" constant="12" id="uS2-lL-jtx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tWu-NP-NaX" firstAttribute="leading" secondItem="XfT-Ab-xna" secondAttribute="leading" constant="24" id="6Ui-le-VLY"/>
+                            <constraint firstItem="fBL-Wp-arM" firstAttribute="leading" secondItem="XfT-Ab-xna" secondAttribute="leading" constant="16" id="CEF-mW-cjA"/>
+                            <constraint firstItem="BX4-Mj-SPy" firstAttribute="top" secondItem="fBL-Wp-arM" secondAttribute="bottom" constant="32" id="Dbq-bJ-jVV"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="trailing" secondItem="tWu-NP-NaX" secondAttribute="trailing" constant="24" id="Fjn-v5-aKP"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="trailing" secondItem="kuL-CG-f0v" secondAttribute="trailing" constant="24" id="Gbn-Y8-Pql"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="trailing" secondItem="fBL-Wp-arM" secondAttribute="trailing" constant="16" id="H9d-EE-Koo"/>
+                            <constraint firstItem="kuL-CG-f0v" firstAttribute="centerX" secondItem="FVS-uk-CUZ" secondAttribute="centerX" id="Oo3-dB-bYZ"/>
+                            <constraint firstItem="tWu-NP-NaX" firstAttribute="centerX" secondItem="FVS-uk-CUZ" secondAttribute="centerX" id="QVh-js-ZLD"/>
+                            <constraint firstItem="X2i-8o-OdU" firstAttribute="leading" secondItem="XfT-Ab-xna" secondAttribute="leading" constant="24" id="Zij-91-T88"/>
+                            <constraint firstItem="X2i-8o-OdU" firstAttribute="top" secondItem="kuL-CG-f0v" secondAttribute="bottom" constant="24" id="g7e-Fg-dbO"/>
+                            <constraint firstItem="fBL-Wp-arM" firstAttribute="centerY" secondItem="FVS-uk-CUZ" secondAttribute="centerY" id="hEZ-PO-jfc"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="trailing" secondItem="X2i-8o-OdU" secondAttribute="trailing" constant="24" id="pke-oO-hjb"/>
+                            <constraint firstItem="kuL-CG-f0v" firstAttribute="top" secondItem="BX4-Mj-SPy" secondAttribute="bottom" constant="16" id="upP-a0-31i"/>
+                            <constraint firstItem="BX4-Mj-SPy" firstAttribute="leading" secondItem="XfT-Ab-xna" secondAttribute="leading" constant="24" id="vaV-R6-gBV"/>
+                            <constraint firstItem="kuL-CG-f0v" firstAttribute="leading" secondItem="XfT-Ab-xna" secondAttribute="leading" constant="24" id="wOu-n6-qcv"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="bottom" secondItem="tWu-NP-NaX" secondAttribute="bottom" constant="60" id="wtv-S2-vil"/>
+                            <constraint firstItem="XfT-Ab-xna" firstAttribute="trailing" secondItem="BX4-Mj-SPy" secondAttribute="trailing" constant="24" id="zgm-c1-b8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XfT-Ab-xna"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bienvenue" largeTitleDisplayMode="always" id="bdO-JC-lOM">
+                        <barButtonItem key="backBarButtonItem" title="Téléphones" id="FPJ-tP-GLv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="phoneInput" destination="kuL-CG-f0v" id="I2O-Xw-8gJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjJ-qw-lev" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634.78260869565224" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>

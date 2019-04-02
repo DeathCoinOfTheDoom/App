@@ -29,6 +29,8 @@
 		576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */; };
 		576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */; };
 		576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E6121FF6CF30069CFBB /* Folder.swift */; };
+		BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A74562251FD1000204F70 /* OnboardingTitle.swift */; };
+		BC4A74592252420A00204F70 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4A74582252420A00204F70 /* Login.storyboard */; };
 		BCCA5E20221D92D7003513F6 /* poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */; };
 		BCCA5E21221D92D7003513F6 /* poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */; };
 		BCCA5E22221D92D7003513F6 /* poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1D221D92D6003513F6 /* poppins-Light.ttf */; };
@@ -104,6 +106,8 @@
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		B84973F502FCB0AC37347625 /* Pods-Bob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4A74562251FD1000204F70 /* OnboardingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTitle.swift; sourceTree = "<group>"; };
+		BC4A74582252420A00204F70 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Bold.ttf"; sourceTree = "<group>"; };
 		BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Medium.ttf"; sourceTree = "<group>"; };
 		BCCA5E1D221D92D6003513F6 /* poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				576C5E2D21FF658A0069CFBB /* Info.plist */,
 				576C5E2521FF65870069CFBB /* Bob.xcdatamodeld */,
 				BCF5F1292241A239007876C9 /* Onboarding.storyboard */,
+				BC4A74582252420A00204F70 /* Login.storyboard */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				BCD2D2D222008AD100B528D1 /* Input.swift */,
 				BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */,
 				1681CD082236ADBB00165029 /* Tip.swift */,
+				BC4A74562251FD1000204F70 /* OnboardingTitle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				BCCA5E24221D92D7003513F6 /* poppins-SemiBold.ttf in Resources */,
 				BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */,
 				576C5E2921FF658A0069CFBB /* Assets.xcassets in Resources */,
+				BC4A74592252420A00204F70 /* Login.storyboard in Resources */,
 				576C5E2421FF65870069CFBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +620,7 @@
 				576C5E5A21FF68F10069CFBB /* FolderCell.swift in Sources */,
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
 				BCD2D2DB2200A8C000B528D1 /* ImagePickerViewController.swift in Sources */,
+				BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */,
 				BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */,
 				576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */,
 				160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */,

@@ -12,16 +12,11 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
         
         // MARK: - Outlets
         
-        @IBOutlet var pageControl: UIPageControl!
-        
-        @IBOutlet var nextButton: UIButton! {
-            didSet {
-                nextButton.layer.cornerRadius = 25.0
-                nextButton.layer.masksToBounds = true
-            }
-        }
-        
-        @IBOutlet var skipButton: UIButton!
+    @IBOutlet weak var loginButton:
+    UIButton!
+    
+    
+    @IBOutlet var pageControl: UIPageControl!
         
         // MARK: - Properties
         
@@ -29,42 +24,70 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
         
         // MARK: - Actions
         
-        @IBAction func skipButtonTapped(sender: UIButton) {
-            UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
-            dismiss(animated: true, completion: nil)
+//        @IBAction func skipButtonTapped(sender: UIButton) {
+//            UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+//            dismiss(animated: true, completion: nil)
+//            
+//            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//            if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+//                present(onboardingViewController, animated: true, completion: nil)
+//            }
+//        }
+//        
+//        @IBAction func nextButtonTapped(sender: UIButton) {
+//            if let index = onboardingPageViewController?.currentIndex {
+//                switch index {
+//                case 0...4:
+//                    onboardingPageViewController?.forwardPage()
+//                    
+//                case 5:
+//                    UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
+//                    dismiss(animated: true, completion: nil)
+//                    
+//                default: break
+//                }
+//            }
+//            
+//            updateUI()
+//        }
+//    
+//    
+    @IBAction func loginAction(_ sender: Any) {
+        
+        // TODO: uncomment
+        //UserDefaults.standard.set(true, forKey: "hasAlreadySeenOnboarding")
+        
+        // chargement du fichier Login.storyboard
+        let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        
+        // Chargement du premier view controller (ici le navigation controller avec la flèche)
+        if let loginRootViewController = loginStoryboard.instantiateInitialViewController() {
+            self.navigationController?.pushViewController(loginRootViewController, animated: true)
         }
         
-        @IBAction func nextButtonTapped(sender: UIButton) {
-            if let index = onboardingPageViewController?.currentIndex {
-                switch index {
-                case 0...4:
-                    onboardingPageViewController?.forwardPage()
-                    
-                case 5:
-                    UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
-                    dismiss(animated: true, completion: nil)
-                    
-                default: break
-                }
-            }
-            
-            updateUI()
+    }
+    
+    @IBAction func signupAction(_ sender: Any) {
+        
+        // TODO: uncomment
+        //UserDefaults.standard.set(true, forKey: "hasAlreadySeenOnboarding")
+        // TODO: uncomment
+        //UserDefaults.standard.set(true, forKey: "hasAlreadySeenOnboarding")
+        
+        // chargement du fichier Login.storyboard
+        let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        
+        // Chargement du premier view controller (ici le navigation controller avec la flèche)
+        if let loginRootViewController = loginStoryboard.instantiateInitialViewController() {
+            self.navigationController?.pushViewController(loginRootViewController, animated: true)
         }
         
+
+        
+    }
+    
         func updateUI() {
             if let index = onboardingPageViewController?.currentIndex {
-                switch index {
-                case 0...4:
-                    nextButton.setTitle("NEXT", for: .normal)
-                    skipButton.isHidden = false
-                    
-                case 5:
-                    nextButton.setTitle("GET STARTED", for: .normal)
-                    skipButton.isHidden = true
-                    
-                default: break
-                }
-                
                 pageControl.currentPage = index
             }
         }
@@ -77,9 +100,17 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            applyStyles()
             
+
             // Do any additional setup after loading the view.
+            
+            // skipButton.addTarget(self, action: #selector(skipButtonTapped(sender:)), for: .touchUpInside)
         }
+    
+    func applyStyles() {
+        loginButton.titleLabel?.font = UIFont(name: Fonts.poppinsRegular, size: 14)
+    }
         
         
         

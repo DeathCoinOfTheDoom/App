@@ -8,12 +8,18 @@
 
 import Foundation
 
+struct DataCategory: Codable {
+    var data: [Category]
+}
+
 struct Category: Codable {
     var type: String
     var id: String
-    let attributes: CategoryAttr
+    var attributes: CategoryAttr
 }
 
 struct CategoryAttr: Codable {
     var title: String
+    var icon: String
+    var description: String
 }

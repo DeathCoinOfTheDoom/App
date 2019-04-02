@@ -15,6 +15,6 @@ class HeaderBuilderBob {
         "Accept": "application/json"
     ]
     static func setToken(token: String){
-        headers["Authorization"] = "Bearer token:\(token)"
+        headers["Authorization"] = "Bearer \(token)"
     }
 }

@@ -6,9 +6,10 @@ target 'Bob' do
   use_frameworks!
 
   # Pods for Bob
-  pod 'Alamofire'
-  pod 'PhoneNumberKit'
+  pod "Alamofire"
+  pod "PhoneNumberKit"
   pod "FlagPhoneNumber"
+  pod "AlamofireImage"
 
   target 'BobTests' do
     inherit! :search_paths

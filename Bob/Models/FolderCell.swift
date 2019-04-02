@@ -9,6 +9,7 @@
 import UIKit
 
 class FolderCell: UITableViewCell {
+    @IBOutlet weak var imageTableCell: UIImageView!
     @IBOutlet weak var descriptionTableCell: UILabel!
     @IBOutlet weak var titleTableCell: UILabel!
 }

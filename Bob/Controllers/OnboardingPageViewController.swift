@@ -19,9 +19,8 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
     
     weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
     
-    var pageHeadings = ["STEP 1", "STEP 2", "STEP 3", "STEP 4", "STEP 5", "STEP 6"]
-    var pageImages = ["Logo", "onboarding-2", "onboarding-3", "onboarding-4", "onboarding-5", "onboarding-6"]
-    var pageSubHeadings = ["Bob le portefeuille sécurisé de vos documents", "Qui vous guide et accompagne ", "Expliquez les catégories (Ajoutez vos documents...)", "Expliquez la creation de dossier (En quelques cliques Bob vous guide afin de créer votre dossier...)", "Envoi du dossier (Envoyez vos dossiers simplement)", "Commencez maintenant"]
+    var pageHeadings = ["Bob est un portefeuille sécurisé pour les documents liés à vos demandes de locations.", "Bob vous accompagne lors la constitutions de vos dossiers locatifs.", "Afin de vous organiser, plusieurs catégories sont à votre disposition pour stocker vos documents.", "Constituez ensuite vos dossiers locatifs, en choisissant les documents à y intégrer.", "D’un simple geste, envoyez votre dossier pour vous démarquez des autres candidats.", "On y va ? C’est parti !"]
+    var pageImages = ["onboarding1", "onboarding2", "onboarding3", "onboarding4", "onboarding5", "onboarding6"]
     
     var currentIndex = 0
     
@@ -66,7 +65,6 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
         if let pageContentViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingContentViewController") as? OnboardingContentViewController {
             pageContentViewController.imageFile = pageImages[index]
             pageContentViewController.heading = pageHeadings[index]
-            pageContentViewController.subHeading = pageSubHeadings[index]
             pageContentViewController.index = index
             
             return pageContentViewController

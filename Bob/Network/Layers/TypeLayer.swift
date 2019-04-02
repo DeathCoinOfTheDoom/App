@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias CallbackGetType =  (_ type: TypeData?, _ error: Error?) -> Void
+typealias CallbackGetType =  (_ type: CategoryData?, _ error: Error?) -> Void
 
 class TypeService {
     static func getType(query: String, header: HTTPHeaders, callback: @escaping CallbackGetType) {

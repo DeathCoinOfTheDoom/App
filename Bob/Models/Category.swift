@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 // All endpoint
 struct Category: Codable {
     var data: [CategoryData]
@@ -25,3 +26,19 @@ struct CategoryAttr: Codable {
     var description: String
     var extendedDescription : String
 }
+
+// Details
+struct CategoryDetails: Codable {
+    var data: [CategoryDetailsData]
+}
+
+struct CategoryDetailsData: Codable {
+    var type: String
+    var id: String
+    var attributes: CategoryDetailsAttr
+}
+
+struct CategoryDetailsAttr: Codable {
+    var title: String
+}
+

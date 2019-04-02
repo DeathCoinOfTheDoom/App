@@ -14,15 +14,11 @@ class OnboardingContentViewController: UIViewController {
     
     @IBOutlet var headingLabel: UILabel! {
         didSet {
-            headingLabel.numberOfLines = 0
+            headingLabel.numberOfLines = 2
         }
     }
     
-    @IBOutlet var subHeadingLabel: UILabel! {
-        didSet {
-            subHeadingLabel.numberOfLines = 0
-        }
-    }
+    
     
     @IBOutlet var contentImageView: UIImageView!
     
@@ -37,7 +33,6 @@ class OnboardingContentViewController: UIViewController {
         super.viewDidLoad()
         
         headingLabel.text = heading
-        subHeadingLabel.text = subHeading
         contentImageView.image = UIImage(named: imageFile)
     }
     

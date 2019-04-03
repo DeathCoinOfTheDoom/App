@@ -36,9 +36,11 @@
 		576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */; };
 		576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */; };
 		576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E6121FF6CF30069CFBB /* Folder.swift */; };
+		BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC205A9C2254A25A009DFE3B /* FolderCreationNameVC.swift */; };
 		BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A74562251FD1000204F70 /* OnboardingTitle.swift */; };
 		BC4A74592252420A00204F70 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4A74582252420A00204F70 /* Login.storyboard */; };
 		BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83B6EF2253B12E00424C24 /* FolderListVC.swift */; };
+		BC83B6F22253CD4000424C24 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC83B6F12253CD4000424C24 /* Folder.storyboard */; };
 		BC86A1552253ADA30070840E /* UserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86A1542253ADA30070840E /* UserLayer.swift */; };
 		BCCA5E20221D92D7003513F6 /* poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */; };
 		BCCA5E21221D92D7003513F6 /* poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */; };
@@ -122,9 +124,11 @@
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		B84973F502FCB0AC37347625 /* Pods-Bob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC205A9C2254A25A009DFE3B /* FolderCreationNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreationNameVC.swift; sourceTree = "<group>"; };
 		BC4A74562251FD1000204F70 /* OnboardingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTitle.swift; sourceTree = "<group>"; };
 		BC4A74582252420A00204F70 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC83B6EF2253B12E00424C24 /* FolderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListVC.swift; sourceTree = "<group>"; };
+		BC83B6F12253CD4000424C24 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
 		BC86A1542253ADA30070840E /* UserLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLayer.swift; sourceTree = "<group>"; };
 		BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Bold.ttf"; sourceTree = "<group>"; };
 		BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 				576C5E2521FF65870069CFBB /* Bob.xcdatamodeld */,
 				BCF5F1292241A239007876C9 /* Onboarding.storyboard */,
 				BC4A74582252420A00204F70 /* Login.storyboard */,
+				BC83B6F12253CD4000424C24 /* Folder.storyboard */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 		576C5E4F21FF66B60069CFBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC83B6F32254A1FE00424C24 /* FolderCreation */,
 				BC83B6EC2253B0DF00424C24 /* FolderList */,
 				BC86A1562253AF740070840E /* Onboarding */,
 				16EDFDE2221DA7C600A00F2A /* CategoryDetails */,
@@ -371,6 +377,14 @@
 				BC83B6EF2253B12E00424C24 /* FolderListVC.swift */,
 			);
 			path = FolderList;
+			sourceTree = "<group>";
+		};
+		BC83B6F32254A1FE00424C24 /* FolderCreation */ = {
+			isa = PBXGroup;
+			children = (
+				BC205A9C2254A25A009DFE3B /* FolderCreationNameVC.swift */,
+			);
+			path = FolderCreation;
 			sourceTree = "<group>";
 		};
 		BC86A1562253AF740070840E /* Onboarding */ = {
@@ -555,6 +569,7 @@
 				BCCA5E23221D92D7003513F6 /* poppins-Regular.ttf in Resources */,
 				BCCA5E22221D92D7003513F6 /* poppins-Light.ttf in Resources */,
 				BCCA5E24221D92D7003513F6 /* poppins-SemiBold.ttf in Resources */,
+				BC83B6F22253CD4000424C24 /* Folder.storyboard in Resources */,
 				BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */,
 				576C5E2921FF658A0069CFBB /* Assets.xcassets in Resources */,
 				BC4A74592252420A00204F70 /* Login.storyboard in Resources */,
@@ -682,6 +697,7 @@
 				BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */,
 				16EDFDE6221DAA5300A00F2A /* CategoryDetailsCard.swift in Sources */,
 				BCF5F12E2241ACAA007876C9 /* OnboardingPageVC.swift in Sources */,
+				BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */,
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
 				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -401,10 +401,10 @@
             </objects>
             <point key="canvasLocation" x="1927" y="125"/>
         </scene>
-        <!--FoldersVC-->
+        <!--CategoryVC-->
         <scene sceneID="ZqA-My-THG">
             <objects>
-                <viewController id="jTJ-zE-K4n" customClass="FoldersVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jTJ-zE-K4n" customClass="CategoryVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wO4-tH-NAU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,7 +432,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-Ch-hId" customClass="FolderCard" customModule="Bob" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snm-Ch-hId" customClass="CategoryCard" customModule="Bob" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="375" height="112.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-Hx-baG">
@@ -735,7 +735,7 @@
                                 <color key="backgroundColor" red="1" green="0.10832243799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Crée un dossier"/>
                                 <connections>
-                                    <segue destination="drc-30-HEZ" kind="show" id="wUr-OU-KMG"/>
+                                    <segue destination="Ujm-Lr-ifm" kind="show" id="VWU-r2-3bq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -752,6 +752,14 @@
             </objects>
             <point key="canvasLocation" x="5873" y="573"/>
         </scene>
+        <!--Folder-->
+        <scene sceneID="ik6-Xc-aaD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Folder" storyboardName="Folder" id="Ujm-Lr-ifm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtJ-0k-a4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6574" y="513"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Fnf-bT-ze1">
             <objects>
@@ -761,22 +769,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBs-q3-fP7">
-                                <rect key="frame" x="24" y="114" width="327" height="21"/>
+                                <rect key="frame" x="24" y="70" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="prZ-hw-EGz">
-                                <rect key="frame" x="40" y="80" width="295" height="2"/>
+                                <rect key="frame" x="40" y="36" width="295" height="2"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selectionnez au moins un document pour postuler à cette annonce." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fe-wd-BxG">
-                                <rect key="frame" x="24" y="137" width="327" height="41"/>
+                                <rect key="frame" x="24" y="93" width="327" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nop-qS-dcp">
-                                <rect key="frame" x="24" y="194" width="327" height="317"/>
+                                <rect key="frame" x="24" y="150" width="327" height="410"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VaE-kt-uq0">
@@ -812,7 +820,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67H-IT-AG3" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="543" width="327" height="30"/>
+                                <rect key="frame" x="24" y="592" width="327" height="30"/>
                                 <state key="normal" title="Suivant"/>
                             </button>
                         </subviews>
@@ -840,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7w-M4-s9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6704.8000000000002" y="572.56371814092961"/>
+            <point key="canvasLocation" x="7305" y="573"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BAt-Ux-y0K">
@@ -855,13 +863,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blE-Vj-C9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7492" y="573"/>
+            <point key="canvasLocation" x="8004" y="573"/>
         </scene>
         <!--Créer un dossier-->
         <scene sceneID="EhA-ef-qOU">
             <objects>
                 <navigationController title="Créer un dossier" automaticallyAdjustsScrollViewInsets="NO" id="6Jz-LQ-zfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Créer un dossier" id="BbL-OA-Zpc"/>
+                    <tabBarItem key="tabBarItem" title="Dossier" id="BbL-OA-Zpc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zeg-ek-YpY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -941,6 +949,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="191" height="140"/>
-        <image name="chevron_right" width="36" height="36"/>
+        <image name="chevron_right" width="18" height="18"/>
     </resources>
 </document>

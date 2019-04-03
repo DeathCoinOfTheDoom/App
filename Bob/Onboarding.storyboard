@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding View Controller-->
+        <!--OnboardingVC-->
         <scene sceneID="SFh-yN-dqF">
             <objects>
-                <viewController id="d8F-Cc-Pgr" customClass="OnboardingViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d8F-Cc-Pgr" customClass="OnboardingVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJY-NL-BxH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,20 +93,20 @@
             </objects>
             <point key="canvasLocation" x="255.19999999999999" y="38.23088455772114"/>
         </scene>
-        <!--Onboarding Page View Controller-->
+        <!--Onboarding PageVC-->
         <scene sceneID="YG2-rs-nQy">
             <objects>
-                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sZB-xK-ECr" customClass="OnboardingPageViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sZB-xK-ECr" customClass="OnboardingPageVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TK-kS-NV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="39.580209895052477"/>
         </scene>
-        <!--Onboarding Content View Controller-->
+        <!--Onboarding ContentVC-->
         <scene sceneID="PDl-Pj-0Ba">
             <objects>
-                <viewController storyboardIdentifier="OnboardingContentViewController" id="f1J-uI-A4b" customClass="OnboardingContentViewController" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingContentViewController" id="f1J-uI-A4b" customClass="OnboardingContentVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bF9-by-Fhi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="46u-ho-rlV">
@@ -166,7 +166,6 @@
                 <navigationController storyboardIdentifier="OnboardingViewController" automaticallyAdjustsScrollViewInsets="NO" id="0Bj-YX-wpO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dXx-vx-vaY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

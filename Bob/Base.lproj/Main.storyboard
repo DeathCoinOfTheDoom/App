@@ -634,6 +634,7 @@
                                         <connections>
                                             <outlet property="categoryDetailsCellCard" destination="LZZ-CZ-Ez3" id="mtQ-SH-pRb"/>
                                             <outlet property="categoryDetailsCellIcon" destination="Tbg-qy-Tsz" id="Sbn-xG-P0i"/>
+                                            <outlet property="categoryDetailsCellIconBg" destination="VRA-I0-lBH" id="VhH-aM-z8m"/>
                                             <outlet property="categoryDetailsCellTitle" destination="vcS-sD-nH3" id="asD-pR-3rq"/>
                                         </connections>
                                     </tableViewCell>

@@ -46,6 +46,8 @@ class CategoryDetailsVC: ImagePickerViewController {
         titleFolderDetails.font = UIFont(name: Fonts.poppinsBold, size: 24)
         // description
         descriptionFolderDetails.font = UIFont(name: Fonts.poppinsMedium, size: 14)
+        self.view.backgroundColor = ColorConstant.Neutral.LIGHTER
+        detailsTableView.backgroundColor = ColorConstant.Neutral.LIGHTER
     }
     //Mark: - Image picker selection
     
@@ -67,6 +69,10 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
         let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! CategoryDetailsCell
         print("self.categoryDetails[indexPath.row]", self.categoryDetails[indexPath.row])
         tableCell.categoryDetailsCellTitle.text = self.categoryDetails[indexPath.row].attributes.title
+        tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
+        tableCell.categoryDetailsCellIconBg.layer.cornerRadius = tableCell.categoryDetailsCellIconBg.frame.size.width/2
+         tableCell.categoryDetailsCellIconBg.clipsToBounds = true
+        tableCell.categoryDetailsCellIconBg.backgroundColor = ColorConstant.Neutral.DARKEST
         return tableCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

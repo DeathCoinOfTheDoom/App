@@ -63,7 +63,7 @@ extension FoldersVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! FolderCell
+        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! CategoryCell
         tableCell.titleTableCell.text = self.categoriesTab[indexPath.section].attributes.title
         tableCell.descriptionTableCell.text = self.categoriesTab[indexPath.section].attributes.description
         let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FolderDetailsCard: UIControl {
+class CategoryDetailsCard: UIControl {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         // style part

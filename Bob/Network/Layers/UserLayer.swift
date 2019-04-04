@@ -11,6 +11,7 @@ import Alamofire
 
 
 typealias CallbackUserFolders = (_ userFolder: [UserFolderData], _ error: Error?) -> Void
+typealias CallbackUserFiles = (_ userFiles: [UserFilesData], _ error: Error?) -> Void
 
 class UserService {
     static func folders(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
@@ -23,6 +24,28 @@ class UserService {
                 do {
                     print("data", data)
                     let result = try jsonDecoder.decode(UserFolder.self, from: data)
+                    callback(result.data, nil)
+                } catch let error {
+                    print("Erreur de parsing", error)
+                    // Erreur de parsing
+                    callback([], error)
+                }
+            case .failure(let error) :
+                print("Erreur de la requête")
+                // Erreur de la requête
+                callback([], error)
+            }
+        }
+    }
+    static func files(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFiles) {
+        let url = UrlBuilder.searchUrl(query: query)
+        Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
+            switch response.result {
+            case .success(let data) :
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                do {
+                    let result = try jsonDecoder.decode(UserFiles.self, from: data)
                     callback(result.data, nil)
                 } catch let error {
                     print("Erreur de parsing", error)

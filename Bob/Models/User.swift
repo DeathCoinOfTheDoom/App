@@ -7,6 +7,7 @@
 //
 import Foundation
 
+// connection
 struct User: Codable {
     var id: String
     let attributes: UserAttr
@@ -32,9 +33,34 @@ struct UserFolderData: Codable {
     var attributes: UserFolderAttr
     //TODO FILES ARRAY
 }
-
 struct UserFolderAttr: Codable {
     var title: String
     var createdAt: String
     var updatedAt: String
+}
+
+// User files
+struct UserFiles: Codable {
+    var data: [UserFilesData]
+}
+struct UserFilesData: Codable {
+    var type: String
+    var id: String
+    var attributes: UserFilesAttr
+    var relationships: UserFilesRelationships
+}
+struct UserFilesAttr: Codable {
+    var url: String
+    var createdAt: String
+    var updatedAt: String
+}
+struct UserFilesRelationships: Codable {
+    var type: UserFilesRelationshipsType
+}
+struct UserFilesRelationshipsType: Codable {
+    var data: UserFilesRelationshipsTypeData
+}
+struct UserFilesRelationshipsTypeData: Codable {
+    var type: String
+    var id : String
 }

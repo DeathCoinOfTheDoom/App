@@ -12,6 +12,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     @IBOutlet weak var titleLabel: UILabel!
     
     lazy var categoryDetails = [CategoryDetailsData]()
+    lazy var userFiles = [UserFilesData]()
     var folderCategory:CategoryData?
     
     override func viewDidLoad() {
@@ -27,6 +28,9 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
                 self.categoryDetails.removeAll()
                 self.categoryDetails.append(contentsOf: categoryDetails)
                 self.detailsTableView.reloadData()
+            }
+            UserService.files(query: "user/2/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
+                print("userFiles", userFiles)
             }
         }
     }
@@ -66,8 +70,7 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! CategoryDetailsCell
-        print("self.categoryDetails[indexPath.row]", self.categoryDetails[indexPath.row])
+        let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "CategoryDetailsCell", for: indexPath) as! CategoryDetailsCell
         tableCell.categoryDetailsCellTitle.text = self.categoryDetails[indexPath.row].attributes.title
         tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
         tableCell.categoryDetailsCellIconBg.layer.cornerRadius = tableCell.categoryDetailsCellIconBg.frame.size.width/2

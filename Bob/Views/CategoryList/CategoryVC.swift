@@ -63,11 +63,11 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! CategoryCell
-        tableCell.titleTableCell.text = self.categoriesTab[indexPath.section].attributes.title
-        tableCell.descriptionTableCell.text = self.categoriesTab[indexPath.section].attributes.description
+        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryListCell", for: indexPath) as! CategoryCell
+        tableCell.titleCategoryCell.text = self.categoriesTab[indexPath.section].attributes.title
+        tableCell.descriptionCategoryCell.text = self.categoriesTab[indexPath.section].attributes.description
         let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!
-        tableCell.imageTableCell.af_setImage(withURL: urlImage)
+        tableCell.imageCategoryCell.af_setImage(withURL: urlImage)
         // style part
         tableCell.layer.cornerRadius = 8
         tableCell.clipsToBounds = true

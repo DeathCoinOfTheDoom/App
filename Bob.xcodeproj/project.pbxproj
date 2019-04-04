@@ -11,6 +11,8 @@
 		160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */; };
 		160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA32201AD21005DF133 /* CategoryCard.swift */; };
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
+		1612B8672254D91900314A4E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8662254D91900314A4E /* CategoryCell.swift */; };
+		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
 		1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0B223947ED00165029 /* UrlBuilder.swift */; };
 		1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0E22394ECE00165029 /* LoginLayer.swift */; };
@@ -32,7 +34,6 @@
 		576C5E4221FF658A0069CFBB /* BobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E4121FF658A0069CFBB /* BobUITests.swift */; };
 		576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5421FF679B0069CFBB /* PhoneStepVC.swift */; };
 		576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */; };
-		576C5E5A21FF68F10069CFBB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5921FF68F10069CFBB /* CategoryCell.swift */; };
 		576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */; };
 		576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */; };
 		576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5E6121FF6CF30069CFBB /* Folder.swift */; };
@@ -88,6 +89,8 @@
 		160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeTextField.swift; sourceTree = "<group>"; };
 		160BDCA32201AD21005DF133 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		1612B8662254D91900314A4E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		1681CD0B223947ED00165029 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		1681CD0E22394ECE00165029 /* LoginLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		576C5E4321FF658A0069CFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576C5E5421FF679B0069CFBB /* PhoneStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneStepVC.swift; sourceTree = "<group>"; };
 		576C5E5721FF67C90069CFBB /* AuthCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeVC.swift; sourceTree = "<group>"; };
-		576C5E5921FF68F10069CFBB /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedTextFieldValues.swift; sourceTree = "<group>"; };
 		576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		576C5E6121FF6CF30069CFBB /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
@@ -201,7 +203,7 @@
 		160BDCA02201A6AF005DF133 /* CategoryList */ = {
 			isa = PBXGroup;
 			children = (
-				576C5E5921FF68F10069CFBB /* CategoryCell.swift */,
+				1612B8662254D91900314A4E /* CategoryCell.swift */,
 				576C5E2021FF65870069CFBB /* CategoryVC.swift */,
 				160BDCA32201AD21005DF133 /* CategoryCard.swift */,
 			);
@@ -250,6 +252,7 @@
 				16EDFDE5221DAA5300A00F2A /* CategoryDetailsCard.swift */,
 				BCD2D2DA2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift */,
 				16E3749D2253A86100084CE1 /* CategoryDetailsVC.swift */,
+				1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */,
 			);
 			path = CategoryDetails;
 			sourceTree = "<group>";
@@ -681,10 +684,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1612B8672254D91900314A4E /* CategoryCell.swift in Sources */,
 				160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */,
 				BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */,
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
-				576C5E5A21FF68F10069CFBB /* CategoryCell.swift in Sources */,
 				BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */,
 				16E3749E2253A86100084CE1 /* CategoryDetailsVC.swift in Sources */,
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
@@ -701,6 +704,7 @@
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
 				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
+				1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */,
 				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,

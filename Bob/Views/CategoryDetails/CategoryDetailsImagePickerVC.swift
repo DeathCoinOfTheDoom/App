@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CategoryDetailsImagePickerVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     func chooseImage() {
      

@@ -37,7 +37,7 @@ class UserService {
             }
         }
     }
-    static func files(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFiles) {
+    static func getFiles(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFiles) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
             switch response.result {
@@ -56,6 +56,19 @@ class UserService {
                 print("Erreur de la requête")
                 // Erreur de la requête
                 callback([], error)
+            }
+        }
+    }
+    static func postFiles(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFiles, payload: UserPostFiles) {
+        let url = UrlBuilder.searchUrl(query: query)
+        if let imgData = payload.image.jpegData(compressionQuality: 0.2) {
+             let parameters = ["userId": payload.userId, "file_type_id": payload.fileTypeId, "file_input": imgData] as [String : Any]
+            Alamofire.upload(imgData, to: url, method: .post, headers: header)
+            .uploadProgress {
+                progress in print("the progress is", progress)
+            }
+            .responseJSON {
+                response in print("the response is", response)
             }
         }
     }

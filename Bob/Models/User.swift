@@ -6,6 +6,7 @@
 //  Copyright © 2019 Bob. All rights reserved.
 //
 import Foundation
+import UIKit
 
 // connection
 struct User: Codable {
@@ -63,4 +64,10 @@ struct UserFilesRelationshipsType: Codable {
 struct UserFilesRelationshipsTypeData: Codable {
     var type: String
     var id : String
+}
+// User Post files
+struct UserPostFiles {
+    var userId: String
+    var fileTypeId: String
+    var image: UIImage
 }

@@ -13,7 +13,6 @@
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
 		1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0B223947ED00165029 /* UrlBuilder.swift */; };
-		1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0E22394ECE00165029 /* LoginLayer.swift */; };
 		1681CD1122394F1F00165029 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD1022394F1F00165029 /* User.swift */; };
 		1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD12223962D500165029 /* HeaderBuilder.swift */; };
 		16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C632C4225204120060B326 /* QueryCallbackError.swift */; };
@@ -45,6 +44,8 @@
 		BC44EB6C2254F48500FFA096 /* FolderCreationResidencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44EB6B2254F48500FFA096 /* FolderCreationResidencyVC.swift */; };
 		BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A74562251FD1000204F70 /* OnboardingTitle.swift */; };
 		BC4A74592252420A00204F70 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4A74582252420A00204F70 /* Login.storyboard */; };
+		BC51001E225603C00066A2FB /* ProfilConsultationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51001D225603C00066A2FB /* ProfilConsultationVC.swift */; };
+		BC51002022563BCB0066A2FB /* ProfilUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51001F22563BCB0066A2FB /* ProfilUpdateVC.swift */; };
 		BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83B6EF2253B12E00424C24 /* FolderListVC.swift */; };
 		BC83B6F22253CD4000424C24 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC83B6F12253CD4000424C24 /* Folder.storyboard */; };
 		BC86A1552253ADA30070840E /* UserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86A1542253ADA30070840E /* UserLayer.swift */; };
@@ -68,6 +69,8 @@
 		BCF5F12C2241AA65007876C9 /* OnboardingContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12B2241AA65007876C9 /* OnboardingContentVC.swift */; };
 		BCF5F12E2241ACAA007876C9 /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12D2241ACAA007876C9 /* OnboardingPageVC.swift */; };
 		BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12F2241ADC9007876C9 /* OnboardingVC.swift */; };
+		BCFEFEA52255EE4C003B7A71 /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFEFEA42255EE4C003B7A71 /* Profil.storyboard */; };
+		BCFEFEA72255FC54003B7A71 /* UnchangeableInputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */; };
 		CD366D10A8B381059FA5B28E /* Pods_BobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A152C630B973A1249E0E8A /* Pods_BobUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +99,6 @@
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		1681CD0B223947ED00165029 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
-		1681CD0E22394ECE00165029 /* LoginLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
 		1681CD1022394F1F00165029 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1681CD12223962D500165029 /* HeaderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		16C632C4225204120060B326 /* QueryCallbackError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryCallbackError.swift; sourceTree = "<group>"; };
@@ -139,6 +141,8 @@
 		BC44EB6B2254F48500FFA096 /* FolderCreationResidencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreationResidencyVC.swift; sourceTree = "<group>"; };
 		BC4A74562251FD1000204F70 /* OnboardingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTitle.swift; sourceTree = "<group>"; };
 		BC4A74582252420A00204F70 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BC51001D225603C00066A2FB /* ProfilConsultationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilConsultationVC.swift; sourceTree = "<group>"; };
+		BC51001F22563BCB0066A2FB /* ProfilUpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilUpdateVC.swift; sourceTree = "<group>"; };
 		BC83B6EF2253B12E00424C24 /* FolderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListVC.swift; sourceTree = "<group>"; };
 		BC83B6F12253CD4000424C24 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
 		BC86A1542253ADA30070840E /* UserLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLayer.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		BCF5F12B2241AA65007876C9 /* OnboardingContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentVC.swift; sourceTree = "<group>"; };
 		BCF5F12D2241ACAA007876C9 /* OnboardingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
 		BCF5F12F2241ADC9007876C9 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		BCFEFEA42255EE4C003B7A71 /* Profil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
+		BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnchangeableInputLabel.swift; sourceTree = "<group>"; };
 		C104B1DAA414E2E1D004CFCF /* Pods-Bob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bob/Pods-Bob.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,7 +254,6 @@
 		1681CD0D22394EA500165029 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				1681CD0E22394ECE00165029 /* LoginLayer.swift */,
 				16F341D7223A9262003A35C4 /* CategoryLayer.swift */,
 				BC86A1542253ADA30070840E /* UserLayer.swift */,
 			);
@@ -305,6 +310,7 @@
 				BCF5F1292241A239007876C9 /* Onboarding.storyboard */,
 				BC4A74582252420A00204F70 /* Login.storyboard */,
 				BC83B6F12253CD4000424C24 /* Folder.storyboard */,
+				BCFEFEA42255EE4C003B7A71 /* Profil.storyboard */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 		576C5E4F21FF66B60069CFBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCFEFEA8225602D8003B7A71 /* Profil */,
 				BC83B6F32254A1FE00424C24 /* FolderCreation */,
 				BC83B6EC2253B0DF00424C24 /* FolderList */,
 				BC86A1562253AF740070840E /* Onboarding */,
@@ -456,8 +463,18 @@
 				1681CD082236ADBB00165029 /* Tip.swift */,
 				BC4A74562251FD1000204F70 /* OnboardingTitle.swift */,
 				BC44EB642254D1C800FFA096 /* ProgressBar.swift */,
+				BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BCFEFEA8225602D8003B7A71 /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				BC51001D225603C00066A2FB /* ProfilConsultationVC.swift */,
+				BC51001F22563BCB0066A2FB /* ProfilUpdateVC.swift */,
+			);
+			path = Profil;
 			sourceTree = "<group>";
 		};
 		C0F77A9A6C00C145E5A51CED /* Pods */ = {
@@ -589,6 +606,7 @@
 				BCCA5E24221D92D7003513F6 /* poppins-SemiBold.ttf in Resources */,
 				BC83B6F22253CD4000424C24 /* Folder.storyboard in Resources */,
 				BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */,
+				BCFEFEA52255EE4C003B7A71 /* Profil.storyboard in Resources */,
 				576C5E2921FF658A0069CFBB /* Assets.xcassets in Resources */,
 				BC4A74592252420A00204F70 /* Login.storyboard in Resources */,
 				576C5E2421FF65870069CFBB /* Main.storyboard in Resources */,
@@ -722,7 +740,6 @@
 				BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */,
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
-				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
 				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
@@ -733,11 +750,14 @@
 				1681CD1122394F1F00165029 /* User.swift in Sources */,
 				576C5E2121FF65870069CFBB /* CategoryVC.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
+				BC51001E225603C00066A2FB /* ProfilConsultationVC.swift in Sources */,
 				BC86A1552253ADA30070840E /* UserLayer.swift in Sources */,
 				BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				BC44EB6A2254F07500FFA096 /* FolderCreationJobVC.swift in Sources */,
+				BC51002022563BCB0066A2FB /* ProfilUpdateVC.swift in Sources */,
 				BC44EB652254D1C800FFA096 /* ProgressBar.swift in Sources */,
+				BCFEFEA72255FC54003B7A71 /* UnchangeableInputLabel.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,
 				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,

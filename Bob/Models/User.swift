@@ -7,16 +7,22 @@
 //
 import Foundation
 
-struct User: Codable {
-    var id: String
-    let attributes: UserAttr
+struct UserInfos: Codable {
+    var data: UserInfosData
 }
 
-struct UserAttr : Codable {
+struct UserInfosData: Codable {
+    var type: String
+    var id: String
+    var attributes: UserInfosAttr
+}
+
+struct UserInfosAttr: Codable {
     var phoneNumber: String
     var email: String
     var firstName: String
     var lastName: String
+    var birthdate: String
     var admin: String
     var createdAt: String
     var updatedAt: String

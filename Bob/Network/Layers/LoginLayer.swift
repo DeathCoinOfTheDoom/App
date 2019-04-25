@@ -9,14 +9,14 @@
 import Foundation
 import Alamofire
 
-typealias CallbackLoginValidation = (_ code: String, _ error: Error?) -> Void
+typealias CallbackLoginValidation = (_ code: Int, _ error: Error?) -> Void
 
 class LoginService {
     static func validation(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackLoginValidation) {
         let url = UrlBuilder.searchUrl(query: query)
         print("payload", payload)
         Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncoding.default, headers: header).responseJSON { response in
-            print(response.value)
+            callback(response.value as! Int, nil)
         }
     }
 }

@@ -15,7 +15,13 @@ class PhoneStepVc: UIInputViewController {
     @IBAction func phoneSendButton(_ sender: Any) {
         if let phoneValue = phoneInput.getFormattedPhoneNumber(format: .International) {
             LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneValue], header: HeaderBuilderBob.headers){ (phone, e) in
-                print("gouac",phone, e)
+                if e != nil {
+                    print("error", e!)
+                }
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                print("storyBoard", storyBoard)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "AuthCodeVC")
+                self.present(newViewController, animated: true, completion: nil)
             }
         }
     }

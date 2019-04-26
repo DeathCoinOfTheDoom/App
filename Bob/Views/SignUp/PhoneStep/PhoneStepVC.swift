@@ -10,18 +10,18 @@ import UIKit
 import PhoneNumberKit
 import FlagPhoneNumber
 
-class PhoneStepVc: UIInputViewController {
+class PhoneStepVc: KeyboardController {
     @IBOutlet weak var phoneInput: FPNTextField!
     @IBAction func phoneSendButton(_ sender: Any) {
         if let phoneValue = phoneInput.getFormattedPhoneNumber(format: .International) {
-            LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneValue], header: HeaderBuilderBob.headers){ (phone, e) in
+            self.view.endEditing(true)
+            LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneValue], header: HeaderBuilderBob.headers, phone: phoneValue){ (code, e) in
                 if e != nil {
                     print("error", e!)
                 }
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                print("storyBoard", storyBoard)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "AuthCodeVC")
-                self.present(newViewController, animated: true, completion: nil)
+                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthCodeVC") as! AuthCodeVC
+                nextVC.phoneNumber = phoneValue
+                self.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
     }
@@ -33,22 +33,6 @@ class PhoneStepVc: UIInputViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         setInputPreferences()
-    }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
-    }
-    override func dismissKeyboard() {
-        view.endEditing(true)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)

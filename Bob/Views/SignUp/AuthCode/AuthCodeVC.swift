@@ -8,7 +8,13 @@
 
 import UIKit
 
-class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
+class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
+    var phoneNumber : String = ""
+    
+    @IBAction func resendAuthCode(_ sender: Any) {
+        LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneNumber], header: HeaderBuilderBob.headers, phone: self.phoneNumber){ (code, e) in
+        }
+    }
     
     // index of the selected item in collectionOfTextField
     var actualStep = 0
@@ -20,8 +26,11 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
         increaseActualStep()
         inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
-            let test = codeConcatValues(inputValues: collectionOfTextField)
-            print("Envois du code", test)
+            let code = codeConcatValues(inputValues: collectionOfTextField)
+            LoginService.authCode(query: "/auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
+                print("user", user, "e", e)
+            }
+            print("Envois du code", code)
         }
     }
     func didPressBackspace(textField: AuthCodeTextField) {
@@ -50,8 +59,6 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionalStyle()
-        inputEnable(actualStep: actualStep)
-        let code = codeConcatValues(inputValues: collectionOfTextField)
         for item in collectionOfTextField {
             item.delegate = self
         }
@@ -59,10 +66,13 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     
     
     func inputEnable(actualStep: Int){
+        var actualStep = actualStep
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true
+                print("in")
                 collectionOfTextField[actualStep].becomeFirstResponder()
+                actualStep = index
             }
             else {
                 textField.isEnabled = false

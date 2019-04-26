@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0431643760406C739AC07136 /* Pods_Bob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4657F039091ACD2F5D8AEFD8 /* Pods_Bob.framework */; };
+		1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1608F3C6227204240074B6F3 /* KeyboardController.swift */; };
 		160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */; };
 		160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA32201AD21005DF133 /* CategoryCard.swift */; };
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
@@ -93,6 +94,7 @@
 /* Begin PBXFileReference section */
 		0E85B3BF5B9B7F5B4F05906F /* Pods_BobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7776081B8C46D28AE7C40A /* Pods-BobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1608F3C6227204240074B6F3 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeTextField.swift; sourceTree = "<group>"; };
 		160BDCA32201AD21005DF133 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */,
 				576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */,
+				1608F3C6227204240074B6F3 /* KeyboardController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				BC44EB6A2254F07500FFA096 /* FolderCreationJobVC.swift in Sources */,
 				BC44EB652254D1C800FFA096 /* ProgressBar.swift in Sources */,
+				1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,
 				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,

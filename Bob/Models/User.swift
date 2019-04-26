@@ -9,12 +9,18 @@ import Foundation
 import UIKit
 
 // connection
-struct User: Codable {
-    var id: String
-    let attributes: UserAttr
+struct UserAuth: Codable {
+    var token: String
+    let user: User
 }
 
-struct UserAttr : Codable {
+struct User : Codable {
+    var type : String
+    var id: String
+    var attributes: UserAttr
+}
+
+struct UserAttr: Codable {
     var phoneNumber: String
     var email: String
     var firstName: String

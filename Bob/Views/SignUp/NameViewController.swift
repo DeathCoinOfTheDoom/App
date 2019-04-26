@@ -22,6 +22,5 @@ class NameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var DestViewController: BirthdayViewController = segue.destination as! BirthdayViewController
         DestViewController.birthdayTitleText = FirstName.text!
-
     }
 }

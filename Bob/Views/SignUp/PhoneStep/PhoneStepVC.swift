@@ -1,11 +1,3 @@
-//
-//  stepOneVC.swift
-//  Bob
-//
-//  Created by Victor Lucas on 28/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 import PhoneNumberKit
 import FlagPhoneNumber
@@ -19,9 +11,11 @@ class PhoneStepVc: KeyboardController {
                 if e != nil {
                     print("error", e!)
                 }
-                let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthCodeVC") as! AuthCodeVC
-                nextVC.phoneNumber = phoneValue
-                self.navigationController?.pushViewController(nextVC, animated: true)
+                print("---------", code)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AuthCodeVC") as! AuthCodeVC
+                nextViewController.phoneNumber = phoneValue
+                self.present(nextViewController, animated:true, completion:nil)
             }
         }
     }

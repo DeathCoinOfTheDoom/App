@@ -18,7 +18,6 @@ class LaunchScreenVC: UIViewController {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
             let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
                 present(onboardingViewController, animated: true, completion: nil)
-            
         }
         
     }

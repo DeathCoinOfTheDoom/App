@@ -15,17 +15,17 @@ struct UserAuth: Codable {
 }
 
 struct User : Codable {
-    var type : String
+    var type: String
     var id: String
     var attributes: UserAttr
 }
 
 struct UserAttr: Codable {
     var phoneNumber: String
-    var email: String
-    var firstName: String
-    var lastName: String
-    var admin: String
+    var email: String?
+    var firstName: String?
+    var lastName: String?
+    var birthdate: Date?
     var createdAt: String
     var updatedAt: String
 }

@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0431643760406C739AC07136 /* Pods_Bob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4657F039091ACD2F5D8AEFD8 /* Pods_Bob.framework */; };
+		16089F3B227F7AA300023A11 /* AppInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16089F3A227F7AA300023A11 /* AppInit.swift */; };
 		1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1608F3C6227204240074B6F3 /* KeyboardController.swift */; };
+		1608F3C9227358DB0074B6F3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1608F3C8227358DB0074B6F3 /* Credential.swift */; };
 		160BDC9F2201A229005DF133 /* AuthCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */; };
 		160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA32201AD21005DF133 /* CategoryCard.swift */; };
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
 		1612B8672254D91900314A4E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8662254D91900314A4E /* CategoryCell.swift */; };
 		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
+		1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FA16227A3A19007A6559 /* TokenHelper.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
 		1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0B223947ED00165029 /* UrlBuilder.swift */; };
 		1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0E22394ECE00165029 /* LoginLayer.swift */; };
@@ -94,12 +97,15 @@
 /* Begin PBXFileReference section */
 		0E85B3BF5B9B7F5B4F05906F /* Pods_BobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7776081B8C46D28AE7C40A /* Pods-BobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobUITests/Pods-BobUITests.release.xcconfig"; sourceTree = "<group>"; };
+		16089F3A227F7AA300023A11 /* AppInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInit.swift; sourceTree = "<group>"; };
 		1608F3C6227204240074B6F3 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
+		1608F3C8227358DB0074B6F3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		160BDC9E2201A229005DF133 /* AuthCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeTextField.swift; sourceTree = "<group>"; };
 		160BDCA32201AD21005DF133 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		1612B8662254D91900314A4E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
+		1645FA16227A3A19007A6559 /* TokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		1681CD0B223947ED00165029 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		1681CD0E22394ECE00165029 /* LoginLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
@@ -199,6 +205,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16089F37227F7A4A00023A11 /* AppInit */ = {
+			isa = PBXGroup;
+			children = (
+				16089F3A227F7AA300023A11 /* AppInit.swift */,
+			);
+			path = AppInit;
+			sourceTree = "<group>";
+		};
 		160BDC9C2200A5AD005DF133 /* PhoneStep */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +262,7 @@
 				1681CD0D22394EA500165029 /* Layers */,
 				1681CD0B223947ED00165029 /* UrlBuilder.swift */,
 				1681CD12223962D500165029 /* HeaderBuilder.swift */,
+				1645FA16227A3A19007A6559 /* TokenHelper.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -338,6 +353,7 @@
 		576C5E4F21FF66B60069CFBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				16089F37227F7A4A00023A11 /* AppInit */,
 				BC83B6F32254A1FE00424C24 /* FolderCreation */,
 				BC83B6EC2253B0DF00424C24 /* FolderList */,
 				BC86A1562253AF740070840E /* Onboarding */,
@@ -366,6 +382,7 @@
 				1681CD1022394F1F00165029 /* User.swift */,
 				16F341D9223A98DB003A35C4 /* Category.swift */,
 				16C632C4225204120060B326 /* QueryCallbackError.swift */,
+				1608F3C8227358DB0074B6F3 /* Credential.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -730,11 +747,14 @@
 				16EDFDE6221DAA5300A00F2A /* CategoryDetailsCard.swift in Sources */,
 				BCF5F12E2241ACAA007876C9 /* OnboardingPageVC.swift in Sources */,
 				BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */,
+				1608F3C9227358DB0074B6F3 /* Credential.swift in Sources */,
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
 				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
 				1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */,
+				1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */,
 				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
+				16089F3B227F7AA300023A11 /* AppInit.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
 				1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */,

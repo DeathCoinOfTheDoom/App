@@ -14,6 +14,10 @@ class HeaderBuilderBob {
         "Content-Type": "application/json",
         "Accept": "application/json"
     ]
+    static var headersPut: HTTPHeaders = [
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json"
+    ]
     static func setToken(token: String){
         headers["Authorization"] = "Bearer \(token)"
     }

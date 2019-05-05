@@ -1,26 +1,22 @@
-//
-//  NameViewController.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 30/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class NameViewController: UIViewController {
-
+    var user: User?
+    var userToken : String?
     
-    @IBOutlet weak var FirstName: Input!
+    @IBOutlet weak var firstName: Input!
+    @IBOutlet weak var lastName: Input!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var DestViewController: BirthdayViewController = segue.destination as! BirthdayViewController
-        DestViewController.birthdayTitleText = FirstName.text!
+        let NextViewController: BirthdayViewController = segue.destination as! BirthdayViewController
+        if var user = user {
+            user.attributes.lastName = lastName.text!
+            user.attributes.firstName = firstName.text!
+            NextViewController.user = user
+        }
     }
 }

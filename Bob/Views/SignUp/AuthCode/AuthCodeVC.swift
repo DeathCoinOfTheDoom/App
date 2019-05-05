@@ -1,11 +1,3 @@
-//
-//  SetpTwo.swift
-//  Bob
-//
-//  Created by Victor Lucas on 28/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
@@ -20,18 +12,23 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     var actualStep = 0
     // events
     @IBOutlet weak var helpTip: UILabel!
-    @IBOutlet weak var resendAuthCode: UIButton!
     @IBOutlet var collectionOfTextField: Array<UITextField> = []
+    @IBOutlet weak var resendAuthButton: UIButton!
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
         inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
             let code = codeConcatValues(inputValues: collectionOfTextField)
-            LoginService.authCode(query: "/auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
-                print("user", user, "e", e)
+            LoginService.authCode(query: "auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
+                if let token = user?.token {
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+                    nextViewController.user = user?.user
+                    nextViewController.userToken = token
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
             }
-            print("Envois du code", code)
-        }
+        }   
     }
     func didPressBackspace(textField: AuthCodeTextField) {
         if (collectionOfTextField[actualStep].text == "") {
@@ -70,7 +67,6 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true
-                print("in")
                 collectionOfTextField[actualStep].becomeFirstResponder()
                 actualStep = index
             }
@@ -91,8 +87,8 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
         helpTip.font =  UIFont(name: Fonts.poppinsSemiBold, size: 14)
         helpTip.textColor = ColorConstant.Neutral.LIGHT
         // resendAuthCode
-        resendAuthCode.tintColor = ColorConstant.Primary.BASE
-        resendAuthCode.titleLabel?.textColor = ColorConstant.Primary.LIGHT
-        resendAuthCode.titleLabel?.font = UIFont(name: Fonts.poppinsSemiBold, size: 14)
+        resendAuthButton.tintColor = ColorConstant.Primary.BASE
+        resendAuthButton.titleLabel?.textColor = ColorConstant.Primary.LIGHT
+        resendAuthButton.titleLabel?.font = UIFont(name: Fonts.poppinsSemiBold, size: 14)
     }
 }

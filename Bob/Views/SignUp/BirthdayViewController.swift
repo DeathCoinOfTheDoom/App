@@ -13,8 +13,15 @@ class BirthdayViewController: UIViewController {
             "firstName": user.attributes.lastName!,
             "birthdate": user.attributes.birthdate!,
             ] as [String : Any]
-        UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headersPut) { (test, error) in
-            
+            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headersPut) { (userModified, error) in
+                if (error == nil) {
+                    print("error", error!)
+                }
+                else {
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UINavigationController
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
             }
         }
     }

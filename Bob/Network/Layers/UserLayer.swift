@@ -12,6 +12,7 @@ import Alamofire
 
 typealias CallbackUserFolders = (_ userFolder: [UserFolderData], _ error: Error?) -> Void
 typealias CallbackUserFiles = (_ userFiles: [UserFilesData], _ error: Error?) -> Void
+typealias CallbackUserEdition = (_ user: User?, _ error: Error?) -> Void
 
 class UserService {
     static func folders(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
@@ -72,7 +73,7 @@ class UserService {
             }
         }
     }
-    static func update(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackSignIn) {
+    static func update(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackUserEdition) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding.default, headers: header).responseData() { (response) in
             switch response.result {
@@ -80,7 +81,7 @@ class UserService {
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
-                    let result = try jsonDecoder.decode(UserAuth.self, from: data)
+                    let result = try jsonDecoder.decode(User.self, from: data)
                     print("result", result)
                     callback(result, nil)
                 } catch let error {

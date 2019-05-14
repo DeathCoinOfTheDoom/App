@@ -26,7 +26,6 @@ class BirthdayViewController: UIViewController {
         birthdayPicker.datePickerMode = UIDatePicker.Mode.date
         birthdayPicker.locale = Locale(identifier: "fr_FR")
         birthdayPicker.addTarget(self, action: #selector(BirthdayViewController.birthdayPickerValueChange(sender: )), for: UIControl.Event.valueChanged)
-        
         BirthdayPicker.inputView = birthdayPicker
     }
     

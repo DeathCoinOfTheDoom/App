@@ -16,6 +16,21 @@ struct UserInfosData: Codable {
     var id: String
     var attributes: UserInfosAttr
 }
+struct UserInfosAttrView: Codable {
+    var email: String
+    var firstName: String
+    var lastName: String
+    var birthdate: String
+    init(email: String,
+        firstName: String,
+        lastName: String,
+        birthdate: String) {
+        self.email = email
+        self.firstName = firstName
+        self.lastName = lastName
+        self.birthdate = birthdate
+    }
+}
 
 struct UserInfosAttr: Codable {
     var phoneNumber: String

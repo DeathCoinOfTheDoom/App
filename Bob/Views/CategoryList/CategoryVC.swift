@@ -16,15 +16,19 @@ class CategoryVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     lazy var categoriesTab = [CategoryData]()
+    lazy var userFiles = [UserFilesData]()
     let cellSpacingHeight: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HeaderBuilderBob.setToken(token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg2NzI5ZjcwYjgxOGI5MmU2ODVhMzJmMmI2YzY2ODI5MjQ0YjIwNmE2ZDI0MGJlY2QzOTM2YjJjOWNmNDAzMmUzNmY1NjMzYzRiODFhYWE0In0.eyJhdWQiOiIxIiwianRpIjoiODY3MjlmNzBiODE4YjkyZTY4NWEzMmYyYjZjNjY4MjkyNDRiMjA2YTZkMjQwYmVjZDM5MzZiMmM5Y2Y0MDMyZTM2ZjU2MzNjNGI4MWFhYTQiLCJpYXQiOjE1NTQzODExMTIsIm5iZiI6MTU1NDM4MTExMiwiZXhwIjoxNTg2MDAzNTEyLCJzdWIiOiIzMCIsInNjb3BlcyI6W119.HA4CG08yJQsPKwOfhZkyEDQq40efPHHffspNNpUXFnbnOcSrYzUiAg0uXj6WgY44QjlvDugyy63hk02vuYHdNUvkKOioHeLPFm_1ifLvSqnkjC79DMbVBFAzH-FIZYAQdZEEE2pPTcvCO40pVVmS1GAxlhgAujPoxsCy-ZNm3W7DYdg8JUYx83k5VKEDZOB75FKXsSJyX1cd7a4e65BnjfsOYopas0e36iwLp_oa1qHx1jNfA9xuvsMGiUuTps5ols6ok06I7MJaGUirLLw4IoUJLcpBuDdUoAjL32zLTo75e7ePWNRzp1q3LR9Vy0D3PfGPuIHvZDJZiWAGDCvy-S-rhMlzqNh5E68h6tqtGyP1padF0OLad5_n1YKwZ3JR4IK9OBhNzcXXwsuNkcreJIoxhQs_DGHt6J0w4JlQ3XE9HcFvyKD0LfoDFJq9HNgUh3QmDp2KEMjgbZ-eDrPuTd5y2k0dvtkV7B5VK1sF1QNUGIzqplOrkhe3G4K2ko3uUY1dc7elBeuXaxLmJpvraCxWUJleskN60PgvYrAl9A60OSpjM-E5q1r1hVUuYi2fQ-h-qzQrrhAab0AmfGweVzIveSHNEp2T7FtleXReEu1zB80CmtR9u9eKWwAZbR8YxNPYa6NKYxSWpBdfBebyaaHlkDHM1wgYbkOjzWyyF8k")
         CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
-            self.categoriesTab.removeAll()
-            self.categoriesTab.append(contentsOf: categories)
-            self.tableView.reloadData()
+            UserService.getFiles(query: "user/2/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
+                self.userFiles.append(contentsOf: userFiles)
+                self.categoriesTab.removeAll()
+                self.categoriesTab.append(contentsOf: categories)
+                self.tableView.reloadData()
+            }
         }
         self.styleFolderList()
         self.tableView.delegate = self
@@ -39,6 +43,17 @@ class CategoryVC: UIViewController {
         titleFolderList.font = UIFont(name: Fonts.poppinsBold, size: 22)
         titleFolderList.textColor = ColorConstant.Neutral.DARKEST
         subTitleFolderList.font = UIFont(name: Fonts.poppinsRegular, size: 14)
+    }
+    func determineProgression(index: Int) -> Float {
+        let total = self.categoriesTab[index].relationships.type.data.count
+        var counter = 0
+        self.userFiles.forEach { (userFileData) in
+            print(userFileData.relationships.type.data.id , self.categoriesTab[index].id)
+            if (userFileData.relationships.type.data.id == self.categoriesTab[index].id) {
+                counter = counter + 1
+            }
+        }
+        return Float(counter)/Float(total)
     }
 }
 
@@ -63,11 +78,14 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! FolderCell
-        tableCell.titleTableCell.text = self.categoriesTab[indexPath.section].attributes.title
-        tableCell.descriptionTableCell.text = self.categoriesTab[indexPath.section].attributes.description
+        let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryListCell", for: indexPath) as! CategoryCell
+        // set pregress of the UiProgressBar
+        tableCell.progressCategoryCell.progress = self.determineProgression(index: indexPath.section)
+        // dinamic content
+        tableCell.titleCategoryCell.text = self.categoriesTab[indexPath.section].attributes.title
+        tableCell.descriptionCategoryCell.text = self.categoriesTab[indexPath.section].attributes.description
         let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!
-        tableCell.imageTableCell.af_setImage(withURL: urlImage)
+        tableCell.imageCategoryCell.af_setImage(withURL: urlImage)
         // style part
         tableCell.layer.cornerRadius = 8
         tableCell.clipsToBounds = true
@@ -77,7 +95,8 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "CategoryDetails") as! CategoryDetailsVC
-        nextViewController.folderCategory = categoriesTab[indexPath.row]
+        print("indexPath.row", indexPath.row)
+        nextViewController.folderCategory = self.categoriesTab[indexPath.section]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

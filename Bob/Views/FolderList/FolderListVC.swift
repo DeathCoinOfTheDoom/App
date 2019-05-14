@@ -21,6 +21,7 @@ class FolderListVC: UIViewController {
 //        mainTableView.reloadData()
 //        mainTableView.setEmptyView(title: "cest vide", message: "vrmt vide")
 //    }
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     let cellIdentifier = "basic_cell_identifier"
@@ -56,12 +57,11 @@ extension FolderListVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.textLabel?.text = self.userFolders[indexPath.row].attributes.title
         return cell
     }
-    
-    
 }
 
 extension UITableView {
@@ -93,7 +93,6 @@ extension UITableView {
     
     func restore() {
         self.backgroundView = nil
-        self.separatorStyle = .singleLine
     }
     
    

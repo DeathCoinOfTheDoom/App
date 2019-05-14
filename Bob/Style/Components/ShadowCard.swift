@@ -1,14 +1,15 @@
 //
-//  FolderDetailsCard.swift
+//  TitleLabel.swift
 //  Bob
 //
-//  Created by Gérome Lacaux on 20/02/2019.
+//  Created by Isabelle Melchiori on 29/01/2019.
 //  Copyright © 2019 Bob. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class CategoryDetailsCard: UIView {
+class ShadowCard: UIControl {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         // style part

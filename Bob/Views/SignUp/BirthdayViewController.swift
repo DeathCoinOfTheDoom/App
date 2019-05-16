@@ -1,34 +1,58 @@
 import UIKit
 
 class BirthdayViewController: UIViewController {
+    // Infos from the previous VC
+    var user: User?
+    var userToken: String?
     // UI components
-    @IBOutlet weak var BirthdayPicker: UITextField!
-    @IBOutlet weak var BirthdayTitle: TitleLabel!
-    @IBAction func NextStepButton(_ sender: Any) {
+    @IBAction func endUserModification(_ sender: Any) {
         if let user = user {
-        let parameters = [
-            "phone_number": user.attributes.phoneNumber,
-            "email": user.attributes.email!,
-            "lastName": user.attributes.lastName!,
-            "firstName": user.attributes.lastName!,
-            "birthdate": user.attributes.birthdate!,
-            ] as [String : Any]
-            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headersPut) { (userModified, error) in
+            let parameters = [
+                "phone_number": user.attributes.phoneNumber,
+                "lastName": user.attributes.lastName!,
+                "firstName": user.attributes.firstName!,
+                "birthdate": user.attributes.birthdate!,
+                "_method": "put",
+                ] as [String : String]
+            HeaderBuilderBob.setTokenInHeader()
+            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headers) { (userModified, error) in
                 if (error == nil) {
                     print("error", error!)
                 }
                 else {
-                    print("userModified", userModified)
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UINavigationController
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
                     self.present(nextViewController, animated:true, completion:nil)
                 }
             }
         }
     }
-    // Infos from the previous VC
-    var user: User?
-    var userToken: String?
+    @IBOutlet weak var BirthdayPicker: UITextField!
+    @IBOutlet weak var BirthdayTitle: TitleLabel!
+    @IBAction func NextStepButton(_ sender: Any) {
+//        if let user = user {
+//        let parameters = [
+//            "phone_number": user.attributes.phoneNumber,
+//            "email": user.attributes.email!,
+//            "lastName": user.attributes.lastName!,
+//            "firstName": user.attributes.lastName!,
+//            "birthdate": user.attributes.birthdate!,
+//            ] as [String : Any]
+//            print("-----dans l'event")
+//            print("-----userID", user.id)
+//            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headersPut) { (userModified, error) in
+//                if (error == nil) {
+//                    print("error", error!)
+//                }
+//                else {
+//                    print("userModified", userModified)
+//                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UINavigationController
+//                    self.present(nextViewController, animated:true, completion:nil)
+//                }
+//            }
+//        }
+    }
     
     lazy var formatter = DateFormatter()
     
@@ -44,7 +68,9 @@ class BirthdayViewController: UIViewController {
     }
     
     @objc func birthdayPickerValueChange(sender: UIDatePicker) {
-        user?.attributes.birthdate = sender.date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        user?.attributes.birthdate = formatter.string(from: sender.date)
         formatter.dateStyle = DateFormatter.Style.long
         formatter.timeStyle = DateFormatter.Style.none
         formatter.locale = Locale(identifier: "fr_FR")

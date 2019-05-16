@@ -24,7 +24,6 @@ class CategoryVC: UIViewController {
         let localStorageInstance = LocalStorage()
         HeaderBuilderBob.setTokenInHeader()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        print("userId-----", userId)
         CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
             UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                 self.userFiles.append(contentsOf: userFiles)

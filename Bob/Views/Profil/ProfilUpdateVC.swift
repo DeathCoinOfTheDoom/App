@@ -24,18 +24,15 @@ class ProfilUpdateVC: UIViewController {
     }
     func sendUserchanges() {
         HeaderBuilderBob.setTokenInHeader()
-        let parameters = ["email": userEmailModif.text,"lastName": userLastNameModif.text,"firstName": userFirstNameModif.text,"birthdate": userBirthdayModif.text]
-        
-        UserService.postUserInfos(query: "user/2", payload: parameters, header: HeaderBuilderBob.headers) { (userInfos, e) in
+        let parameters = ["email": userEmailModif.text,"lastName": userLastNameModif.text,"firstName": userFirstNameModif.text,"birthdate": userBirthdayModif.text] as! [String: String]
+        let localStorageInstance = LocalStorage()
+        let id = localStorageInstance.getUserInfos(key: "id")
+        UserService.update(query: "user/\(id)", payload: parameters, header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
                 return
             }
-            
-            guard let userInfos = userInfos else {
-                print("no result found")
-                return
-            }
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

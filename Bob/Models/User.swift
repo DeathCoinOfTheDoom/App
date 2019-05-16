@@ -58,7 +58,7 @@ struct UserAttr: Codable {
     var email: String?
     var firstName: String?
     var lastName: String?
-    var birthdate: Date?
+    var birthdate: String?
     var createdAt: String
     var updatedAt: String
 }

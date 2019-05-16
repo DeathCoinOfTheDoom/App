@@ -9,13 +9,14 @@ class NameViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let NextViewController: BirthdayViewController = segue.destination as! BirthdayViewController
-        if var user = user {
-            user.attributes.lastName = lastName.text!
-            user.attributes.firstName = firstName.text!
-            NextViewController.user = user
+        if let destination = segue.destination as? BirthdayViewController {
+            if var user = user {
+                user.attributes.lastName = lastName.text!
+                user.attributes.firstName = firstName.text!
+                destination.user = user
+            }
         }
     }
+
 }

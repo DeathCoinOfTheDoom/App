@@ -34,12 +34,11 @@ struct UserInfosAttrView: Codable {
 }
 
 struct UserInfosAttr: Codable {
+    var birthdate: String
     var phoneNumber: String
-    var email: String
+    var email: String?
     var firstName: String
     var lastName: String
-    var birthdate: String
-    var admin: String
 }
 // connection
 struct UserAuth: Codable {

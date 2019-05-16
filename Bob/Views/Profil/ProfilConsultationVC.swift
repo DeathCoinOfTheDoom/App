@@ -19,12 +19,15 @@ class ProfilConsultationVC: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         HeaderBuilderBob.setTokenInHeader()
-        UserService.userInfos(query: "user/2", header: HeaderBuilderBob.headers) { (userInfos, e) in
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
+        print("userId-----", userId)
+        UserService.userInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
                 return
             }
-            
+            print("-----userInfos", userInfos)
             guard let userInfos = userInfos else {
                 print("no result found")
                 return
@@ -32,7 +35,7 @@ class ProfilConsultationVC: UIViewController {
             self.userInfos.lastName = userInfos.attributes.lastName
             self.userInfos.firstName = userInfos.attributes.firstName
             self.userInfos.birthdate = userInfos.attributes.birthdate
-            self.userInfos.email = userInfos.attributes.email
+            self.userInfos.email = userInfos.attributes.email ?? ""
             self.applyDataToView(userInfos: userInfos.attributes)
         }
     }

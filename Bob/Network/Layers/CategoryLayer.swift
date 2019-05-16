@@ -1,11 +1,3 @@
-//
-//  FolderLayer.swift
-//  Bob
-//
-//  Created by Gérome Lacaux on 14/03/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import AlamofireImage
@@ -27,12 +19,10 @@ class CategoryService {
                     callback(result.data, nil)
                 } catch let error {
                     print("Erreur de parsing", error)
-                    // Erreur de parsing
                     callback([], error)
                 }
             case .failure(let error) :
                 print("Erreur de la requête")
-                // Erreur de la requête
                 callback([], error)
             }
         }
@@ -49,12 +39,10 @@ class CategoryService {
                     callback(result.data, nil)
                 } catch let error {
                     print("Erreur de parsing", error)
-                    // Erreur de parsing
                     callback([], error)
                 }
             case .failure(let error) :
                 print("Erreur de la requête")
-                // Erreur de la requête
                 callback([], error)
             }
         }

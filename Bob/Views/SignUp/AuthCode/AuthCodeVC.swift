@@ -1,28 +1,36 @@
-//
-//  SetpTwo.swift
-//  Bob
-//
-//  Created by Victor Lucas on 28/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
-class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
+class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
+    var phoneNumber : String = ""
+    
+    @IBAction func resendAuthCode(_ sender: Any) {
+        LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneNumber], header: HeaderBuilderBob.headers, phone: self.phoneNumber){ (code, e) in
+        }
+    }
     
     // index of the selected item in collectionOfTextField
     var actualStep = 0
     // events
     @IBOutlet weak var helpTip: UILabel!
-    @IBOutlet weak var resendAuthCode: UIButton!
     @IBOutlet var collectionOfTextField: Array<UITextField> = []
+    @IBOutlet weak var resendAuthButton: UIButton!
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
         inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
-            let test = codeConcatValues(inputValues: collectionOfTextField)
-            print("Envois du code", test)
-        }
+            let code = codeConcatValues(inputValues: collectionOfTextField)
+            LoginService.authCode(query: "auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
+                if let token = user?.token {
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+                    let tokenInstance = TokenHelper()
+                    let localStorageInstance = LocalStorage()
+                    localStorageInstance.setUserId(id: (user!.user.id))
+                    tokenInstance.setToken(token: token)
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
+            }
+        }   
     }
     func didPressBackspace(textField: AuthCodeTextField) {
         if (collectionOfTextField[actualStep].text == "") {
@@ -50,8 +58,6 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionalStyle()
-        inputEnable(actualStep: actualStep)
-        let code = codeConcatValues(inputValues: collectionOfTextField)
         for item in collectionOfTextField {
             item.delegate = self
         }
@@ -59,10 +65,12 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
     
     
     func inputEnable(actualStep: Int){
+        var actualStep = actualStep
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true
                 collectionOfTextField[actualStep].becomeFirstResponder()
+                actualStep = index
             }
             else {
                 textField.isEnabled = false
@@ -81,8 +89,8 @@ class AuthCodeVC: UIViewController, AuthCodeTextFieldDelegate {
         helpTip.font =  UIFont(name: Fonts.poppinsSemiBold, size: 14)
         helpTip.textColor = ColorConstant.Neutral.LIGHT
         // resendAuthCode
-        resendAuthCode.tintColor = ColorConstant.Primary.BASE
-        resendAuthCode.titleLabel?.textColor = ColorConstant.Primary.LIGHT
-        resendAuthCode.titleLabel?.font = UIFont(name: Fonts.poppinsSemiBold, size: 14)
+        resendAuthButton.tintColor = ColorConstant.Primary.BASE
+        resendAuthButton.titleLabel?.textColor = ColorConstant.Primary.LIGHT
+        resendAuthButton.titleLabel?.font = UIFont(name: Fonts.poppinsSemiBold, size: 14)
     }
 }

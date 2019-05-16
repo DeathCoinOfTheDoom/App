@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-struct UserInfos: Codable {
-    var data: UserInfosData
-}
+ struct UserInfos: Codable {
+     var data: UserInfosData
+ }
 
-struct UserInfosData: Codable {
-    var type: String
-    var id: String
-    var attributes: UserInfosAttr
-}
+ struct UserInfosData: Codable {
+     var type: String
+     var id: String
+     var attributes: UserInfosAttr
+ }
 struct UserInfosAttrView: Codable {
     var email: String
     var firstName: String
@@ -40,6 +40,25 @@ struct UserInfosAttr: Codable {
     var lastName: String
     var birthdate: String
     var admin: String
+}
+// connection
+struct UserAuth: Codable {
+    var token: String
+    let user: User
+}
+
+struct User : Codable {
+    var type: String
+    var id: String
+    var attributes: UserAttr
+}
+
+struct UserAttr: Codable {
+    var phoneNumber: String
+    var email: String?
+    var firstName: String?
+    var lastName: String?
+    var birthdate: Date?
     var createdAt: String
     var updatedAt: String
 }

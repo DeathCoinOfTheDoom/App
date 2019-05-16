@@ -61,6 +61,7 @@
 		BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83B6EF2253B12E00424C24 /* FolderListVC.swift */; };
 		BC83B6F22253CD4000424C24 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC83B6F12253CD4000424C24 /* Folder.storyboard */; };
 		BC86A1552253ADA30070840E /* UserLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86A1542253ADA30070840E /* UserLayer.swift */; };
+		BC8E1A9F228D9C0300101694 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E1A9E228D9C0300101694 /* EmailVC.swift */; };
 		BCCA5E20221D92D7003513F6 /* poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */; };
 		BCCA5E21221D92D7003513F6 /* poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */; };
 		BCCA5E22221D92D7003513F6 /* poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCA5E1D221D92D6003513F6 /* poppins-Light.ttf */; };
@@ -172,6 +173,7 @@
 		BC83B6EF2253B12E00424C24 /* FolderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListVC.swift; sourceTree = "<group>"; };
 		BC83B6F12253CD4000424C24 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
 		BC86A1542253ADA30070840E /* UserLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLayer.swift; sourceTree = "<group>"; };
+		BC8E1A9E228D9C0300101694 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		BCCA5E1B221D92D6003513F6 /* poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Bold.ttf"; sourceTree = "<group>"; };
 		BCCA5E1C221D92D6003513F6 /* poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Medium.ttf"; sourceTree = "<group>"; };
 		BCCA5E1D221D92D6003513F6 /* poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				160BDC9C2200A5AD005DF133 /* PhoneStep */,
 				BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */,
 				BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */,
+				BC8E1A9E228D9C0300101694 /* EmailVC.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				1612B8672254D91900314A4E /* CategoryCell.swift in Sources */,
 				160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */,
 				BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */,
+				BC8E1A9F228D9C0300101694 /* EmailVC.swift in Sources */,
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
 				BC44EB6C2254F48500FFA096 /* FolderCreationResidencyVC.swift in Sources */,
 				BC44EB682254DA4000FFA096 /* FolderCreationTableViewCell.swift in Sources */,

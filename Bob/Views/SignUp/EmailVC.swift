@@ -1,20 +1,17 @@
+
 import UIKit
 
-class NameViewController: UIViewController {
+class EmailVC: UIViewController {
+    // UI components
     var user: User?
     
-    @IBOutlet weak var firstName: Input!
-    @IBOutlet weak var lastName: Input!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EmailVC {
             if var user = user {
-                user.attributes.lastName = lastName.text!
-                user.attributes.firstName = firstName.text!
+//                user.attributes.email = email.text!
                 destination.user = user
             }
         }

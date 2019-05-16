@@ -15,7 +15,7 @@ class AddFolderCell: UICollectionViewCell {
     // Méthode appelée lorsque la vue a été chargée depuis le Storyboard
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.backgroundColor = ColorConstant.Primary.LIGHTEST.cgColor
+        self.layer.backgroundColor = ColorConstant.Primary.LIGHTER.cgColor
         addButton.layer.backgroundColor = ColorConstant.Primary.LIGHT.cgColor
         print("width",addButton.frame.width)
         addButton.layer.cornerRadius = addButton.frame.width / 2

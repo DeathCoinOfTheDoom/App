@@ -12,7 +12,7 @@ import FlagPhoneNumber
 
 class PhoneStepVc: UIInputViewController {
     @IBOutlet weak var phoneInput: FPNTextField!
-    @IBAction func phoneSendButton(_ sender: Any) {
+    @IBAction func  phoneSendButton(_ sender: Any) {
         if let phoneValue = phoneInput.getFormattedPhoneNumber(format: .International) {
             LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneValue], header: HeaderBuilderBob.headers){ (phone, e) in
                 print("gouac",phone, e)

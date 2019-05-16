@@ -13,6 +13,11 @@
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
 		1612B8672254D91900314A4E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8662254D91900314A4E /* CategoryCell.swift */; };
 		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
+		1681A027228B1196007FD31C /* TypeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A025228B1196007FD31C /* TypeLayer.swift */; };
+		1681A028228B1196007FD31C /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A026228B1196007FD31C /* LoginLayer.swift */; };
+		1681A02A228B130E007FD31C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A029228B130E007FD31C /* LoginVC.swift */; };
+		1681A02C228B147D007FD31C /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */; };
+		1681A02E228B1498007FD31C /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02D228B1498007FD31C /* Type.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
 		1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD0B223947ED00165029 /* UrlBuilder.swift */; };
 		1681CD1122394F1F00165029 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD1022394F1F00165029 /* User.swift */; };
@@ -103,6 +108,11 @@
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		1612B8662254D91900314A4E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
+		1681A025228B1196007FD31C /* TypeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLayer.swift; sourceTree = "<group>"; };
+		1681A026228B1196007FD31C /* LoginLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
+		1681A029228B130E007FD31C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
+		1681A02D228B1498007FD31C /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		1681CD0B223947ED00165029 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		1681CD1022394F1F00165029 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -264,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				16F341D7223A9262003A35C4 /* CategoryLayer.swift */,
+				1681A026228B1196007FD31C /* LoginLayer.swift */,
+				1681A025228B1196007FD31C /* TypeLayer.swift */,
 				BC86A1542253ADA30070840E /* UserLayer.swift */,
 			);
 			path = Layers;
@@ -346,13 +358,13 @@
 		576C5E4F21FF66B60069CFBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BCFEFEA8225602D8003B7A71 /* Profil */,
-				BC83B6F32254A1FE00424C24 /* FolderCreation */,
-				BC83B6EC2253B0DF00424C24 /* FolderList */,
-				BC86A1562253AF740070840E /* Onboarding */,
 				16EDFDE2221DA7C600A00F2A /* CategoryDetails */,
 				160BDCA02201A6AF005DF133 /* CategoryList */,
+				BC83B6F32254A1FE00424C24 /* FolderCreation */,
+				BC83B6EC2253B0DF00424C24 /* FolderList */,
 				160BDCA52201EC95005DF133 /* LaunchScreen */,
+				BC86A1562253AF740070840E /* Onboarding */,
+				BCFEFEA8225602D8003B7A71 /* Profil */,
 				576C5E5621FF67A00069CFBB /* SignUp */,
 			);
 			path = Views;
@@ -370,10 +382,12 @@
 		576C5E5121FF66C30069CFBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				576C5E6121FF6CF30069CFBB /* Folder.swift */,
-				1681CD1022394F1F00165029 /* User.swift */,
+				1681A02D228B1498007FD31C /* Type.swift */,
+				1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */,
 				16F341D9223A98DB003A35C4 /* Category.swift */,
+				576C5E6121FF6CF30069CFBB /* Folder.swift */,
 				16C632C4225204120060B326 /* QueryCallbackError.swift */,
+				1681CD1022394F1F00165029 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +395,7 @@
 		576C5E5621FF67A00069CFBB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				1681A029228B130E007FD31C /* LoginVC.swift */,
 				160BDC9D2200A929005DF133 /* AuthCode */,
 				160BDC9C2200A5AD005DF133 /* PhoneStep */,
 				BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */,
@@ -465,17 +480,17 @@
 			isa = PBXGroup;
 			children = (
 				BCD2D2C82200894A00B528D1 /* FilledButton.swift */,
-				BCD2D2CC22008A2E00B528D1 /* OutlinedButton.swift */,
-				BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */,
-				BCD2D2D022008A9D00B528D1 /* InputLabel.swift */,
-				BCD2D2D222008AD100B528D1 /* Input.swift */,
 				BCD2D2D722008DFA00B528D1 /* IndicationLabel.swift */,
-				1681CD082236ADBB00165029 /* Tip.swift */,
+				BCD2D2D222008AD100B528D1 /* Input.swift */,
+				BCD2D2D022008A9D00B528D1 /* InputLabel.swift */,
 				BC4A74562251FD1000204F70 /* OnboardingTitle.swift */,
+				BCD2D2CC22008A2E00B528D1 /* OutlinedButton.swift */,
 				BC44EB642254D1C800FFA096 /* ProgressBar.swift */,
-				BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */,
-				BCE203932271BA1B00F2BC08 /* ShadowCard.swift */,
 				169DAE7A2257A334009A8B11 /* RoundedView.swift */,
+				BCE203932271BA1B00F2BC08 /* ShadowCard.swift */,
+				1681CD082236ADBB00165029 /* Tip.swift */,
+				BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */,
+				BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -742,6 +757,8 @@
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
 				BCD2D2DB2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift in Sources */,
 				BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */,
+				1681A028228B1196007FD31C /* LoginLayer.swift in Sources */,
+				1681A02C228B147D007FD31C /* AddCollectionViewCell.swift in Sources */,
 				16F341DA223A98DB003A35C4 /* Category.swift in Sources */,
 				BCD2D2D822008DFA00B528D1 /* IndicationLabel.swift in Sources */,
 				576C5E5521FF679B0069CFBB /* PhoneStepVC.swift in Sources */,
@@ -754,12 +771,12 @@
 				BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */,
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
-				1681CD0F22394ECE00165029 /* LoginLayer.swift in Sources */,
 				1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */,
 				16F341D8223A9262003A35C4 /* CategoryLayer.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
 				1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */,
+				1681A027228B1196007FD31C /* TypeLayer.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
 				160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */,
@@ -772,10 +789,12 @@
 				BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				BC44EB6A2254F07500FFA096 /* FolderCreationJobVC.swift in Sources */,
+				1681A02A228B130E007FD31C /* LoginVC.swift in Sources */,
 				BC51002022563BCB0066A2FB /* ProfilUpdateVC.swift in Sources */,
 				BC44EB652254D1C800FFA096 /* ProgressBar.swift in Sources */,
 				BCFEFEA72255FC54003B7A71 /* UnchangeableInputLabel.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,
+				1681A02E228B1498007FD31C /* Type.swift in Sources */,
 				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				1681CD092236ADBB00165029 /* Tip.swift in Sources */,

@@ -20,7 +20,8 @@ typealias CallbackUpdateProfile = (_ userInfos: UserInfosData? , _ error: Error?
 class UserService {
     static func userInfos(query: String, header: HTTPHeaders, callback: @escaping CallbackUserInfos) {
         let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .get, headers: header).responseData { (response) in
+        Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
+            print("responseJSON-----", response)
             switch response.result {
             case .success(let data) :
                 let jsonDecoder = JSONDecoder()

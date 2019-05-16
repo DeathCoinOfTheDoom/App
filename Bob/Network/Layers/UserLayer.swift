@@ -14,6 +14,7 @@ typealias CallbackUserFolders = (_ userFolder: [UserFolderData], _ error: Error?
 typealias CallbackUserFiles = (_ userFiles: [UserFilesData], _ error: Error?) -> Void
 
 typealias CallbackUserInfos = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
+typealias CallbackUpdateProfile = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 
 
 class UserService {
@@ -34,6 +35,18 @@ class UserService {
             case .failure(let error) :
                 callback(nil, error)
             }
+        }
+    }
+    static func postUserInfos(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackUpdateProfile) {
+        let url = UrlBuilder.searchUrl(query: query)
+        Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+            switch response.result {
+            case .success :
+                callback(response.value as? Int, nil)
+            case .failure(let error) :
+                callback(nil, error)
+            }
+            
         }
     }
     

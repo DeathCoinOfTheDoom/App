@@ -8,8 +8,10 @@
 import UIKit
 
 class FolderListVC: UIViewController {
-    
-//    @IBAction func fillAction(_ sender: Any) {
+    @IBAction func test(_ sender: Any) {
+        print("salut-------")
+    }
+    //    @IBAction func fillAction(_ sender: Any) {
 //        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
 //        mainTableView.reloadData()
 //        mainTableView.restore()

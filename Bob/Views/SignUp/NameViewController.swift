@@ -10,7 +10,7 @@ class NameViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BirthdayViewController {
+        if let destination = segue.destination as? EmailVC {
             if var user = user {
                 user.attributes.lastName = lastName.text!
                 user.attributes.firstName = firstName.text!

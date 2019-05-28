@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8lM-zS-Ctm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O7F-wK-RXm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oML-mN-r9q" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="577" width="327" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Envoyer le SMS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -292,7 +292,7 @@
                                 <rect key="frame" x="24" y="577" width="327" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="Mu4-dv-0Z2" kind="show" id="W7F-ZK-FDc"/>
+                                    <segue destination="Nve-qy-1KZ" kind="show" id="DAh-sG-cZE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Smith" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SXj-aM-yjd" customClass="Input" customModule="Bob" customModuleProvider="target">
@@ -392,7 +392,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec4-oP-hoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="125"/>
+            <point key="canvasLocation" x="2823" y="130"/>
+        </scene>
+        <!--EmailVC-->
+        <scene sceneID="b2k-1i-r8Y">
+            <objects>
+                <viewController id="Nve-qy-1KZ" customClass="EmailVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lzP-i0-ap3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quel est ton adresse mail ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-Pp-N8M" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="323" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse mail " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAi-bX-gi7" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="376" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="marie.curie@nobel.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-db-NFR" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="16" y="405" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJf-Hm-yhx" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="577" width="327" height="30"/>
+                                <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <segue destination="Mu4-dv-0Z2" kind="show" id="yXY-U3-LUc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Swa-db-NFR" firstAttribute="leading" secondItem="qTF-sU-zgm" secondAttribute="leading" constant="16" id="7ff-RB-YGr"/>
+                            <constraint firstItem="Swa-db-NFR" firstAttribute="top" secondItem="FAi-bX-gi7" secondAttribute="bottom" constant="8" id="AQU-4L-IHU"/>
+                            <constraint firstItem="qTF-sU-zgm" firstAttribute="trailing" secondItem="Swa-db-NFR" secondAttribute="trailing" constant="16" id="C1i-Vd-ETy"/>
+                            <constraint firstItem="Pnp-Pp-N8M" firstAttribute="centerX" secondItem="lzP-i0-ap3" secondAttribute="centerX" id="GAk-kb-wSI"/>
+                            <constraint firstItem="jJf-Hm-yhx" firstAttribute="leading" secondItem="qTF-sU-zgm" secondAttribute="leading" constant="24" id="Gjp-UV-lux"/>
+                            <constraint firstItem="FAi-bX-gi7" firstAttribute="leading" secondItem="qTF-sU-zgm" secondAttribute="leading" constant="16" id="Rzc-NV-mC6"/>
+                            <constraint firstItem="FAi-bX-gi7" firstAttribute="top" secondItem="Pnp-Pp-N8M" secondAttribute="bottom" constant="32" id="ggk-22-D9L"/>
+                            <constraint firstItem="Pnp-Pp-N8M" firstAttribute="centerY" secondItem="lzP-i0-ap3" secondAttribute="centerY" id="hgv-70-UBB"/>
+                            <constraint firstItem="qTF-sU-zgm" firstAttribute="bottom" secondItem="jJf-Hm-yhx" secondAttribute="bottom" constant="60" id="lfC-ul-gpe"/>
+                            <constraint firstItem="qTF-sU-zgm" firstAttribute="trailing" secondItem="jJf-Hm-yhx" secondAttribute="trailing" constant="24" id="pZI-Kp-Yja"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTF-sU-zgm"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailInput" destination="Swa-db-NFR" id="Mio-EG-dvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32j-68-0tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="125"/>
         </scene>
         <!--CategoryVC-->
         <scene sceneID="ZqA-My-THG">
@@ -1026,12 +1083,12 @@
     </scenes>
     <resources>
         <image name="Logo" width="191" height="140"/>
-        <image name="chevron_right" width="18" height="18"/>
-        <image name="folder-blue" width="25" height="25"/>
-        <image name="home-blue" width="25" height="25"/>
-        <image name="icon-folder" width="25" height="25"/>
-        <image name="icon-home" width="25" height="25"/>
-        <image name="icon-profile" width="25" height="25"/>
-        <image name="profil-blue" width="25" height="25"/>
+        <image name="chevron_right" width="36" height="36"/>
+        <image name="folder-blue" width="50" height="50"/>
+        <image name="home-blue" width="50" height="50"/>
+        <image name="icon-folder" width="50" height="50"/>
+        <image name="icon-home" width="50" height="50"/>
+        <image name="icon-profile" width="50" height="50"/>
+        <image name="profil-blue" width="50" height="50"/>
     </resources>
 </document>

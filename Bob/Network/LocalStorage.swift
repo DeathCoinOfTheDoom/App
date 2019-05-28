@@ -10,8 +10,8 @@ import Foundation
 
 class LocalStorage {
     let defaults = UserDefaults.standard
-    func setUserId(id: String) {
-        defaults.set(id, forKey: "id")
+    func setUserInfos(key: String, value: String) {
+        defaults.set(value, forKey: key)
     }
     func getUserInfos(key: String) -> String {
         return defaults.string(forKey: key) ?? ""

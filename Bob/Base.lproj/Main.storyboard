@@ -359,7 +359,7 @@
                                 <rect key="frame" x="24" y="577" width="327" height="30"/>
                                 <state key="normal" title="Terminer"/>
                                 <connections>
-                                    <action selector="NextStepButton:" destination="Mu4-dv-0Z2" eventType="touchUpInside" id="8Al-ID-ISa"/>
+                                    <action selector="endUserModification:" destination="Mu4-dv-0Z2" eventType="touchUpInside" id="65e-oz-MBV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de naissance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrI-Nz-x3c">

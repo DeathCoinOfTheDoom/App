@@ -16,7 +16,7 @@ class ProfilUpdateVC: UIViewController {
     @IBOutlet weak var userEmailModif: Input!
     @IBOutlet weak var userFirstNameModif: Input!
     @IBOutlet weak var userLastNameModif: Input!
-    var userAttrBeforeModif = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "")
+    var userAttrBeforeModif = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +24,21 @@ class ProfilUpdateVC: UIViewController {
     }
     func sendUserchanges() {
         HeaderBuilderBob.setTokenInHeader()
-        let parameters = ["email": userEmailModif.text,"lastName": userLastNameModif.text,"firstName": userFirstNameModif.text,"birthdate": userBirthdayModif.text]
-        
-        UserService.postUserInfos(query: "user/2", payload: parameters, header: HeaderBuilderBob.headers) { (userInfos, e) in
+        print("userAttrBeforeModif", userAttrBeforeModif)
+        let parameters = ["phone_number": userAttrBeforeModif.phoneNumber,
+                          "email": userEmailModif.text!,
+                          "lastName": userLastNameModif.text!,
+                          "firstName": userFirstNameModif.text!,
+                          "birthdate": userBirthdayModif.text!,
+                          "_method": "put"]
+        let localStorageInstance = LocalStorage()
+        let id = localStorageInstance.getUserInfos(key: "id")
+        UserService.postUserInfos(query: "user/\(id)", payload: parameters, header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
                 return
             }
-            
-            guard let userInfos = userInfos else {
-                print("no result found")
-                return
-            }
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

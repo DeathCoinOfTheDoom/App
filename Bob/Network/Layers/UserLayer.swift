@@ -12,16 +12,17 @@ import Alamofire
 
 typealias CallbackUserFolders = (_ userFolder: [UserFolderData], _ error: Error?) -> Void
 typealias CallbackUserFiles = (_ userFiles: [UserFilesData], _ error: Error?) -> Void
-typealias CallbackUserEdition = (_ user: User?, _ error: Error?) -> Void
+typealias CallbackUserEdition = (_ user: UserInfos?, _ error: Error?) -> Void
 
 typealias CallbackUserInfos = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 typealias CallbackUpdateProfile = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 
 
 class UserService {
-    static func userInfos(query: String, header: HTTPHeaders, callback: @escaping CallbackUserInfos) {
+    static func getUserInfos(query: String, header: HTTPHeaders, callback: @escaping CallbackUserInfos) {
         let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .get, headers: header).responseData { (response) in
+        Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
+            print("responseJSON-----", response)
             switch response.result {
             case .success(let data) :
                 let jsonDecoder = JSONDecoder()
@@ -38,22 +39,9 @@ class UserService {
             }
         }
     }
-    static func postUserInfos(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackUpdateProfile) {
-        let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding.default, headers: header).responseJSON { response in
-            switch response.result {
-            case .success :
-                    print("c'est le succées")
-//                callback(response.value as? Int, nil)
-            case .failure(let error) :
-                callback(nil, error)
-            }
-            
-        }
-    }
     
     
-    static func folders(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
+    static func getFolders(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
             switch response.result {
@@ -109,25 +97,26 @@ class UserService {
             }
         }
     }
-    static func update(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackUserEdition) {
+    static func postUserInfos(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackUserEdition) {
         let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .put, parameters: payload, encoding: JSONEncoding.default, headers: header).responseData() { (response) in
-            switch response.result {
-            case .success(let data) :
-                let jsonDecoder = JSONDecoder()
-                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                do {
-                    let result = try jsonDecoder.decode(User.self, from: data)
-                    print("result", result)
-                    callback(result, nil)
-                } catch let error {
-                    print("Erreur de parsing", error)
-                    callback(nil, error)
-                }
-            case .failure(let error) :
-                print("Erreur de la requête")
-                callback(nil, error)
-            }
+        Alamofire.request(url, method: .post, parameters: payload, encoding: JSONEncoding.default, headers: header).responseJSON() { (response) in
+            print("response----", response)
+//            switch response.result {
+//            case .success(let data) :
+//                let jsonDecoder = JSONDecoder()
+//                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+//                do {
+//                    let result = try jsonDecoder.decode(UserInfos.self, from: data)
+//                    print("result", result)
+//                    callback(result, nil)
+//                } catch let error {
+//                    print("Erreur de parsing", error)
+//                    callback(nil, error)
+//                }
+//            case .failure(let error) :
+//                print("Erreur de la requête")
+//                callback(nil, error)
+//            }
         }
     }
 }

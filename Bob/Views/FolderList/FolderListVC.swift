@@ -26,6 +26,19 @@ class FolderListVC: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
+//    @IBAction func fillAction(_ sender: Any) {
+//        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
+//        mainTableView.reloadData()
+//        mainTableView.restore()
+//
+//    }
+//    @IBAction func emptyAction(_ sender: Any) {
+//
+//        values.removeAll()
+//        mainTableView.reloadData()
+//        mainTableView.setEmptyView(title: "cest vide", message: "vrmt vide")
+//    }
+    
     let cellIdentifier = "basic_cell_identifier"
     
     lazy var userFolders = [UserFolderData]()
@@ -33,7 +46,7 @@ class FolderListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         HeaderBuilderBob.setTokenInHeader()
-        UserService.folders(query: "user/2/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+        UserService.getFolders(query: "user/2/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
                 self.mainTableView.reloadData()
@@ -43,7 +56,6 @@ class FolderListVC: UIViewController {
                 self.userFolders.append(contentsOf: userFolders)
                 self.mainTableView.reloadData()
                 self.mainTableView.restore()
-                
             }
         }
     }

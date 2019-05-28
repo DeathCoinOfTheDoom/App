@@ -1,11 +1,3 @@
-//
-//  NameViewController.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 30/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class ProfilConsultationVC: UIViewController {
@@ -14,25 +6,27 @@ class ProfilConsultationVC: UIViewController {
     @IBOutlet weak var emailProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var firstNameProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var lastNameProfilConsultation: UnchangeableInputLabel!
-    var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "")
+    var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         HeaderBuilderBob.setTokenInHeader()
-        UserService.userInfos(query: "user/2", header: HeaderBuilderBob.headers) { (userInfos, e) in
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
+        UserService.getUserInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
                 return
             }
-            
             guard let userInfos = userInfos else {
                 print("no result found")
                 return
             }
             self.userInfos.lastName = userInfos.attributes.lastName
+            self.userInfos.phoneNumber = userInfos.attributes.phoneNumber
             self.userInfos.firstName = userInfos.attributes.firstName
             self.userInfos.birthdate = userInfos.attributes.birthdate
-            self.userInfos.email = userInfos.attributes.email
+            self.userInfos.email = userInfos.attributes.email ?? ""
             self.applyDataToView(userInfos: userInfos.attributes)
         }
     }

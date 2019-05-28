@@ -15,7 +15,7 @@ class BirthdayViewController: UIViewController {
                 "_method": "put",
                 ] as [String : String]
             HeaderBuilderBob.setTokenInHeader()
-            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headers) { (userModified, error) in
+            UserService.postUserInfos(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headers) { (userModified, error) in
                 if (error == nil) {
                     print("error", error!)
                 }

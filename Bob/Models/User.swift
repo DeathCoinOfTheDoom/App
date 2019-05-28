@@ -22,14 +22,16 @@ struct UserInfosAttrView: Codable {
     var firstName: String
     var lastName: String
     var birthdate: String
+    var phoneNumber: String
     init(email: String,
         firstName: String,
         lastName: String,
-        birthdate: String) {
+        birthdate: String, phoneNumber: String) {
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
         self.birthdate = birthdate
+        self.phoneNumber = phoneNumber
     }
 }
 

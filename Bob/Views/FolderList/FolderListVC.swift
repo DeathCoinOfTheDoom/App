@@ -31,7 +31,7 @@ class FolderListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         HeaderBuilderBob.setTokenInHeader()
-        UserService.folders(query: "user/2/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+        UserService.getFolders(query: "user/2/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
                 self.mainTableView.reloadData()

@@ -14,25 +14,24 @@ class ProfilConsultationVC: UIViewController {
     @IBOutlet weak var emailProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var firstNameProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var lastNameProfilConsultation: UnchangeableInputLabel!
-    var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "")
+    var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        print("userId-----", userId)
-        UserService.userInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
+        UserService.getUserInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
                 return
             }
-            print("-----userInfos", userInfos)
             guard let userInfos = userInfos else {
                 print("no result found")
                 return
             }
             self.userInfos.lastName = userInfos.attributes.lastName
+            self.userInfos.phoneNumber = userInfos.attributes.phoneNumber
             self.userInfos.firstName = userInfos.attributes.firstName
             self.userInfos.birthdate = userInfos.attributes.birthdate
             self.userInfos.email = userInfos.attributes.email ?? ""

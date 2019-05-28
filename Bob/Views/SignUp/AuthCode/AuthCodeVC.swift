@@ -5,6 +5,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     
     @IBAction func resendAuthCode(_ sender: Any) {
         LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneNumber], header: HeaderBuilderBob.headers, phone: self.phoneNumber){ (code, e) in
+            print("code", code)
         }
     }
     
@@ -21,11 +22,23 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
             let code = codeConcatValues(inputValues: collectionOfTextField)
             LoginService.authCode(query: "auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
                 if let token = user?.token {
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
-                    nextViewController.user = user?.user
-                    nextViewController.userToken = token
-                    self.present(nextViewController, animated:true, completion:nil)
+                    let tokenInstance = TokenHelper()
+                    let localStorageInstance = LocalStorage()
+                    localStorageInstance.setUserInfos(key: "id", value: user!.user.id)
+                    tokenInstance.setToken(token: token)
+                    // is a new user
+                    if (user?.user.attributes.birthdate == nil) {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NameViewController") as! NameViewController
+                        nextViewController.user = user?.user
+                        self.present(nextViewController, animated:true, completion:nil)
+                    }
+                    // is a already knowned user
+                    else {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
+                        self.present(nextViewController, animated:true, completion:nil)
+                    }
                 }
             }
         }   

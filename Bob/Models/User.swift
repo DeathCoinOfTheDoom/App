@@ -8,6 +8,40 @@
 import Foundation
 import UIKit
 
+ struct UserInfos: Codable {
+     var data: UserInfosData
+ }
+
+ struct UserInfosData: Codable {
+     var type: String
+     var id: String
+     var attributes: UserInfosAttr
+ }
+struct UserInfosAttrView: Codable {
+    var email: String
+    var firstName: String
+    var lastName: String
+    var birthdate: String
+    var phoneNumber: String
+    init(email: String,
+        firstName: String,
+        lastName: String,
+        birthdate: String, phoneNumber: String) {
+        self.email = email
+        self.firstName = firstName
+        self.lastName = lastName
+        self.birthdate = birthdate
+        self.phoneNumber = phoneNumber
+    }
+}
+
+struct UserInfosAttr: Codable {
+    var birthdate: String
+    var phoneNumber: String
+    var email: String?
+    var firstName: String
+    var lastName: String
+}
 // connection
 struct UserAuth: Codable {
     var token: String
@@ -25,7 +59,7 @@ struct UserAttr: Codable {
     var email: String?
     var firstName: String?
     var lastName: String?
-    var birthdate: Date?
+    var birthdate: String?
     var createdAt: String
     var updatedAt: String
 }

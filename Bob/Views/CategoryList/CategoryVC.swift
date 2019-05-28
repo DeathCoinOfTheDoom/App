@@ -21,9 +21,11 @@ class CategoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let localStorageInstance = LocalStorage()
         HeaderBuilderBob.setTokenInHeader()
+        let userId = localStorageInstance.getUserInfos(key: "id")
         CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
-            UserService.getFiles(query: "user/2/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
+            UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                 self.userFiles.append(contentsOf: userFiles)
                 self.categoriesTab.removeAll()
                 self.categoriesTab.append(contentsOf: categories)

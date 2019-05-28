@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mu4-dv-0Z2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5o-sO-alX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -359,7 +359,7 @@
                                 <rect key="frame" x="24" y="577" width="327" height="30"/>
                                 <state key="normal" title="Terminer"/>
                                 <connections>
-                                    <action selector="NextStepButton:" destination="Mu4-dv-0Z2" eventType="touchUpInside" id="8Al-ID-ISa"/>
+                                    <action selector="endUserModification:" destination="Mu4-dv-0Z2" eventType="touchUpInside" id="65e-oz-MBV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de naissance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrI-Nz-x3c">
@@ -684,7 +684,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="iRG-az-lfE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8lM-zS-Ctm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTBVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8lM-zS-Ctm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cfy-vu-YSf">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -737,6 +737,14 @@
                                     <segue destination="Ujm-Lr-ifm" kind="show" id="VWU-r2-3bq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-wI-Sm1">
+                                <rect key="frame" x="169" y="289" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profil"/>
+                                <connections>
+                                    <segue destination="RZ7-Xg-b5O" kind="show" id="Js8-40-HWt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.76862745099999996" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -758,6 +766,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtJ-0k-a4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6574" y="513"/>
+        </scene>
+        <!--Profil-->
+        <scene sceneID="JKs-5q-ta0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Profil" storyboardName="Profil" id="RZ7-Xg-b5O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hv-bd-CpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6437" y="684"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fnf-bT-ze1">

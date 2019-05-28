@@ -4,14 +4,14 @@ import FlagPhoneNumber
 
 class PhoneStepVc: KeyboardController {
     @IBOutlet weak var phoneInput: FPNTextField!
-    @IBAction func phoneSendButton(_ sender: Any) {
+    @IBAction func  phoneSendButton(_ sender: Any) {
         if let phoneValue = phoneInput.getFormattedPhoneNumber(format: .International) {
             self.view.endEditing(true)
             LoginService.validation(query: "auth/sms", payload: ["phone_num": phoneValue], header: HeaderBuilderBob.headers, phone: phoneValue){ (code, e) in
                 if e != nil {
                     print("error", e!)
                 }
-                print("---------", code)
+                print("code", code)
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AuthCodeVC") as! AuthCodeVC
                 nextViewController.phoneNumber = phoneValue

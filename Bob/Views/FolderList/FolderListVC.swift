@@ -8,8 +8,10 @@
 import UIKit
 
 class FolderListVC: UIViewController {
-    
-//    @IBAction func fillAction(_ sender: Any) {
+    @IBAction func test(_ sender: Any) {
+        print("salut-------")
+    }
+    //    @IBAction func fillAction(_ sender: Any) {
 //        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
 //        mainTableView.reloadData()
 //        mainTableView.restore()
@@ -23,6 +25,19 @@ class FolderListVC: UIViewController {
 //    }
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+//    @IBAction func fillAction(_ sender: Any) {
+//        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
+//        mainTableView.reloadData()
+//        mainTableView.restore()
+//
+//    }
+//    @IBAction func emptyAction(_ sender: Any) {
+//
+//        values.removeAll()
+//        mainTableView.reloadData()
+//        mainTableView.setEmptyView(title: "cest vide", message: "vrmt vide")
+//    }
     
     let cellIdentifier = "basic_cell_identifier"
     
@@ -41,7 +56,6 @@ class FolderListVC: UIViewController {
                 self.userFolders.append(contentsOf: userFolders)
                 self.mainTableView.reloadData()
                 self.mainTableView.restore()
-                
             }
         }
     }

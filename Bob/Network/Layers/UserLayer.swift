@@ -17,6 +17,7 @@ typealias CallbackUserEdition = (_ user: UserInfos?, _ error: Error?) -> Void
 typealias CallbackUserInfos = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 typealias CallbackUpdateProfile = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 
+
 class UserService {
     static func getUserInfos(query: String, header: HTTPHeaders, callback: @escaping CallbackUserInfos) {
         let url = UrlBuilder.searchUrl(query: query)

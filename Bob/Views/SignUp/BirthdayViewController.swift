@@ -20,6 +20,7 @@ class BirthdayViewController: UIViewController {
                     print("error", error!)
                 }
                 else {
+                    print("userModified", userModified)
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
                     self.present(nextViewController, animated:true, completion:nil)

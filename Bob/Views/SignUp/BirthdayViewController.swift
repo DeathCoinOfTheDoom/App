@@ -59,7 +59,7 @@ class BirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BirthdayTitle.text = "Quelle est votre date de naissance \(user?.attributes.lastName ?? "") ?"
+        BirthdayTitle.text = "Dernière étape ! \n Quel est votre e-mail \(user?.attributes.lastName ?? "") ?"
         
         let birthdayPicker = UIDatePicker()
         birthdayPicker.datePickerMode = UIDatePicker.Mode.date

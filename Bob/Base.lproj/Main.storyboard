@@ -49,46 +49,7 @@
                                                         <attributes>
                                                             <color key="NSColor" red="0.33333000000000002" green="0.30196000000000001" blue="0.33724999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -306,11 +267,11 @@
                     <connections>
                         <outlet property="helpTip" destination="ppu-zQ-DuR" id="H8G-Hb-mTU"/>
                         <outlet property="resendAuthButton" destination="sAQ-Ye-NW0" id="tEa-55-gwO"/>
-                        <outletCollection property="collectionOfTextField" destination="Trc-Lj-ufi" collectionClass="NSMutableArray" id="4Wu-QH-aoK"/>
-                        <outletCollection property="collectionOfTextField" destination="XLl-3X-VUK" collectionClass="NSMutableArray" id="d7s-8b-WyN"/>
-                        <outletCollection property="collectionOfTextField" destination="Cbv-Cw-2ug" collectionClass="NSMutableArray" id="60C-oo-IHJ"/>
                         <outletCollection property="collectionOfTextField" destination="rA8-N2-3Ai" collectionClass="NSMutableArray" id="0fu-lp-UgD"/>
                         <outletCollection property="collectionOfTextField" destination="GOZ-sq-WnS" collectionClass="NSMutableArray" id="y3Q-yJ-B7Q"/>
+                        <outletCollection property="collectionOfTextField" destination="Cbv-Cw-2ug" collectionClass="NSMutableArray" id="60C-oo-IHJ"/>
+                        <outletCollection property="collectionOfTextField" destination="Trc-Lj-ufi" collectionClass="NSMutableArray" id="4Wu-QH-aoK"/>
+                        <outletCollection property="collectionOfTextField" destination="XLl-3X-VUK" collectionClass="NSMutableArray" id="d7s-8b-WyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfw-Kl-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,7 +525,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voici vos premiers dossiers !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdM-kb-nWR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bienvenue dans votre espace !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdM-kb-nWR" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="132" width="327" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -607,7 +568,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Ici vous pouvez trouver tout vos documents nécessaires" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-y6-pud">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Ici vous pouvez trouver tout vos documents nécessaires" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-y6-pud" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="22.5" width="191" height="33.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
@@ -681,6 +642,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gkn-rk-D1d"/>
                     <connections>
+                        <outlet property="homeTitle" destination="uGu-WY-V4M" id="ahY-VP-pt3"/>
                         <outlet property="subTitleFolderList" destination="LdM-kb-nWR" id="p29-SX-M8y"/>
                         <outlet property="tableView" destination="56h-TY-JW6" id="HuX-Tf-l5n"/>
                         <outlet property="titleFolderList" destination="uGu-WY-V4M" id="24t-fy-JMw"/>
@@ -698,33 +660,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lga-qK-DzL">
-                                <rect key="frame" x="24" y="44" width="32" height="32"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-Nu-E7T">
-                                        <rect key="frame" x="5" y="5" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="2tT-gU-ChQ"/>
-                                            <constraint firstAttribute="height" constant="22" id="31i-ka-sh9"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.026851819200000002" green="1" blue="0.94382401230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="b9K-Nu-E7T" firstAttribute="centerY" secondItem="lga-qK-DzL" secondAttribute="centerY" id="HzX-g5-lQh"/>
-                                    <constraint firstAttribute="width" constant="32" id="bm0-5e-2b1"/>
-                                    <constraint firstItem="b9K-Nu-E7T" firstAttribute="centerX" secondItem="lga-qK-DzL" secondAttribute="centerX" id="k1F-Qi-KfO"/>
-                                    <constraint firstAttribute="height" constant="32" id="kmp-aJ-jJL"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-GN-Rrb" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="68" y="44" width="283" height="32"/>
+                                <rect key="frame" x="24" y="44" width="327" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="10v-xd-7e7">
-                                <rect key="frame" x="0.0" y="184.5" width="375" height="482.5"/>
+                                <rect key="frame" x="0.0" y="181.5" width="375" height="485.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryDetailsCell" rowHeight="92" id="mS2-ye-DLV" customClass="CategoryDetailsCell" customModule="Bob" customModuleProvider="target">
@@ -792,8 +735,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFt-Ya-EHB">
-                                <rect key="frame" x="24" y="84" width="327" height="84.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFt-Ya-EHB" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="81" width="327" height="84.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
@@ -808,25 +751,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bFt-Ya-EHB" firstAttribute="top" secondItem="lga-qK-DzL" secondAttribute="bottom" constant="8" id="A5D-WV-A6X"/>
                             <constraint firstItem="10v-xd-7e7" firstAttribute="top" secondItem="bFt-Ya-EHB" secondAttribute="bottom" constant="16" id="CU9-Lf-K67"/>
+                            <constraint firstItem="K3B-GN-Rrb" firstAttribute="leading" secondItem="QEs-de-LGg" secondAttribute="leading" constant="24" id="DC4-bd-nvW"/>
                             <constraint firstItem="QEs-de-LGg" firstAttribute="bottom" secondItem="10v-xd-7e7" secondAttribute="bottom" id="EP5-Xr-KUc"/>
                             <constraint firstAttribute="trailing" secondItem="bFt-Ya-EHB" secondAttribute="trailing" constant="24" id="Fh7-39-8KH"/>
                             <constraint firstItem="QEs-de-LGg" firstAttribute="trailing" secondItem="K3B-GN-Rrb" secondAttribute="trailing" constant="24" id="LFp-zA-wzS"/>
                             <constraint firstItem="bFt-Ya-EHB" firstAttribute="leading" secondItem="QEs-de-LGg" secondAttribute="leading" constant="24" id="MvN-aE-cfH"/>
-                            <constraint firstItem="lga-qK-DzL" firstAttribute="leading" secondItem="QEs-de-LGg" secondAttribute="leading" constant="24" id="T5E-uH-DtD"/>
+                            <constraint firstItem="QEs-de-LGg" firstAttribute="trailing" secondItem="K3B-GN-Rrb" secondAttribute="trailing" constant="24" id="b5c-35-C1c"/>
                             <constraint firstItem="10v-xd-7e7" firstAttribute="leading" secondItem="QEs-de-LGg" secondAttribute="leading" id="dGz-NJ-qw2"/>
-                            <constraint firstItem="K3B-GN-Rrb" firstAttribute="leading" secondItem="lga-qK-DzL" secondAttribute="trailing" constant="12" id="ehr-k6-UH7"/>
                             <constraint firstItem="bFt-Ya-EHB" firstAttribute="top" secondItem="K3B-GN-Rrb" secondAttribute="bottom" constant="8" id="g6i-ot-14S"/>
                             <constraint firstItem="QEs-de-LGg" firstAttribute="trailing" secondItem="10v-xd-7e7" secondAttribute="trailing" id="hwY-QM-M4P"/>
-                            <constraint firstItem="lga-qK-DzL" firstAttribute="top" secondItem="QEs-de-LGg" secondAttribute="top" constant="24" id="rdO-M6-a98"/>
                             <constraint firstItem="K3B-GN-Rrb" firstAttribute="top" secondItem="QEs-de-LGg" secondAttribute="top" constant="24" id="zqd-H6-QB7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QEs-de-LGg"/>
                     </view>
                     <connections>
-                        <outlet property="completeIcon" destination="lga-qK-DzL" id="SsB-tw-tDi"/>
-                        <outlet property="completeIconImage" destination="b9K-Nu-E7T" id="whV-dK-ckU"/>
                         <outlet property="descriptionFolderDetails" destination="bFt-Ya-EHB" id="PJ7-yR-4om"/>
                         <outlet property="detailsTableView" destination="10v-xd-7e7" id="9Lu-md-zjm"/>
                         <outlet property="titleFolderDetails" destination="K3B-GN-Rrb" id="gIL-fc-nW3"/>

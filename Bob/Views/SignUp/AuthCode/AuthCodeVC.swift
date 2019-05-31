@@ -17,7 +17,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     @IBOutlet weak var resendAuthButton: UIButton!
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
-//        inputEnable(actualStep: actualStep)
+        inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
             let code = codeConcatValues(inputValues: collectionOfTextField)
             LoginService.authCode(query: "auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
@@ -33,7 +33,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
                         nextViewController.user = user?.user
                         self.present(nextViewController, animated:true, completion:nil)
                     }
-                    // is a already knowned user
+                        // is a already knowned user
                     else {
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
@@ -41,7 +41,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
                     }
                 }
             }
-        }   
+        }
     }
     func didPressBackspace(textField: AuthCodeTextField) {
         if (collectionOfTextField[actualStep].text == "") {

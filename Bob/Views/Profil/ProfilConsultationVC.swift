@@ -9,7 +9,7 @@ class ProfilConsultationVC: UIViewController {
     var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")

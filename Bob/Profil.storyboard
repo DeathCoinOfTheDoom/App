@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profil ConsultationVC-->
+        <!--Mon profil-->
         <scene sceneID="wyM-tL-GXr">
             <objects>
-                <viewController id="kJk-X2-XJS" customClass="ProfilConsultationVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mon profil" id="kJk-X2-XJS" customClass="ProfilConsultationVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbw-pm-h0r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qaY-aG-bba"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JW6-iv-mmf"/>
+                    <navigationItem key="navigationItem" title="Mon profil" id="JW6-iv-mmf"/>
                     <connections>
                         <outlet property="birthdayProfilConsultation" destination="al7-re-nK2" id="ofW-Lg-MEO"/>
                         <outlet property="emailProfilConsultation" destination="CtB-E0-RoI" id="WPC-Ps-JTt"/>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1137.68115942029" y="-37.5"/>
         </scene>
-        <!--Profil UpdateVC-->
+        <!--Modifier mon profil-->
         <scene sceneID="15S-Yo-5XP">
             <objects>
-                <viewController restorationIdentifier="UserProfileEdition" storyboardIdentifier="UserProfileEdition" id="uCY-pE-9Hl" customClass="ProfilUpdateVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="UserProfileEdition" storyboardIdentifier="UserProfileEdition" title="Modifier mon profil" id="uCY-pE-9Hl" customClass="ProfilUpdateVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2cW-IU-ltD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,38 +147,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-e6-eGm" customClass="Input" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="494" width="366" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-e6-eGm" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="455" width="366" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svd-wv-bYr" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="299" width="366" height="21"/>
+                                <rect key="frame" x="24" y="286" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-3I-M7a" customClass="Input" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="245" width="366" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-3I-M7a" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="245" width="366" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHs-cX-vfd" customClass="Input" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="328" width="366" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHs-cX-vfd" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="315" width="366" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fA-3t-UjL" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="382" width="366" height="21"/>
+                                <rect key="frame" x="24" y="356" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49j-Jh-dFX" customClass="Input" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="411" width="366" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49j-Jh-dFX" customClass="Input" customModule="Bob" customModuleProvider="target">
+                                <rect key="frame" x="24" y="385" width="366" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -191,7 +191,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de naissance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyq-AF-XMe" customClass="InputLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="465" width="366" height="21"/>
+                                <rect key="frame" x="24" y="426" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

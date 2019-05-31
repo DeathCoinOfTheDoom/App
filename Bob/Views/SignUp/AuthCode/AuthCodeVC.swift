@@ -17,7 +17,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     @IBOutlet weak var resendAuthButton: UIButton!
     @IBAction func onChangeInput(_ sender: AnyObject) {
         increaseActualStep()
-        inputEnable(actualStep: actualStep)
+//        inputEnable(actualStep: actualStep)
         if (checkFieldsAreFull()) {
             let code = codeConcatValues(inputValues: collectionOfTextField)
             LoginService.authCode(query: "auth/login", payload: ["token": code], header: HeaderBuilderBob.headers) { (user, e) in
@@ -56,6 +56,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
         }
     }
     func increaseActualStep() {
+        print("actual increase", actualStep)
         if (actualStep <= collectionOfTextField.count) {
             actualStep += 1
         }
@@ -77,6 +78,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     
     func inputEnable(actualStep: Int){
         var actualStep = actualStep
+        print("actual enable", actualStep)
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true

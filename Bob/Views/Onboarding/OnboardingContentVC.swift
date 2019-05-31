@@ -14,7 +14,7 @@ class OnboardingContentVC: UIViewController {
     
     @IBOutlet var headingLabel: UILabel! {
         didSet {
-            headingLabel.numberOfLines = 2
+            headingLabel.numberOfLines = 4
         }
     }
     
@@ -34,6 +34,8 @@ class OnboardingContentVC: UIViewController {
         
         headingLabel.text = heading
         contentImageView.image = UIImage(named: imageFile)
+        let screenSize: CGRect = UIScreen.main.bounds
+        contentImageView.frame = CGRect(x: 0, y: 0, width: 50, height: screenSize.height * 0.2)
     }
     
     

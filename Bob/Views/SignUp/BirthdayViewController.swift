@@ -12,12 +12,13 @@ class BirthdayViewController: UIViewController {
                 "lastName": user.attributes.lastName!,
                 "firstName": user.attributes.firstName!,
                 "birthdate": user.attributes.birthdate!,
+                "email": user.attributes.email!,
                 "_method": "put",
                 ] as [String : String]
             HeaderBuilderBob.setTokenInHeader()
             UserService.postUserInfos(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headers) { (userModified, error) in
-                if (error == nil) {
-                    print("error", error!)
+                if (error != nil) {
+                    print("error", error)
                 }
                 else {
                     print("userModified", userModified)
@@ -59,7 +60,7 @@ class BirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BirthdayTitle.text = "Quelle est votre date de naissance \(user?.attributes.lastName ?? "") ?"
+        BirthdayTitle.text = "Dernière étape ! \n Quelle est votre date de naissance \(user?.attributes.firstName ?? "") ?"
         
         let birthdayPicker = UIDatePicker()
         birthdayPicker.datePickerMode = UIDatePicker.Mode.date

@@ -8,15 +8,20 @@
 import UIKit
 
 class FolderCreationNameVC: UIViewController {
-    
+    @IBAction func buttonFolderName(_ sender: Any) {
+        if (inputFolderName.text!.count > 0) {
+            let localStorageInstance = LocalStorage()
+            let userId = localStorageInstance.getUserInfos(key: "id")
+            FolderService.creation(query: "folder", payload: ["user_id": userId, "title": inputFolderName.text!], header: HeaderBuilderBob.headers){ (folder, e) in
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Folder", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FolderCreationIdentity") as! FolderCreationIdentityVC
+                nextViewController.title = folder?.data.attributes.title
+                self.present(nextViewController, animated:true, completion:nil)
+            }
+        }
+    }
+    @IBOutlet weak var inputFolderName: Input!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
-
-
-/*
- // MARK: - Navigation
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */

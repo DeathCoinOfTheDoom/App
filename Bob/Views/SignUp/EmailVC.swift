@@ -19,7 +19,6 @@ class EmailVC: UIViewController {
         if let destination = segue.destination as? BirthdayViewController {
             if var user = user {
                 user.attributes.email = emailInput.text!
-                print("user----", user)
                 destination.user = user
             }
         }

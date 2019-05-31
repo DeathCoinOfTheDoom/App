@@ -8,6 +8,7 @@
 import UIKit
 
 class FolderCreationIdentityVC: UIViewController {
+    var folderTitle: String?
     @IBOutlet weak var folderCreationCategoryTableView: UITableView!
     override func viewDidLoad() {
         self.folderCreationCategoryTableView.delegate = self

@@ -97,7 +97,6 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "CategoryDetails") as! CategoryDetailsVC
-        print("indexPath.row", indexPath.row)
         nextViewController.folderCategory = self.categoriesTab[indexPath.section]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }

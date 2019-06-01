@@ -11,14 +11,14 @@ class Folder {
     }
 }
 
-struct FolderCreation {
+struct FolderCreation: Codable {
     var data: FolderCreationData
 }
-struct FolderCreationData {
+struct FolderCreationData: Codable {
     let type: String
     let id: String
     let attributes: FolderCreationAttr
 }
-struct FolderCreationAttr {
+struct FolderCreationAttr: Codable {
     let title: String
 }

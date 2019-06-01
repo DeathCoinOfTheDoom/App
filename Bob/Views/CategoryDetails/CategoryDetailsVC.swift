@@ -25,8 +25,10 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
             self.titleLabel.text = folderCategoryNotNull.attributes.title
             self.descriptionFolderDetails.text = folderCategoryNotNull.attributes.extendedDescription
             HeaderBuilderBob.setTokenInHeader()
+            let localStorageInstance = LocalStorage()
+            let userId = localStorageInstance.getUserInfos(key: "id")
             CategoryService.details(query: "category/\(folderCategoryNotNull.id)/type", header: HeaderBuilderBob.headers) { (categoryDetails, error) in
-                UserService.getFiles(query: "user/2/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
+                UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                     self.userFiles.append(contentsOf: userFiles)
                     userFiles.forEach({ (userFilesData) in
                         self.userFilesDataIds.append(userFilesData.id)

@@ -23,9 +23,20 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
         if let folderCategoryNotNull = folderCategory {
             self.titleLabel.text = folderCategoryNotNull.attributes.title
             self.descriptionFolderDetails.text = folderCategoryNotNull.attributes.extendedDescription
-            HeaderBuilderBob.setTokenInHeader()
-            let localStorageInstance = LocalStorage()
-            let userId = localStorageInstance.getUserInfos(key: "id")
+        }
+        self.fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = false
+        self.applyStyle()
+    }
+    func fetchData() {
+        if let folderCategoryNotNull = folderCategory {
+        HeaderBuilderBob.setTokenInHeader()
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
             CategoryService.details(query: "category/\(folderCategoryNotNull.id)/type", header: HeaderBuilderBob.headers) { (categoryDetails, error) in
                 UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                     self.userFiles.append(contentsOf: userFiles)
@@ -38,12 +49,6 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
                 }
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.isNavigationBarHidden = false
-        self.applyStyle()
     }
     // Here we are setting the value of idsOfDoneFiles to know if a documents as been already given
     func categoryFilesExtended(categoryDetails: [CategoryDetailsData]) -> [CategoryDetailsData] {
@@ -93,7 +98,9 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
                 HeaderBuilderBob.setTokenInHeader()
                 let localStorageInstance = LocalStorage()
                 let userId = localStorageInstance.getUserInfos(key: "id")
-                FilesService.postImage(query: "file", imageData: data, payload: ["user_id" : userId, "file_type_id" : categoryDetails[indexOfClickedCell!].id] ,header: HeaderBuilderBob.headers)
+                FilesService.postImage(query: "file", imageData: data, payload: ["user_id" : userId, "file_type_id" : categoryDetails[indexOfClickedCell!].id] ,header: HeaderBuilderBob.headers) {
+                    self.fetchData()
+                }
             }
         }
     }

@@ -1,10 +1,11 @@
 import Foundation
 import Alamofire
 
+typealias CallbackPostImage = () -> Void
+
 class FilesService {
-    static func postImage(query: String, imageData: Data?, payload: Parameters, header: HTTPHeaders) {
+    static func postImage(query: String, imageData: Data?, payload: Parameters, header: HTTPHeaders,  callback: @escaping CallbackPostImage) {
         let url = UrlBuilder.searchUrl(query: query)
-        print("ouep")
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in payload {
                 multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
@@ -23,6 +24,7 @@ class FilesService {
                         print("err", err)
                         return
                     }
+                    callback()
                 }
             case .failure(let error):
                 print("Error in upload: \(error.localizedDescription)")

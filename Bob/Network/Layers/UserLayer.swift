@@ -48,7 +48,7 @@ class UserService {
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
-                    let result = try jsonDecoder.decode(UserFolder.self, from: data)
+                    let result = try jsonDecoder.decode(UserFolders.self, from: data)
                     callback(result.data, nil)
                 } catch let error {
                     print("Erreur de parsing", error)

@@ -1,10 +1,3 @@
-//
-//  FolderCreationViewController.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 02/04/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
 import UIKit
 
 class FolderCreationNameVC: UIViewController {
@@ -18,6 +11,7 @@ class FolderCreationNameVC: UIViewController {
                 let firstRenderedView = nextViewController.viewControllers.first as! FolderCreationIdentityVC
                 if (folder != nil) {
                     firstRenderedView.folderTitle = folder!.attributes.title
+                    firstRenderedView.folderId = folder!.id
                     self.present(nextViewController, animated:true, completion:nil)
                 }
             }

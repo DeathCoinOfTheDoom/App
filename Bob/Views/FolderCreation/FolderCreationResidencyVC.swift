@@ -9,7 +9,9 @@ class FolderCreationResidencyVC: UIViewController {
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
     var userFilesDataIds : [String] = []
+    // Data from previous VC
     var folderTitle : String = ""
+    var folderId: String = ""
     @IBOutlet weak var folderCreationResidencyTableView: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -18,6 +20,7 @@ class FolderCreationResidencyVC: UIViewController {
                 let displayVC = segue.destination as! FolderCreationGuarantorVC
                 displayVC.previousVCIds =  self.previousVCIds + self.finalUserFilesIds
                 displayVC.folderTitle = self.folderTitle
+                displayVC.folderId = self.folderId
             }
         }
     }

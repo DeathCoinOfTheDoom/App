@@ -9,13 +9,18 @@ class FolderCreationGuarantorVC: UIViewController {
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
     var userFilesDataIds : [String] = []
+    // Data from previous VC
     var folderTitle : String = ""
+    var folderId: String = ""
     
     @IBAction func sendFilesButton(_ sender: Any) {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         let parameters = ["title": folderTitle, "user_id": userId, "_method": "put"]
+        FolderService.modification(query: "folder/\(folderId)", payload: parameters, header: HeaderBuilderBob.headers) { (createdFolder, error) in
+            
+        }
     }
     @IBOutlet weak var folderCreationGuarantorTableView: UITableView!
     

@@ -42,7 +42,7 @@ struct UserInfosAttr: Codable {
     var firstName: String
     var lastName: String
 }
-// connection
+// connexion
 struct UserAuth: Codable {
     var token: String
     let user: User
@@ -64,15 +64,17 @@ struct UserAttr: Codable {
     var updatedAt: String
 }
 
-struct UserFolder: Codable {
+struct UserFolders: Codable {
     var data: [UserFolderData]
+}
+struct UserFolder: Codable {
+    var data: UserFolderData
 }
 
 struct UserFolderData: Codable {
     var type: String
     var id: String
     var attributes: UserFolderAttr
-    //TODO FILES ARRAY
 }
 struct UserFolderAttr: Codable {
     var title: String

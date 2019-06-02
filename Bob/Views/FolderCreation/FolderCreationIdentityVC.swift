@@ -1,12 +1,7 @@
 import UIKit
 
 class FolderCreationIdentityVC: UIViewController {
-    @IBAction func nextStepButton(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Folder", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FolderCreationJobVC") as! FolderCreationJobVC
-        nextViewController.previousVCIds = self.finalUserFilesIds
-        self.present(nextViewController, animated:true, completion:nil)
-    }
+    
     @IBOutlet weak var folderCreationIdentityTableView: UITableView!
     // list of userFiles lazy displayed in the table cells
     lazy var userFiles = [UserFilesData]()
@@ -15,6 +10,22 @@ class FolderCreationIdentityVC: UIViewController {
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
     var userFilesDataIds : [String] = []
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toFolderCreationJobVC"){
+            if (finalUserFilesIds.count > 0) {
+                let displayVC = segue.destination as! FolderCreationJobVC
+                displayVC.previousVCIds = finalUserFilesIds
+            }
+        }
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (finalUserFilesIds.count > 0) {
+            return true
+        } else {
+            return false
+        }
+    }
     
     override func viewDidLoad() {
         self.folderCreationIdentityTableView.delegate = self
@@ -50,7 +61,7 @@ extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderCreationIdentityTableView.dequeueReusableCell(withIdentifier: "folderCreationIdentityCell", for: indexPath) as! FolderCreationTableViewCell
         let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.row].relationships.type.data.id);
-       cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
+        cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

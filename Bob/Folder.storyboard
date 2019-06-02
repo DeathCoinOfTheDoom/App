@@ -289,7 +289,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="TlV-9U-3dj" kind="show" id="Bdl-J6-PUq"/>
+                                    <segue destination="TlV-9U-3dj" kind="show" identifier="toFolderCreationJobVC" id="E8B-Ac-EBC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,7 +326,7 @@
         <!--Appartement Rambuteau-->
         <scene sceneID="eJY-Bn-2hg">
             <objects>
-                <viewController title="Appartement Rambuteau" id="TlV-9U-3dj" customClass="FolderCreationJobVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationJobVC" storyboardIdentifier="FolderCreationJobVC" title="Appartement Rambuteau" id="TlV-9U-3dj" customClass="FolderCreationJobVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4QE-6f-vjf" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,6 +388,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="x8E-nZ-52o" id="J3u-0j-MaS"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="U3W-hk-2pO" id="7AH-V7-Una"/>
                                         </connections>
                                     </tableViewCell>
@@ -397,7 +398,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="fhE-UP-wDO" kind="show" id="3Sx-d3-sjK"/>
+                                    <segue destination="fhE-UP-wDO" kind="show" identifier="toFolderCreationResidencyVC" id="FTc-rH-yEI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -433,7 +434,7 @@
         <!--Appartement Rambuteau-->
         <scene sceneID="nOQ-1t-2l3">
             <objects>
-                <viewController title="Appartement Rambuteau" id="fhE-UP-wDO" customClass="FolderCreationResidencyVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationResidencyVC" storyboardIdentifier="FolderCreationResidencyVC" title="Appartement Rambuteau" id="fhE-UP-wDO" customClass="FolderCreationResidencyVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wes-iX-EmU" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,6 +496,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="qlg-UY-ML6" id="vSX-mg-Gh5"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="KjM-pT-VLv" id="3Kt-aK-pmX"/>
                                         </connections>
                                     </tableViewCell>
@@ -504,7 +506,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="Sph-zZ-Eg1" kind="show" id="XHu-fq-kw8"/>
+                                    <segue destination="Sph-zZ-Eg1" kind="show" identifier="toFolderCreationGuarantorVC" id="Rgi-FX-Y3a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -540,7 +542,7 @@
         <!--Appartement Rambuteau-->
         <scene sceneID="Iz4-fV-rvp">
             <objects>
-                <viewController title="Appartement Rambuteau" id="Sph-zZ-Eg1" customClass="FolderCreationGuarantorVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationGuarantorVC" storyboardIdentifier="FolderCreationGuarantorVC" title="Appartement Rambuteau" id="Sph-zZ-Eg1" customClass="FolderCreationGuarantorVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Cv-mC-Tqd" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,6 +604,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="TQj-Ts-WxQ" id="NT9-6F-DZh"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="Va5-Zv-Mgy" id="fG7-Ti-ipS"/>
                                         </connections>
                                     </tableViewCell>
@@ -610,6 +613,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-JZ-V0e" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <action selector="sendFilesButton:" destination="Sph-zZ-Eg1" eventType="touchUpInside" id="ke4-cy-KCE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

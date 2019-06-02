@@ -31,7 +31,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
                 UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                     self.userFiles.append(contentsOf: userFiles)
                     userFiles.forEach({ (userFilesData) in
-                        self.userFilesDataIds.append(userFilesData.id)
+                        self.userFilesDataIds.append(userFilesData.relationships.type.data.id)
                     })
                     self.categoryDetails.removeAll()
                     self.categoryDetails.append(contentsOf: self.categoryFilesExtended(categoryDetails: categoryDetails))
@@ -109,6 +109,7 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "CategoryDetailsCell", for: indexPath) as! CategoryDetailsCell
         tableCell.categoryDetailsCellTitle.text = self.categoryDetails[indexPath.row].attributes.title
+        print("self.categoryDetails", self.categoryDetails, "index", indexPath.row)
         self.applyCellStyle(tableCell: tableCell, userAsDoneThisFile:
             self.categoryDetails[indexPath.row].userAsDoneThisFile)
         completeIcon.backgroundColor = ColorConstant.Green.Primary

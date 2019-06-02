@@ -6,7 +6,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     @IBOutlet weak var titleFolderDetails: TitleLabel!
     @IBOutlet weak var descriptionFolderDetails: UILabel!
     @IBAction func addDocument(_ sender: Any) {
-        self.chooseImage()
+        
     }
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -14,6 +14,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     lazy var userFiles = [UserFilesData]()
     var folderCategory:CategoryData?
     var userFilesDataIds : [String] = []
+    var indexOfClickedCell : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,10 +87,14 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     }
     //Mark: - Image picker selection
     override func didSelectImage(image: UIImage) {
-        if let data = image.pngData() {
-            print("oui l'image", data)
-            // ici on a l'image (en PNG) au format binaire
-            // on peut ensuite l'envoyer via un multipart request 🥳
+        let resizedImage = image.resized(toWidth: 200.0)
+        if (resizedImage != nil) {
+            if let data = resizedImage!.pngData() {
+                HeaderBuilderBob.setTokenInHeader()
+                let localStorageInstance = LocalStorage()
+                let userId = localStorageInstance.getUserInfos(key: "id")
+                FilesService.postImage(query: "file", imageData: data, payload: ["user_id" : userId, "file_type_id" : categoryDetails[indexOfClickedCell!].id] ,header: HeaderBuilderBob.headers)
+            }
         }
     }
 }
@@ -98,13 +103,16 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.categoryDetails.count
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexOfClickedCell = indexPath.row
+        self.chooseImage()
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "CategoryDetailsCell", for: indexPath) as! CategoryDetailsCell
         tableCell.categoryDetailsCellTitle.text = self.categoryDetails[indexPath.row].attributes.title
-        print("self.categoryDetails", self.categoryDetails, "index", indexPath.row)
         self.applyCellStyle(tableCell: tableCell, userAsDoneThisFile:
             self.categoryDetails[indexPath.row].userAsDoneThisFile)
+        tableCell.selectionStyle = .none
         return tableCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -22,7 +22,6 @@ class UserService {
     static func getUserInfos(query: String, header: HTTPHeaders, callback: @escaping CallbackUserInfos) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
-            print("responseJSON-----", response)
             switch response.result {
             case .success(let data) :
                 let jsonDecoder = JSONDecoder()
@@ -49,7 +48,6 @@ class UserService {
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
-                    print("data", data)
                     let result = try jsonDecoder.decode(UserFolder.self, from: data)
                     callback(result.data, nil)
                 } catch let error {

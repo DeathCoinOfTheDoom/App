@@ -3,8 +3,6 @@ import UIKit
 class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     
     @IBOutlet weak var detailsTableView: UITableView!
-    @IBOutlet weak var completeIconImage: UIImageView!
-    @IBOutlet weak var completeIcon: UIView!
     @IBOutlet weak var titleFolderDetails: TitleLabel!
     @IBOutlet weak var descriptionFolderDetails: UILabel!
     @IBAction func addDocument(_ sender: Any) {
@@ -65,10 +63,6 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     }
     
     func applyStyle() {
-        // icon
-        completeIcon.rounded()
-        completeIcon.tintColor = ColorConstant.Error.ERROR
-        // title
         titleFolderDetails.font = UIFont(name: Fonts.poppinsBold, size: 24)
         // description
         descriptionFolderDetails.font = UIFont(name: Fonts.poppinsMedium, size: 14)
@@ -79,14 +73,13 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
         tableCell.categoryDetailsCellIconBg.rounded()
         tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
         if (userAsDoneThisFile!) {
-            completeIcon.backgroundColor = ColorConstant.Green.Primary
             tableCell.categoryDetailsCellCard.backgroundColor = ColorConstant.Green.Primary
             tableCell.categoryDetailsCellIconBg.backgroundColor = ColorConstant.Green.Dark
             tableCell.categoryDetailsCellTitle.textColor = ColorConstant.White
-            tableCell.categoryDetailsCellIcon.image = UIImage(named: "Logo")
+            tableCell.categoryDetailsCellIcon.image = UIImage(named: "check")
         }
         else {
-            tableCell.categoryDetailsCellIcon.image = UIImage(named: "Logo")
+            tableCell.categoryDetailsCellIcon.image = UIImage(named: "add")
             tableCell.categoryDetailsCellIconBg.backgroundColor = ColorConstant.Neutral.DARKEST
             tableCell.categoryDetailsCellCard.backgroundColor = ColorConstant.White
         }
@@ -112,7 +105,6 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
         print("self.categoryDetails", self.categoryDetails, "index", indexPath.row)
         self.applyCellStyle(tableCell: tableCell, userAsDoneThisFile:
             self.categoryDetails[indexPath.row].userAsDoneThisFile)
-        completeIcon.backgroundColor = ColorConstant.Green.Primary
         return tableCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -33,7 +33,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
                         nextViewController.user = user?.user
                         self.present(nextViewController, animated:true, completion:nil)
                     }
-                    // is a already knowned user
+                        // is a already knowned user
                     else {
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
@@ -41,7 +41,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
                     }
                 }
             }
-        }   
+        }
     }
     func didPressBackspace(textField: AuthCodeTextField) {
         if (collectionOfTextField[actualStep].text == "") {
@@ -56,6 +56,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
         }
     }
     func increaseActualStep() {
+        print("actual increase", actualStep)
         if (actualStep <= collectionOfTextField.count) {
             actualStep += 1
         }
@@ -77,6 +78,7 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     
     func inputEnable(actualStep: Int){
         var actualStep = actualStep
+        print("actual enable", actualStep)
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true

@@ -17,3 +17,4 @@ class OnboardingLabel: UILabel {
         self.textColor = ColorConstant.Neutral.DARKEST
     }
 }
+

@@ -10,7 +10,8 @@ import UIKit
 import AlamofireImage
 
 class CategoryVC: UIViewController {
-
+    
+    @IBOutlet weak var homeTitle: UILabel!
     @IBOutlet weak var subTitleFolderList: UILabel!
     @IBOutlet weak var titleFolderList: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,19 @@ class CategoryVC: UIViewController {
         let localStorageInstance = LocalStorage()
         HeaderBuilderBob.setTokenInHeader()
         let userId = localStorageInstance.getUserInfos(key: "id")
+        
+        UserService.getUserInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
+            guard e == nil else {
+                print(e!.localizedDescription)
+                return
+            }
+            guard let userInfos = userInfos else {
+                print("no result found")
+                return
+            }
+            self.homeTitle.text = "Bonjour " + userInfos.attributes.firstName + ","
+        }
+        
         CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
             UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                 self.userFiles.append(contentsOf: userFiles)
@@ -59,6 +73,15 @@ class CategoryVC: UIViewController {
         }
         return Float(counter)/Float(total)
     }
+    
+//    func applyDataToView(userInfos: UserInfosAttr) {
+//        self.firstNameProfilConsultation.text = userInfos.firstName
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? ProfilUpdateVC {
+//            destination.userAttrBeforeModif = self.userInfos
+//        }
+//    }
 }
 
 

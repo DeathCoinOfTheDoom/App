@@ -82,6 +82,7 @@
 		BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */; };
 		BCE203922271B96200F2BC08 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203912271B96200F2BC08 /* FolderCard.swift */; };
 		BCE203942271BA1B00F2BC08 /* ShadowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203932271BA1B00F2BC08 /* ShadowCard.swift */; };
+		BCE2FF6B22A4849600930EB5 /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE2FF6A22A4849600930EB5 /* FolderCell.swift */; };
 		BCF5F12A2241A239007876C9 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF5F1292241A239007876C9 /* Onboarding.storyboard */; };
 		BCF5F12C2241AA65007876C9 /* OnboardingContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12B2241AA65007876C9 /* OnboardingContentVC.swift */; };
 		BCF5F12E2241ACAA007876C9 /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5F12D2241ACAA007876C9 /* OnboardingPageVC.swift */; };
@@ -196,6 +197,7 @@
 		BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		BCE203912271B96200F2BC08 /* FolderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
 		BCE203932271BA1B00F2BC08 /* ShadowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCard.swift; sourceTree = "<group>"; };
+		BCE2FF6A22A4849600930EB5 /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
 		BCF5F1292241A239007876C9 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BCF5F12B2241AA65007876C9 /* OnboardingContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentVC.swift; sourceTree = "<group>"; };
 		BCF5F12D2241ACAA007876C9 /* OnboardingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			children = (
 				BC83B6EF2253B12E00424C24 /* FolderListVC.swift */,
 				BCE203912271B96200F2BC08 /* FolderCard.swift */,
+				BCE2FF6A22A4849600930EB5 /* FolderCell.swift */,
 			);
 			path = FolderList;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				16089F3B227F7AA300023A11 /* AppInit.swift in Sources */,
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
+				BCE2FF6B22A4849600930EB5 /* FolderCell.swift in Sources */,
 				1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */,
 				1681A027228B1196007FD31C /* TypeLayer.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,

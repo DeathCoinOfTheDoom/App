@@ -8,6 +8,36 @@
 import UIKit
 
 class FolderListVC: UIViewController {
+    
+    
+    @IBAction func emptyFlashFolderCreation(_ sender: Any) {
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
+        FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier oo"], header: HeaderBuilderBob.headers){ (folder, e) in
+            UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+                self.userFolders.removeAll()
+                self.userFolders.append(contentsOf: userFolders)
+                self.mainTableView.reloadData()
+                self.mainTableView.restore()
+            }
+            
+        }
+        
+    }
+    
+    @IBAction func filledflashFolderCreation(_ sender: Any) {
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
+        FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier oo"], header: HeaderBuilderBob.headers){ (folder, e) in
+            UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+                self.userFolders.removeAll()
+                self.userFolders.append(contentsOf: userFolders)
+                self.mainTableView.reloadData()
+                self.mainTableView.restore()
+            }
+        }
+    }
+    
     @IBAction func test(_ sender: Any) {
         print("salut-------")
     }
@@ -61,21 +91,60 @@ class FolderListVC: UIViewController {
             }
         }
     }
+    
+    func applyCellStyle(tableCell: FolderCell) {
+        tableCell.folderTitle.font = UIFont(name: Fonts.poppinsBold, size: 24)
+        tableCell.folderIconBg.rounded()
+        tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
+        tableCell.folderIcon.image = UIImage(named: "delete")
+        tableCell.folderIconBg.backgroundColor = ColorConstant.Red
+        tableCell.folderCard.backgroundColor = ColorConstant.White
+    }
+    
 }
 
         
-extension FolderListVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userFolders.count
-    }
+extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
     
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.userFolders.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = self.userFolders[indexPath.row].attributes.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FolderCell
+        cell.folderTitle.text = self.userFolders[indexPath.row].attributes.title
+        self.applyCellStyle(tableCell: cell)
+        
+        
         return cell
     }
+    
+    
+    
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return userFolders.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+//        cell.textLabel?.text = self.userFolders[indexPath.row].attributes.title
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 90
+//    }
+    
 }
+
+
 
 extension UITableView {
     func setEmptyView(title: String, message: String) {
@@ -107,6 +176,4 @@ extension UITableView {
     func restore() {
         self.backgroundView = nil
     }
-    
-   
 }

@@ -18,6 +18,7 @@
 		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
 		1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FA16227A3A19007A6559 /* TokenHelper.swift */; };
 		164AF280229DE82100C58D62 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164AF27F229DE82100C58D62 /* EmailVC.swift */; };
+		1672267622A09E6400C0AD09 /* FolderCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderCreation.swift */; };
 		1681A027228B1196007FD31C /* TypeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A025228B1196007FD31C /* TypeLayer.swift */; };
 		1681A028228B1196007FD31C /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A026228B1196007FD31C /* LoginLayer.swift */; };
 		1681A02A228B130E007FD31C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A029228B130E007FD31C /* LoginVC.swift */; };
@@ -120,6 +121,7 @@
 		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
 		1645FA16227A3A19007A6559 /* TokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
 		164AF27F229DE82100C58D62 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
+		1672267522A09E6400C0AD09 /* FolderCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreation.swift; sourceTree = "<group>"; };
 		1681A025228B1196007FD31C /* TypeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLayer.swift; sourceTree = "<group>"; };
 		1681A026228B1196007FD31C /* LoginLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
 		1681A029228B130E007FD31C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				1681A026228B1196007FD31C /* LoginLayer.swift */,
 				1681A025228B1196007FD31C /* TypeLayer.swift */,
 				BC86A1542253ADA30070840E /* UserLayer.swift */,
+				1672267522A09E6400C0AD09 /* FolderCreation.swift */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,
 				1681A02E228B1498007FD31C /* Type.swift in Sources */,
+				1672267622A09E6400C0AD09 /* FolderCreation.swift in Sources */,
 				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				1681CD092236ADBB00165029 /* Tip.swift in Sources */,

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pUv-o0-gYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pUv-o0-gYj">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -170,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="232" width="366" height="30"/>
                                         <state key="normal" title="Créer"/>
                                         <connections>
-                                            <segue destination="i1t-lx-zOL" kind="show" id="mHg-q1-ycj"/>
+                                            <action selector="buttonFolderName:" destination="qSy-ix-ilh" eventType="touchUpInside" id="Oz3-rc-Oeq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pour commencer, nommez votre dossier :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-iP-9oY" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
@@ -206,6 +206,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9WI-hz-coS"/>
                     </view>
+                    <connections>
+                        <outlet property="inputFolderName" destination="4CJ-4S-5aZ" id="clo-md-YWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izM-7Q-OMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-xl-mKh" customClass="ProgressBar" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="44" y="60" width="326" height="8"/>
+                                <rect key="frame" x="44" y="104" width="326" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="yIJ-tj-cak"/>
                                 </constraints>
@@ -228,19 +231,19 @@
                                 <color key="trackTintColor" red="0.89411764705882346" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSm-Xd-sBV" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="92" width="366" height="21"/>
+                                <rect key="frame" x="24" y="136" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionnez les fichiers pertinents pour votre candidature " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aG-9g-KwO" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="137" width="366" height="41"/>
+                                <rect key="frame" x="24" y="181" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-p1-VjB">
-                                <rect key="frame" x="24" y="202" width="366" height="574"/>
+                                <rect key="frame" x="24" y="246" width="366" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationIdentityCell" rowHeight="49" id="2hH-S0-1zR" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -276,6 +279,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="BZH-Kk-CMc" id="hoo-i5-bJC"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="nF4-G0-iHt" id="vWe-1b-rxC"/>
                                         </connections>
                                     </tableViewCell>
@@ -285,7 +289,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="TlV-9U-3dj" kind="show" id="Bdl-J6-PUq"/>
+                                    <segue destination="TlV-9U-3dj" kind="show" identifier="toFolderCreationJobVC" id="E8B-Ac-EBC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -310,24 +314,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tTe-Mo-6jz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="W3o-6N-evO"/>
                     <connections>
-                        <outlet property="folderCreationCategoryTableView" destination="m8f-p1-VjB" id="udG-mA-x4S"/>
+                        <outlet property="folderCreationIdentityTableView" destination="m8f-p1-VjB" id="udG-mA-x4S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpy-0N-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.8550724637682" y="152.67857142857142"/>
+            <point key="canvasLocation" x="2312" y="153"/>
         </scene>
         <!--Appartement Rambuteau-->
         <scene sceneID="eJY-Bn-2hg">
             <objects>
-                <viewController title="Appartement Rambuteau" id="TlV-9U-3dj" customClass="FolderCreationJobVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationJobVC" storyboardIdentifier="FolderCreationJobVC" title="Appartement Rambuteau" id="TlV-9U-3dj" customClass="FolderCreationJobVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4QE-6f-vjf" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-77-aZl" customClass="ProgressBar" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="44" y="60" width="326" height="8"/>
+                                <rect key="frame" x="44" y="104" width="326" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="Lls-PY-D64"/>
                                 </constraints>
@@ -335,19 +340,19 @@
                                 <color key="trackTintColor" red="0.89411764709999997" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emploi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jl-su-v99" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="92" width="366" height="21"/>
+                                <rect key="frame" x="24" y="136" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionnez les fichiers pertinents pour votre candidature " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asP-dz-Srg" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="137" width="366" height="41"/>
+                                <rect key="frame" x="24" y="181" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-Zx-1Ku">
-                                <rect key="frame" x="24" y="202" width="366" height="574"/>
+                                <rect key="frame" x="24" y="246" width="366" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationJobCell" rowHeight="49" id="zKP-tu-sRy" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -383,6 +388,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="x8E-nZ-52o" id="J3u-0j-MaS"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="U3W-hk-2pO" id="7AH-V7-Una"/>
                                         </connections>
                                     </tableViewCell>
@@ -392,7 +398,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="fhE-UP-wDO" kind="show" id="3Sx-d3-sjK"/>
+                                    <segue destination="fhE-UP-wDO" kind="show" identifier="toFolderCreationResidencyVC" id="FTc-rH-yEI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -423,18 +429,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hj2-Ei-5Xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="153"/>
+            <point key="canvasLocation" x="3242" y="153"/>
         </scene>
         <!--Appartement Rambuteau-->
         <scene sceneID="nOQ-1t-2l3">
             <objects>
-                <viewController title="Appartement Rambuteau" id="fhE-UP-wDO" customClass="FolderCreationResidencyVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationResidencyVC" storyboardIdentifier="FolderCreationResidencyVC" title="Appartement Rambuteau" id="fhE-UP-wDO" customClass="FolderCreationResidencyVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wes-iX-EmU" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="1V6-cC-jpY" customClass="ProgressBar" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="44" y="60" width="326" height="8"/>
+                                <rect key="frame" x="44" y="104" width="326" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="pVS-Yi-9FP"/>
                                 </constraints>
@@ -442,19 +448,19 @@
                                 <color key="trackTintColor" red="0.89411764709999997" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domicile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-Od-ll6" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="92" width="366" height="21"/>
+                                <rect key="frame" x="24" y="136" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionnez les fichiers pertinents pour votre candidature " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-oz-Nf3" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="137" width="366" height="41"/>
+                                <rect key="frame" x="24" y="181" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="blE-w0-M7d">
-                                <rect key="frame" x="24" y="202" width="366" height="574"/>
+                                <rect key="frame" x="24" y="246" width="366" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationResidencyCell" rowHeight="49" id="pu0-Nc-it9" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -490,6 +496,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="qlg-UY-ML6" id="vSX-mg-Gh5"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="KjM-pT-VLv" id="3Kt-aK-pmX"/>
                                         </connections>
                                     </tableViewCell>
@@ -499,7 +506,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
-                                    <segue destination="Sph-zZ-Eg1" kind="show" id="XHu-fq-kw8"/>
+                                    <segue destination="Sph-zZ-Eg1" kind="show" identifier="toFolderCreationGuarantorVC" id="Rgi-FX-Y3a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -530,18 +537,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxd-xJ-gvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2978" y="153"/>
+            <point key="canvasLocation" x="4200" y="153"/>
         </scene>
         <!--Appartement Rambuteau-->
         <scene sceneID="Iz4-fV-rvp">
             <objects>
-                <viewController title="Appartement Rambuteau" id="Sph-zZ-Eg1" customClass="FolderCreationGuarantorVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FolderCreationGuarantorVC" storyboardIdentifier="FolderCreationGuarantorVC" title="Appartement Rambuteau" id="Sph-zZ-Eg1" customClass="FolderCreationGuarantorVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Cv-mC-Tqd" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="i8O-O4-ydH" customClass="ProgressBar" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="44" y="60" width="326" height="8"/>
+                                <rect key="frame" x="44" y="104" width="326" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="dWA-D3-13s"/>
                                 </constraints>
@@ -549,19 +556,19 @@
                                 <color key="trackTintColor" red="0.89411764709999997" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garant (facultatif)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-Ub-v1M" customClass="TitleLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="92" width="366" height="21"/>
+                                <rect key="frame" x="24" y="136" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionnez les fichiers pertinents pour votre candidature " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-8Y-Giz" customClass="IndicationLabel" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="137" width="366" height="41"/>
+                                <rect key="frame" x="24" y="181" width="366" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-Hx-hsN">
-                                <rect key="frame" x="24" y="202" width="366" height="574"/>
+                                <rect key="frame" x="24" y="246" width="366" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationGuarantorCell" rowHeight="49" id="X4q-KG-vjv" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -597,6 +604,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundFolderCreationCategory" destination="TQj-Ts-WxQ" id="NT9-6F-DZh"/>
                                             <outlet property="titleFolderCreationCategoryFile" destination="Va5-Zv-Mgy" id="fG7-Ti-ipS"/>
                                         </connections>
                                     </tableViewCell>
@@ -605,6 +613,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-JZ-V0e" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
+                                <connections>
+                                    <action selector="sendFilesButton:" destination="Sph-zZ-Eg1" eventType="touchUpInside" id="ke4-cy-KCE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -634,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T02-32-zYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4155" y="153"/>
+            <point key="canvasLocation" x="5378" y="153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="r1C-IN-ngw">
@@ -651,8 +662,26 @@
             </objects>
             <point key="canvasLocation" x="309" y="-545"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gvb-fO-ey0">
+            <objects>
+                <navigationController restorationIdentifier="FolderCreationIdentity" storyboardIdentifier="FolderCreationIdentity" automaticallyAdjustsScrollViewInsets="NO" id="ycq-ns-esf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QWx-pQ-Xbw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i1t-lx-zOL" kind="relationship" relationship="rootViewController" id="384-eA-oBJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xk-8i-tud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="153"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Fl-XD-CWp"/>
+        <segue reference="XUw-42-AtF"/>
     </inferredMetricsTieBreakers>
 </document>

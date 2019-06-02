@@ -63,9 +63,11 @@ class CategoryVC: UIViewController {
     func determineProgression(index: Int) -> Float {
         let total = self.categoriesTab[index].relationships.type.data.count
         var counter = 0
+        let acceptedIds : [String] = self.categoriesTab[index].relationships.type.data.map({ (CategoryRelationshipsTypeData) -> String in
+            return CategoryRelationshipsTypeData.id
+        })
         self.userFiles.forEach { (userFileData) in
-            print(userFileData.relationships.type.data.id , self.categoriesTab[index].id)
-            if (userFileData.relationships.type.data.id == self.categoriesTab[index].id) {
+            if (acceptedIds.contains(userFileData.relationships.type.data.id)) {
                 counter = counter + 1
             }
         }
@@ -120,7 +122,6 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "CategoryDetails") as! CategoryDetailsVC
-        print("indexPath.row", indexPath.row)
         nextViewController.folderCategory = self.categoriesTab[indexPath.section]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }

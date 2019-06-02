@@ -1,11 +1,3 @@
-//
-//  Folder.swift
-//  Bob
-//
-//  Created by Victor Lucas on 28/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class Folder {
@@ -17,4 +9,16 @@ class Folder {
         self.title = title
         self.description = description
     }
+}
+
+struct FolderCreation: Codable {
+    var data: FolderCreationData
+}
+struct FolderCreationData: Codable {
+    let type: String
+    let id: String
+    let attributes: FolderCreationAttr
+}
+struct FolderCreationAttr: Codable {
+    let title: String
 }

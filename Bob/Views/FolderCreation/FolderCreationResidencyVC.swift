@@ -9,6 +9,7 @@ class FolderCreationResidencyVC: UIViewController {
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
     var userFilesDataIds : [String] = []
+    var folderTitle : String = ""
     @IBOutlet weak var folderCreationResidencyTableView: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -16,6 +17,7 @@ class FolderCreationResidencyVC: UIViewController {
             if (finalUserFilesIds.count > 0) {
                 let displayVC = segue.destination as! FolderCreationGuarantorVC
                 displayVC.previousVCIds =  self.previousVCIds + self.finalUserFilesIds
+                displayVC.folderTitle = self.folderTitle
             }
         }
     }
@@ -54,11 +56,23 @@ class FolderCreationResidencyVC: UIViewController {
 }
 
 extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.userFiles.count
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10;
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 90;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderCreationResidencyTableView.dequeueReusableCell(withIdentifier: "folderCreationResidencyCell", for: indexPath) as! FolderCreationTableViewCell

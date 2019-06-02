@@ -15,7 +15,11 @@ class FolderCreationNameVC: UIViewController {
             FolderService.creation(query: "folder", payload: ["user_id": userId, "title": inputFolderName.text!], header: HeaderBuilderBob.headers){ (folder, e) in
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Folder", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FolderCreationIdentity") as! UINavigationController
-                self.present(nextViewController, animated:true, completion:nil)
+                let firstRenderedView = nextViewController.viewControllers.first as! FolderCreationIdentityVC
+                if (folder != nil) {
+                    firstRenderedView.folderTitle = folder!.attributes.title
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
             }
         }
     }

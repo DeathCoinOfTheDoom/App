@@ -355,18 +355,18 @@
                                 <rect key="frame" x="24" y="246" width="366" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationJobCell" rowHeight="49" id="zKP-tu-sRy" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="366" height="49"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationJobCell" rowHeight="108" id="zKP-tu-sRy" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="366" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zKP-tu-sRy" id="f9F-9f-MQu">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8E-nZ-52o" customClass="CategoryDetailsCard" customModule="Bob" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="108"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3W-hk-2pO">
-                                                            <rect key="frame" x="24" y="14" width="318" height="21"/>
+                                                            <rect key="frame" x="24" y="43.5" width="318" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -429,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hj2-Ei-5Xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="153"/>
+            <point key="canvasLocation" x="3240.579710144928" y="152.67857142857142"/>
         </scene>
         <!--Appartement Rambuteau-->
         <scene sceneID="nOQ-1t-2l3">

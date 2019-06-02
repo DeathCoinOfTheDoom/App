@@ -1,6 +1,5 @@
 import Foundation
 import Alamofire
-import AlamofireImage
 
 
 typealias CallbackAllCategory = (_ categories: [CategoryData], _ error: Error?) -> Void

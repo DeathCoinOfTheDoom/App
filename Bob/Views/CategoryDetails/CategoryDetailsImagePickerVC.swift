@@ -37,16 +37,10 @@ class CategoryDetailsImagePickerVC: UIViewController, UIImagePickerControllerDel
         
         self.present(actionSheet, animated: true, completion: nil)
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
-        
-        didSelectImage(image: image)
-        
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: {self.didSelectImage(image: image)})
     }
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }

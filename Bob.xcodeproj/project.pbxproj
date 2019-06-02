@@ -16,10 +16,11 @@
 		160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */; };
 		1612B8672254D91900314A4E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8662254D91900314A4E /* CategoryCell.swift */; };
 		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
+		1620CFA622A44146003C5494 /* FilesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA522A44146003C5494 /* FilesLayer.swift */; };
+		1620CFA822A45DD5003C5494 /* imageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA722A45DD5003C5494 /* imageResize.swift */; };
 		1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FA16227A3A19007A6559 /* TokenHelper.swift */; };
 		164AF280229DE82100C58D62 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164AF27F229DE82100C58D62 /* EmailVC.swift */; };
 		1672267622A09E6400C0AD09 /* FolderCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderCreation.swift */; };
-		1681A027228B1196007FD31C /* TypeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A025228B1196007FD31C /* TypeLayer.swift */; };
 		1681A028228B1196007FD31C /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A026228B1196007FD31C /* LoginLayer.swift */; };
 		1681A02A228B130E007FD31C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A029228B130E007FD31C /* LoginVC.swift */; };
 		1681A02C228B147D007FD31C /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */; };
@@ -119,10 +120,11 @@
 		160BDCA62201ED03005DF133 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		1612B8662254D91900314A4E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
+		1620CFA522A44146003C5494 /* FilesLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesLayer.swift; sourceTree = "<group>"; };
+		1620CFA722A45DD5003C5494 /* imageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageResize.swift; sourceTree = "<group>"; };
 		1645FA16227A3A19007A6559 /* TokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
 		164AF27F229DE82100C58D62 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		1672267522A09E6400C0AD09 /* FolderCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreation.swift; sourceTree = "<group>"; };
-		1681A025228B1196007FD31C /* TypeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLayer.swift; sourceTree = "<group>"; };
 		1681A026228B1196007FD31C /* LoginLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
 		1681A029228B130E007FD31C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -301,9 +303,9 @@
 			children = (
 				16F341D7223A9262003A35C4 /* CategoryLayer.swift */,
 				1681A026228B1196007FD31C /* LoginLayer.swift */,
-				1681A025228B1196007FD31C /* TypeLayer.swift */,
 				BC86A1542253ADA30070840E /* UserLayer.swift */,
 				1672267522A09E6400C0AD09 /* FolderCreation.swift */,
+				1620CFA522A44146003C5494 /* FilesLayer.swift */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -404,6 +406,7 @@
 				576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */,
 				576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */,
 				1608F3C6227204240074B6F3 /* KeyboardController.swift */,
+				1620CFA722A45DD5003C5494 /* imageResize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -812,13 +815,14 @@
 				BCD2D2D122008A9D00B528D1 /* InputLabel.swift in Sources */,
 				BCD2D2CD22008A2E00B528D1 /* OutlinedButton.swift in Sources */,
 				1681CD0C223947ED00165029 /* UrlBuilder.swift in Sources */,
-				1681A027228B1196007FD31C /* TypeLayer.swift in Sources */,
 				576C5E6221FF6CF30069CFBB /* Folder.swift in Sources */,
 				576C5E6021FF6BC00069CFBB /* TextFieldMaxLength.swift in Sources */,
 				160BDCA72201ED03005DF133 /* LaunchScreenVC.swift in Sources */,
+				1620CFA622A44146003C5494 /* FilesLayer.swift in Sources */,
 				1681CD1122394F1F00165029 /* User.swift in Sources */,
 				164AF280229DE82100C58D62 /* EmailVC.swift in Sources */,
 				576C5E2121FF65870069CFBB /* CategoryVC.swift in Sources */,
+				1620CFA822A45DD5003C5494 /* imageResize.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				BC51001E225603C00066A2FB /* ProfilConsultationVC.swift in Sources */,
 				169EFF53228D87350014BD07 /* LocalStorage.swift in Sources */,

@@ -80,6 +80,11 @@ extension FolderCreationJobVC: UITableViewDelegate, UITableViewDataSource {
         print("cell", cell)
         let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.row].relationships.type.data.id);
         cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
+        cell.iconBgFolderCreationCategoryFile.rounded()
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
+        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -99,11 +104,15 @@ extension FolderCreationJobVC: UITableViewDelegate, UITableViewDataSource {
     }
     func styleActiveCell (cell: FolderCreationTableViewCell) {
         print("cell" , cell, "backgroundFolderCreationCategory", cell.backgroundFolderCreationCategory)
-        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.Green.Primary
-        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.White
+        cell.backgroundFolderCreationCategory.backgroundColor = UIColor(red:0.78, green:0.97, blue:0.89, alpha:1.0)
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Green.Dark
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "check")
     }
     func styleUnactiveCell (cell: FolderCreationTableViewCell) {
-        cell.backgroundFolderCreationCategory.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
-        cell.titleFolderCreationCategoryFile.textColor = UIColor.darkGray
+        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
     }
 }

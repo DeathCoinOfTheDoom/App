@@ -67,16 +67,14 @@ class FolderService {
             }
         }
     }
-    static func delete(query: String, payload: Parameters, header: HTTPHeaders, callback: @escaping CallbackDeleteFolder) {
+    static func delete(query: String, header: HTTPHeaders, callback: @escaping CallbackDeleteFolder) {
         let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .delete, parameters: payload, encoding: JSONEncoding.default, headers: header).responseData() { response in
+        Alamofire.request(url, method: .delete, encoding: JSONEncoding.default, headers: header).responseJSON() { response in
             switch response.result {
-            case .success(let data) :
-                print("data")
+            case .success :
                 callback()
             case .failure(let error) :
-                print("Erreur de la requête", error)
-                callback()
+                print("error", error)
             }
         }
     }

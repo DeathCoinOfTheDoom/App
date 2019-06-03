@@ -38,6 +38,12 @@ class ProfilUpdateVC: UIViewController {
                 print(e!.localizedDescription)
                 return
             }
+            let nextVC = self.navigationController?.viewControllers[0] as! ProfilConsultationVC
+            if let userInfos = userInfos {
+                let userAttr = userInfos.data.attributes
+                nextVC.userInfos = UserInfosAttrView(email: userAttr.email, firstName: userAttr.firstName, lastName: userAttr.lastName, birthdate: userAttr.birthdate, phoneNumber: userAttr.phoneNumber)
+                nextVC.applyDataToView(userInfos: userAttr)
+            }
             self.navigationController?.popToRootViewController(animated: true)
         }
     }

@@ -1,6 +1,7 @@
 import UIKit
 
 class FolderListVC: UIViewController {
+    private let refreshControl = UIRefreshControl()
     @IBAction func emptyFlashFolderCreation(_ sender: Any) {
         createFlashFolder()
     }
@@ -21,16 +22,10 @@ class FolderListVC: UIViewController {
             }
         }
     }
-    
-    @IBOutlet weak var mainTableView: UITableView!
-    lazy var userFolders = [UserFolderData]()
-    let cellIdentifier = "basic_cell_identifier"
-    var selectedCellIndexPath: Int?
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func fetchData() {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
-        let userId = localStorageInstance.getUserInfos(key: "id") 
+        let userId = localStorageInstance.getUserInfos(key: "id")
         FolderService.listing(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
@@ -42,15 +37,38 @@ class FolderListVC: UIViewController {
                 self.mainTableView.reloadData()
                 self.mainTableView.restore()
             }
+            self.refreshControl.endRefreshing()
         }
     }
     
+    @IBOutlet weak var mainTableView: UITableView!
+    lazy var userFolders = [UserFolderData]()
+    let cellIdentifier = "basic_cell_identifier"
+    var selectedCellIndexPath: Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.fetchData()
+        self.configurationRefreshControl()
+    }
+    func configurationRefreshControl() {
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            mainTableView.refreshControl = refreshControl
+        } else {
+            mainTableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshFolderData(_:)), for: .valueChanged)
+        refreshControl.tintColor = ColorConstant.Primary.BASE
+    }
+    @objc private func refreshFolderData(_ sender: Any) {
+        fetchData()
+    }
     func applyCellStyle(tableCell: FolderCell) {
         tableCell.folderTitle.font = UIFont(name: Fonts.poppinsMedium, size: 14)
         tableCell.backgroundColor = ColorConstant.White
         tableCell.folderCard.backgroundColor = ColorConstant.White
     }
-    
 }
 
         

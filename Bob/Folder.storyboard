@@ -139,6 +139,7 @@
                                         <state key="normal" title="Supprimer"/>
                                         <connections>
                                             <action selector="deleteButton:" destination="Hyi-uY-QZs" eventType="touchUpInside" id="Y7I-Wr-CJc"/>
+                                            <segue destination="pUv-o0-gYj" kind="custom" customClass="DismissSegue" customModule="Bob" customModuleProvider="target" id="Z9U-kM-Z1M"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -783,5 +784,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Fl-XD-CWp"/>
+        <segue reference="Z9U-kM-Z1M"/>
     </inferredMetricsTieBreakers>
 </document>

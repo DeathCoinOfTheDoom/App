@@ -1,8 +1,10 @@
 import UIKit
 
 class FolderCreationIdentityVC: UIViewController {
-    
     @IBOutlet weak var folderCreationIdentityTableView: UITableView!
+    // Data from previous VC
+    var folderTitle : String = ""
+    var folderId: String = ""
     // list of userFiles lazy displayed in the table cells
     lazy var userFiles = [UserFilesData]()
     // ids passed to the next view. Necessary to create the folder during the final step
@@ -10,12 +12,14 @@ class FolderCreationIdentityVC: UIViewController {
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
     var userFilesDataIds : [String] = []
-    
+    let cellSpacingHeight: CGFloat = 10
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toFolderCreationJobVC"){
             if (finalUserFilesIds.count > 0) {
                 let displayVC = segue.destination as! FolderCreationJobVC
                 displayVC.previousVCIds = finalUserFilesIds
+                displayVC.folderTitle = self.folderTitle
+                displayVC.folderId = self.folderId
             }
         }
     }
@@ -30,6 +34,7 @@ class FolderCreationIdentityVC: UIViewController {
     override func viewDidLoad() {
         self.folderCreationIdentityTableView.delegate = self
         self.folderCreationIdentityTableView.dataSource = self
+        print("folderTitle", folderTitle)
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()
@@ -52,15 +57,27 @@ class FolderCreationIdentityVC: UIViewController {
     
 }
 extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.userFiles.count
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 90;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderCreationIdentityTableView.dequeueReusableCell(withIdentifier: "folderCreationIdentityCell", for: indexPath) as! FolderCreationTableViewCell
-        let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.row].relationships.type.data.id);
+        let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.section].relationships.type.data.id);
         cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
         return cell
     }
@@ -68,14 +85,14 @@ extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.cellForRow(at: indexPath) as! FolderCreationTableViewCell
         cell.selectionStyle = .none
         // already in array delete the element
-        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.row].id)
+        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.section].id)
         if ((indexOfId) != nil) {
             finalUserFilesIds.remove(at: indexOfId!)
             styleUnactiveCell(cell: cell)
         }
         // not in the array add the element and apply the selected style
         else {
-            finalUserFilesIds.append(userFiles[indexPath.row].id)
+            finalUserFilesIds.append(userFiles[indexPath.section].id)
             styleActiveCell(cell: cell)
         }
     }

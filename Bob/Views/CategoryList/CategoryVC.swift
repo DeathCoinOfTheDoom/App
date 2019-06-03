@@ -1,23 +1,16 @@
-//
-//  ViewController.swift
-//  Bob
-//
-//  Created by Victor Lucas on 28/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 import AlamofireImage
 
 class CategoryVC: UIViewController {
-    
+    // UI components
     @IBOutlet weak var homeTitle: UILabel!
     @IBOutlet weak var subTitleFolderList: UILabel!
     @IBOutlet weak var titleFolderList: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    // hold result of network call
     lazy var categoriesTab = [CategoryData]()
     lazy var userFiles = [UserFilesData]()
+    // Static data
     let cellSpacingHeight: CGFloat = 10
     
     override func viewDidLoad() {
@@ -73,15 +66,6 @@ class CategoryVC: UIViewController {
         }
         return Float(counter)/Float(total)
     }
-    
-//    func applyDataToView(userInfos: UserInfosAttr) {
-//        self.firstNameProfilConsultation.text = userInfos.firstName
-//    }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? ProfilUpdateVC {
-//            destination.userAttrBeforeModif = self.userInfos
-//        }
-//    }
 }
 
 

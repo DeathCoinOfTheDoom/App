@@ -18,10 +18,9 @@ class BirthdayViewController: UIViewController {
             HeaderBuilderBob.setTokenInHeader()
             UserService.postUserInfos(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headers) { (userModified, error) in
                 if (error != nil) {
-                    print("error", error)
+                    print("error", error!)
                 }
                 else {
-                    print("userModified", userModified)
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
                     self.present(nextViewController, animated:true, completion:nil)

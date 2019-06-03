@@ -48,7 +48,7 @@ class FolderListVC: UIViewController {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id") 
-        UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+        FolderService.listing(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
                 self.mainTableView.reloadData()

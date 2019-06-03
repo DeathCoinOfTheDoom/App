@@ -38,28 +38,6 @@ class UserService {
             }
         }
     }
-    
-    
-    static func getFolders(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
-        let url = UrlBuilder.searchUrl(query: query)
-        Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
-            switch response.result {
-            case .success(let data) :
-                let jsonDecoder = JSONDecoder()
-                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                do {
-                    let result = try jsonDecoder.decode(UserFolders.self, from: data)
-                    callback(result.data, nil)
-                } catch let error {
-                    print("Erreur de parsing", error)
-                    callback([], error)
-                }
-            case .failure(let error) :
-                print("Erreur de la requête")
-                callback([], error)
-            }
-        }
-    }
     static func getFiles(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFiles) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in

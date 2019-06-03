@@ -20,7 +20,7 @@
 		1620CFA822A45DD5003C5494 /* imageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA722A45DD5003C5494 /* imageResize.swift */; };
 		1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FA16227A3A19007A6559 /* TokenHelper.swift */; };
 		164AF280229DE82100C58D62 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164AF27F229DE82100C58D62 /* EmailVC.swift */; };
-		1672267622A09E6400C0AD09 /* FolderCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderCreation.swift */; };
+		1672267622A09E6400C0AD09 /* FolderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderLayer.swift */; };
 		1681A028228B1196007FD31C /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A026228B1196007FD31C /* LoginLayer.swift */; };
 		1681A02A228B130E007FD31C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A029228B130E007FD31C /* LoginVC.swift */; };
 		1681A02C228B147D007FD31C /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */; };
@@ -124,7 +124,7 @@
 		1620CFA722A45DD5003C5494 /* imageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageResize.swift; sourceTree = "<group>"; };
 		1645FA16227A3A19007A6559 /* TokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
 		164AF27F229DE82100C58D62 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
-		1672267522A09E6400C0AD09 /* FolderCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreation.swift; sourceTree = "<group>"; };
+		1672267522A09E6400C0AD09 /* FolderLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderLayer.swift; sourceTree = "<group>"; };
 		1681A026228B1196007FD31C /* LoginLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
 		1681A029228B130E007FD31C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 				16F341D7223A9262003A35C4 /* CategoryLayer.swift */,
 				1681A026228B1196007FD31C /* LoginLayer.swift */,
 				BC86A1542253ADA30070840E /* UserLayer.swift */,
-				1672267522A09E6400C0AD09 /* FolderCreation.swift */,
+				1672267522A09E6400C0AD09 /* FolderLayer.swift */,
 				1620CFA522A44146003C5494 /* FilesLayer.swift */,
 			);
 			path = Layers;
@@ -838,7 +838,7 @@
 				1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,
 				1681A02E228B1498007FD31C /* Type.swift in Sources */,
-				1672267622A09E6400C0AD09 /* FolderCreation.swift in Sources */,
+				1672267622A09E6400C0AD09 /* FolderLayer.swift in Sources */,
 				1681CD13223962D500165029 /* HeaderBuilder.swift in Sources */,
 				576C5E1F21FF65870069CFBB /* AppDelegate.swift in Sources */,
 				1681CD092236ADBB00165029 /* Tip.swift in Sources */,

@@ -82,7 +82,7 @@ class FolderListVC: UIViewController {
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
                 self.mainTableView.reloadData()
-                self.mainTableView.setEmptyView(title: "Aucun dossiers", message: "Vous n'avez aucun dossiers pour le moment, vous pouvez dès maintenant en créer un.")
+                self.mainTableView.setEmptyView(title: "Aucun dossiers", message: "Vous n'avez aucun dossiers pour le moment, vous pouvez en créer un dès maintenant.")
             } else {
                 self.userFolders.removeAll()
                 self.userFolders.append(contentsOf: userFolders)
@@ -93,9 +93,9 @@ class FolderListVC: UIViewController {
     }
     
     func applyCellStyle(tableCell: FolderCell) {
-        tableCell.folderTitle.font = UIFont(name: Fonts.poppinsBold, size: 24)
+        tableCell.folderTitle.font = UIFont(name: Fonts.poppinsMedium, size: 14)
         tableCell.folderIconBg.rounded()
-        tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
+        tableCell.backgroundColor = ColorConstant.White
         tableCell.folderIcon.image = UIImage(named: "delete")
         tableCell.folderIconBg.backgroundColor = ColorConstant.Red
         tableCell.folderCard.backgroundColor = ColorConstant.White
@@ -105,19 +105,29 @@ class FolderListVC: UIViewController {
 
         
 extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
-    
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.userFolders.count
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+//        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10;
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 90;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FolderCell
         cell.folderTitle.text = self.userFolders[indexPath.row].attributes.title
+        cell.selectionStyle = .none
         self.applyCellStyle(tableCell: cell)
         
         

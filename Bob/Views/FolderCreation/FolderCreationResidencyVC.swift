@@ -36,7 +36,6 @@ class FolderCreationResidencyVC: UIViewController {
         self.folderCreationResidencyTableView.delegate = self
         self.folderCreationResidencyTableView.dataSource = self
         let localStorageInstance = LocalStorage()
-        print("previousVCIds", previousVCIds)
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()
         CategoryService.details(query: "category/3/type", header: HeaderBuilderBob.headers) { (categoryDetails, error) in

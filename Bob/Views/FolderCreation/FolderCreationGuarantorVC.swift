@@ -4,7 +4,6 @@ class FolderCreationGuarantorVC: UIViewController {
     var previousVCIds : [String] = []
     // list of userFiles lazy displayed in the table cells
     lazy var userFiles = [UserFilesData]()
-    // ids passed to the next view. Necessary to create the folder during the final step
     var finalUserFilesIds : [String] = []
     lazy var categoryDetails = [CategoryDetailsData]()
     // ids of subdocument possibly display in this step
@@ -17,9 +16,13 @@ class FolderCreationGuarantorVC: UIViewController {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        let parameters = ["title": folderTitle, "user_id": userId, "_method": "put"]
+        print("finalUserFilesIds", finalUserFilesIds + previousVCIds)
+        let parameters = ["title": folderTitle, "user_id": userId, "files": finalUserFilesIds + previousVCIds, "_method": "put"] as [String : Any]
         FolderService.modification(query: "folder/\(folderId)", payload: parameters, header: HeaderBuilderBob.headers) { (createdFolder, error) in
-            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
+            nextViewController.selectedIndex = 1
+            self.present(nextViewController, animated:true, completion:nil)
         }
     }
     @IBOutlet weak var folderCreationGuarantorTableView: UITableView!
@@ -70,22 +73,21 @@ extension FolderCreationGuarantorVC: UITableViewDelegate, UITableViewDataSource 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderCreationGuarantorTableView.dequeueReusableCell(withIdentifier: "folderCreationGuarantorCell", for: indexPath) as! FolderCreationTableViewCell
-        let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.row].relationships.type.data.id);
-        cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
+        cell.titleFolderCreationCategoryFile.text = self.categoryDetails[indexPath.section].attributes.title
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! FolderCreationTableViewCell
         cell.selectionStyle = .none
         // already in array delete the element
-        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.row].id)
+        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.section].id)
         if ((indexOfId) != nil) {
             finalUserFilesIds.remove(at: indexOfId!)
             styleUnactiveCell(cell: cell)
         }
             // not in the array add the element and apply the selected style
         else {
-            finalUserFilesIds.append(userFiles[indexPath.row].id)
+            finalUserFilesIds.append(userFiles[indexPath.section].id)
             styleActiveCell(cell: cell)
         }
     }

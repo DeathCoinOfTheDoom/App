@@ -16,7 +16,6 @@ class FolderCreationGuarantorVC: UIViewController {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        print("finalUserFilesIds", finalUserFilesIds + previousVCIds)
         let parameters = ["title": folderTitle, "user_id": userId, "files": finalUserFilesIds + previousVCIds, "_method": "put"] as [String : Any]
         FolderService.modification(query: "folder/\(folderId)", payload: parameters, header: HeaderBuilderBob.headers) { (createdFolder, error) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)

@@ -32,41 +32,31 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-cx-Uts" userLabel="Folder Card" customClass="FolderCard" customModule="Bob" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="0.0" width="350" height="79"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-IA-nhW">
-                                                            <rect key="frame" x="302" y="23.5" width="32" height="32"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profil" translatesAutoresizingMaskIntoConstraints="NO" id="3Al-8b-wId">
-                                                                    <rect key="frame" x="4" y="4" width="24" height="24"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="24" id="11E-ff-Se1"/>
-                                                                        <constraint firstAttribute="height" constant="24" id="zAg-if-9T9"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                            </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="3Al-8b-wId" secondAttribute="trailing" constant="4" id="1Kt-YO-7QU"/>
-                                                                <constraint firstAttribute="height" constant="32" id="9bg-08-B0G"/>
-                                                                <constraint firstAttribute="width" constant="32" id="aPH-qM-mrV"/>
-                                                                <constraint firstAttribute="bottom" secondItem="3Al-8b-wId" secondAttribute="bottom" constant="4" id="sBP-aE-HYg"/>
-                                                                <constraint firstItem="3Al-8b-wId" firstAttribute="top" secondItem="nOI-IA-nhW" secondAttribute="top" constant="4" id="sIe-6o-u6k"/>
-                                                                <constraint firstItem="3Al-8b-wId" firstAttribute="leading" secondItem="nOI-IA-nhW" secondAttribute="leading" constant="4" id="v8S-aX-pOx"/>
-                                                            </constraints>
-                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32S-JF-7JU">
                                                             <rect key="frame" x="16" y="26" width="42" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-SO-7zP" customClass="DeleteButton" customModule="Bob" customModuleProvider="target">
+                                                            <rect key="frame" x="302" y="23.5" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="TGS-fh-3tJ"/>
+                                                                <constraint firstAttribute="height" constant="32" id="qeR-XZ-blf"/>
+                                                            </constraints>
+                                                            <state key="normal" image="delete"/>
+                                                            <connections>
+                                                                <segue destination="Hyi-uY-QZs" kind="show" id="rCe-DT-tHu"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.10832243799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="0R3-t8-ebB"/>
-                                                        <constraint firstItem="nOI-IA-nhW" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="JgZ-MO-Kbj"/>
+                                                        <constraint firstItem="JxY-SO-7zP" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="4Rr-9w-dOA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JxY-SO-7zP" secondAttribute="trailing" constant="16" id="7Zc-gj-RvK"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="top" secondItem="CFh-cx-Uts" secondAttribute="top" constant="26" id="Nv0-OZ-HvE"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="leading" secondItem="CFh-cx-Uts" secondAttribute="leading" constant="16" id="YIM-pg-34V"/>
-                                                        <constraint firstAttribute="trailing" secondItem="nOI-IA-nhW" secondAttribute="trailing" constant="16" id="b5z-I6-bOF"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -79,8 +69,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="folderCard" destination="CFh-cx-Uts" id="Xq9-Vr-5kl"/>
-                                            <outlet property="folderIcon" destination="3Al-8b-wId" id="uuL-eD-MSe"/>
-                                            <outlet property="folderIconBg" destination="nOI-IA-nhW" id="Rpc-Ru-FOJ"/>
                                             <outlet property="folderTitle" destination="32S-JF-7JU" id="qjx-dq-HzA"/>
                                         </connections>
                                     </tableViewCell>
@@ -127,6 +115,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqx-hI-0l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594.20289855072474" y="818.97321428571422"/>
+        </scene>
+        <!--Delete FolderVC-->
+        <scene sceneID="twf-d0-sQo">
+            <objects>
+                <viewController id="Hyi-uY-QZs" customClass="DeleteFolderVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVX-PV-0sg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="idb-Ol-57j">
+                                <rect key="frame" x="24" y="800" width="366" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Il-hhr" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                        <state key="normal" title="Annuler"/>
+                                        <connections>
+                                            <action selector="CancelButton:" destination="Hyi-uY-QZs" eventType="touchUpInside" id="htU-PH-T7k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-Hk-8t7" customClass="DeleteModalButton" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="171" height="30"/>
+                                        <state key="normal" title="Supprimer"/>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="Hyi-uY-QZs" eventType="touchUpInside" id="Y7I-Wr-CJc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6x-JM-MJn">
+                                <rect key="frame" x="40" y="298" width="334" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete-illu" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-X5-Wsq">
+                                        <rect key="frame" x="87" y="0.0" width="160" height="158"/>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="qvr-TN-Ctd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Êtes-vous sûr de vouloir supprimer ce dossier ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-pp-EEw">
+                                        <rect key="frame" x="0.0" y="198" width="334" height="41"/>
+                                        <color key="tintColor" red="0.89411764709999997" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.24313725489999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7u9-pp-EEw" secondAttribute="trailing" id="3op-W9-31d"/>
+                                    <constraint firstItem="7u9-pp-EEw" firstAttribute="leading" secondItem="w6x-JM-MJn" secondAttribute="leading" id="4FX-4G-U2X"/>
+                                    <constraint firstItem="7u9-pp-EEw" firstAttribute="top" secondItem="mL6-X5-Wsq" secondAttribute="bottom" constant="40" id="7eQ-fe-HYa"/>
+                                    <constraint firstAttribute="height" constant="300" id="7iK-Vr-R8P"/>
+                                    <constraint firstItem="mL6-X5-Wsq" firstAttribute="centerX" secondItem="w6x-JM-MJn" secondAttribute="centerX" id="Chs-CH-XgI"/>
+                                    <constraint firstItem="mL6-X5-Wsq" firstAttribute="top" secondItem="w6x-JM-MJn" secondAttribute="top" id="lLs-hq-W61"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.24313725490196078" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w6x-JM-MJn" firstAttribute="leading" secondItem="iI3-R5-AcT" secondAttribute="leading" constant="40" id="0S4-KB-bHP"/>
+                            <constraint firstItem="w6x-JM-MJn" firstAttribute="centerY" secondItem="DVX-PV-0sg" secondAttribute="centerY" id="56m-rD-kAM"/>
+                            <constraint firstItem="iI3-R5-AcT" firstAttribute="trailing" secondItem="idb-Ol-57j" secondAttribute="trailing" constant="24" id="JmX-Jd-dzU"/>
+                            <constraint firstItem="iI3-R5-AcT" firstAttribute="bottom" secondItem="idb-Ol-57j" secondAttribute="bottom" constant="32" id="PeI-uV-ZrV"/>
+                            <constraint firstItem="iI3-R5-AcT" firstAttribute="trailing" secondItem="w6x-JM-MJn" secondAttribute="trailing" constant="40" id="Wgb-1S-BPd"/>
+                            <constraint firstItem="idb-Ol-57j" firstAttribute="leading" secondItem="iI3-R5-AcT" secondAttribute="leading" constant="24" id="Zfd-Dt-huk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iI3-R5-AcT"/>
+                    </view>
+                    <connections>
+                        <outlet property="ModalIndicationLabel" destination="7u9-pp-EEw" id="1Cl-Nh-SVT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpP-YL-Aen" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.44927536231887" y="829.6875"/>
         </scene>
         <!--Mes dossiers-->
         <scene sceneID="dqx-e5-moe">
@@ -716,7 +779,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profil" width="184" height="184"/>
+        <image name="delete" width="48" height="48"/>
+        <image name="delete-illu" width="158" height="158"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Fl-XD-CWp"/>

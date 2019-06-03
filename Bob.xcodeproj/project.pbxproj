@@ -80,6 +80,9 @@
 		BCD2D2DB2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DA2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift */; };
 		BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */; };
 		BCD2D2DF2201E11200B528D1 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */; };
+		BCD6C86622A514F300B0E34E /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86522A514F300B0E34E /* DeleteButton.swift */; };
+		BCD6C86A22A5187600B0E34E /* FolderDeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86922A5187600B0E34E /* FolderDeleteVC.swift */; };
+		BCD6C86C22A51BC000B0E34E /* DeleteModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */; };
 		BCE203922271B96200F2BC08 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203912271B96200F2BC08 /* FolderCard.swift */; };
 		BCE203942271BA1B00F2BC08 /* ShadowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203932271BA1B00F2BC08 /* ShadowCard.swift */; };
 		BCE2FF6B22A4849600930EB5 /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE2FF6A22A4849600930EB5 /* FolderCell.swift */; };
@@ -195,6 +198,9 @@
 		BCD2D2DA2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsImagePickerVC.swift; sourceTree = "<group>"; };
 		BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		BCD2D2DE2201E11200B528D1 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		BCD6C86522A514F300B0E34E /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		BCD6C86922A5187600B0E34E /* FolderDeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDeleteVC.swift; sourceTree = "<group>"; };
+		BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteModalButton.swift; sourceTree = "<group>"; };
 		BCE203912271B96200F2BC08 /* FolderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
 		BCE203932271BA1B00F2BC08 /* ShadowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCard.swift; sourceTree = "<group>"; };
 		BCE2FF6A22A4849600930EB5 /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
@@ -453,6 +459,7 @@
 				BC83B6EF2253B12E00424C24 /* FolderListVC.swift */,
 				BCE203912271B96200F2BC08 /* FolderCard.swift */,
 				BCE2FF6A22A4849600930EB5 /* FolderCell.swift */,
+				BCD6C86922A5187600B0E34E /* FolderDeleteVC.swift */,
 			);
 			path = FolderList;
 			sourceTree = "<group>";
@@ -526,6 +533,8 @@
 				BCD2D2CE22008A6F00B528D1 /* TitleLabel.swift */,
 				BCFEFEA62255FC54003B7A71 /* UnchangeableInputLabel.swift */,
 				BC52C1F0228EE59E00F0F32E /* TabBar.swift */,
+				BCD6C86522A514F300B0E34E /* DeleteButton.swift */,
+				BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -789,6 +798,7 @@
 				BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */,
 				BC205A9F2254C189009DFE3B /* FolderCreationIdentityVC.swift in Sources */,
 				16E3749E2253A86100084CE1 /* CategoryDetailsVC.swift in Sources */,
+				BCD6C86622A514F300B0E34E /* DeleteButton.swift in Sources */,
 				BCD2D2C92200894A00B528D1 /* FilledButton.swift in Sources */,
 				BCD2D2DB2200A8C000B528D1 /* CategoryDetailsImagePickerVC.swift in Sources */,
 				BC4A74572251FD1000204F70 /* OnboardingTitle.swift in Sources */,
@@ -829,10 +839,12 @@
 				BCE203942271BA1B00F2BC08 /* ShadowCard.swift in Sources */,
 				BC86A1552253ADA30070840E /* UserLayer.swift in Sources */,
 				BCD2D2DD2201DDA100B528D1 /* NameViewController.swift in Sources */,
+				BCD6C86C22A51BC000B0E34E /* DeleteModalButton.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				BC44EB6A2254F07500FFA096 /* FolderCreationJobVC.swift in Sources */,
 				1681A02A228B130E007FD31C /* LoginVC.swift in Sources */,
 				BC51002022563BCB0066A2FB /* ProfilUpdateVC.swift in Sources */,
+				BCD6C86A22A5187600B0E34E /* FolderDeleteVC.swift in Sources */,
 				BC44EB652254D1C800FFA096 /* ProgressBar.swift in Sources */,
 				BCFEFEA72255FC54003B7A71 /* UnchangeableInputLabel.swift in Sources */,
 				1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */,

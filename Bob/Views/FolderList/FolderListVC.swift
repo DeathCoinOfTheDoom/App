@@ -94,10 +94,10 @@ class FolderListVC: UIViewController {
     
     func applyCellStyle(tableCell: FolderCell) {
         tableCell.folderTitle.font = UIFont(name: Fonts.poppinsMedium, size: 14)
-        tableCell.folderIconBg.rounded()
+//        tableCell.folderIconBg.rounded()
         tableCell.backgroundColor = ColorConstant.White
-        tableCell.folderIcon.image = UIImage(named: "delete")
-        tableCell.folderIconBg.backgroundColor = ColorConstant.Red
+//        tableCell.folderIcon.image = UIImage(named: "delete")
+//        tableCell.folderIconBg.backgroundColor = ColorConstant.Red
         tableCell.folderCard.backgroundColor = ColorConstant.White
     }
     

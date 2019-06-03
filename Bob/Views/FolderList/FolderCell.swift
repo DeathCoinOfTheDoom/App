@@ -9,8 +9,8 @@
 import UIKit
 
 class FolderCell: UITableViewCell {
-    @IBOutlet weak var folderIcon: UIImageView!
-    @IBOutlet weak var folderIconBg: UIView!
+//    @IBOutlet weak var folderIcon: UIImageView!
+//    @IBOutlet weak var folderIconBg: UIView!
     @IBOutlet weak var folderCard: FolderCard!
     @IBOutlet weak var folderTitle: UILabel!
 }

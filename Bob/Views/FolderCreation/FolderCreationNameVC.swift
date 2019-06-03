@@ -1,10 +1,3 @@
-//
-//  FolderCreationViewController.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 02/04/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
 import UIKit
 
 class FolderCreationNameVC: UIViewController {
@@ -15,7 +8,12 @@ class FolderCreationNameVC: UIViewController {
             FolderService.creation(query: "folder", payload: ["user_id": userId, "title": inputFolderName.text!], header: HeaderBuilderBob.headers){ (folder, e) in
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Folder", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FolderCreationIdentity") as! UINavigationController
-                self.present(nextViewController, animated:true, completion:nil)
+                let firstRenderedView = nextViewController.viewControllers.first as! FolderCreationIdentityVC
+                if (folder != nil) {
+                    firstRenderedView.folderTitle = folder!.attributes.title
+                    firstRenderedView.folderId = folder!.id
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
             }
         }
     }

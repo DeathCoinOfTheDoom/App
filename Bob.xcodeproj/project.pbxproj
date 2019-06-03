@@ -17,7 +17,8 @@
 		1612B8672254D91900314A4E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8662254D91900314A4E /* CategoryCell.swift */; };
 		1612B8692254DE2900314A4E /* CategoryDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */; };
 		1620CFA622A44146003C5494 /* FilesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA522A44146003C5494 /* FilesLayer.swift */; };
-		1620CFA822A45DD5003C5494 /* imageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA722A45DD5003C5494 /* imageResize.swift */; };
+		1620CFA822A45DD5003C5494 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620CFA722A45DD5003C5494 /* ImageResize.swift */; };
+		1623047A22A5A5B400B4CBA0 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1623047922A5A5B400B4CBA0 /* DismissSegue.swift */; };
 		1645FA17227A3A19007A6559 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FA16227A3A19007A6559 /* TokenHelper.swift */; };
 		164AF280229DE82100C58D62 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164AF27F229DE82100C58D62 /* EmailVC.swift */; };
 		1672267622A09E6400C0AD09 /* FolderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderLayer.swift */; };
@@ -125,7 +126,8 @@
 		1612B8662254D91900314A4E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		1612B8682254DE2800314A4E /* CategoryDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsCell.swift; sourceTree = "<group>"; };
 		1620CFA522A44146003C5494 /* FilesLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesLayer.swift; sourceTree = "<group>"; };
-		1620CFA722A45DD5003C5494 /* imageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageResize.swift; sourceTree = "<group>"; };
+		1620CFA722A45DD5003C5494 /* ImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResize.swift; sourceTree = "<group>"; };
+		1623047922A5A5B400B4CBA0 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		1645FA16227A3A19007A6559 /* TokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
 		164AF27F229DE82100C58D62 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		1672267522A09E6400C0AD09 /* FolderLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderLayer.swift; sourceTree = "<group>"; };
@@ -414,7 +416,8 @@
 				576C5E5D21FF6BC00069CFBB /* AllowedTextFieldValues.swift */,
 				576C5E5E21FF6BC00069CFBB /* TextFieldMaxLength.swift */,
 				1608F3C6227204240074B6F3 /* KeyboardController.swift */,
-				1620CFA722A45DD5003C5494 /* imageResize.swift */,
+				1620CFA722A45DD5003C5494 /* ImageResize.swift */,
+				1623047922A5A5B400B4CBA0 /* DismissSegue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
 				BC44EB6C2254F48500FFA096 /* FolderCreationResidencyVC.swift in Sources */,
 				BC44EB682254DA4000FFA096 /* FolderCreationTableViewCell.swift in Sources */,
+				1623047A22A5A5B400B4CBA0 /* DismissSegue.swift in Sources */,
 				169DAE7B2257A334009A8B11 /* RoundedView.swift in Sources */,
 				BC83B6F02253B12E00424C24 /* FolderListVC.swift in Sources */,
 				BC205A9F2254C189009DFE3B /* FolderCreationIdentityVC.swift in Sources */,
@@ -836,7 +840,7 @@
 				1681CD1122394F1F00165029 /* User.swift in Sources */,
 				164AF280229DE82100C58D62 /* EmailVC.swift in Sources */,
 				576C5E2121FF65870069CFBB /* CategoryVC.swift in Sources */,
-				1620CFA822A45DD5003C5494 /* imageResize.swift in Sources */,
+				1620CFA822A45DD5003C5494 /* ImageResize.swift in Sources */,
 				BCD2D2C7220088CF00B528D1 /* Colors.swift in Sources */,
 				BC51001E225603C00066A2FB /* ProfilConsultationVC.swift in Sources */,
 				169EFF53228D87350014BD07 /* LocalStorage.swift in Sources */,

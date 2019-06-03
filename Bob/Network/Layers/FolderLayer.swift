@@ -3,10 +3,11 @@ import Alamofire
 
 typealias CallbackCreateFolder =  (_ folder: FolderCreationData?, _ error: Error?) -> Void
 typealias CallbackModificationFolder =  (_ folder: UserFolderData?, _ error: Error?) -> Void
+typealias CallbackListingFolders = (_ userFolder: [UserFolderData], _ error: Error?) -> Void
 typealias CallbackDeleteFolder =  () -> Void
 
 class FolderService {
-    static func listing(query: String, header: HTTPHeaders, callback: @escaping CallbackUserFolders) {
+    static func listing(query: String, header: HTTPHeaders, callback: @escaping CallbackListingFolders) {
         let url = UrlBuilder.searchUrl(query: query)
         Alamofire.request(url, method: .get, headers: header).responseData() { (response) in
             switch response.result {

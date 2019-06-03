@@ -1,16 +1,5 @@
 import UIKit
 
-class Folder {
-    let title:String!
-    let description:String!
-    //var image:UIImage!
-    
-    init(title:String, description:String) {
-        self.title = title
-        self.description = description
-    }
-}
-
 struct FolderCreation: Codable {
     var data: FolderCreationData
 }

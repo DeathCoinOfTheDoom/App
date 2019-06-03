@@ -10,10 +10,8 @@ import Foundation
 import Alamofire
 
 
-typealias CallbackUserFolders = (_ userFolder: [UserFolderData], _ error: Error?) -> Void
 typealias CallbackUserFiles = (_ userFiles: [UserFilesData], _ error: Error?) -> Void
 typealias CallbackUserEdition = (_ user: UserInfos?, _ error: Error?) -> Void
-
 typealias CallbackUserInfos = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 typealias CallbackUpdateProfile = (_ userInfos: UserInfosData? , _ error: Error?) -> Void
 

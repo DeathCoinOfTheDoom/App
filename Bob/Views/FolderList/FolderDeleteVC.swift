@@ -7,8 +7,6 @@ class DeleteFolderVC: UIViewController {
         if let deleteFolderId = deleteFolderId {
             HeaderBuilderBob.setTokenInHeader()
             FolderService.delete(query: "folder/\(deleteFolderId)", header: HeaderBuilderBob.headers) {
-//                let nextVC = self.navigationController?.viewControllers[0] as! FolderListVC
-//                nextVC.fetchData()
             }
         }
     }

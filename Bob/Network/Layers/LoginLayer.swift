@@ -1,10 +1,3 @@
-//
-//  LoginLayer.swift
-//  Bob
-//
-//  Created by Gérome Lacaux on 13/03/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
 import Foundation
 import Alamofire
 
@@ -33,7 +26,6 @@ class LoginService {
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
                     let result = try jsonDecoder.decode(UserAuth.self, from: data)
-                    print("result", result)
                     callback(result, nil)
                 } catch let error {
                     print("Erreur de parsing", error)

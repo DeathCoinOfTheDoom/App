@@ -1,10 +1,3 @@
-//
-//  User.swift
-//  Bob
-//
-//  Created by Gérome Lacaux on 13/03/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
 import Foundation
 import UIKit
 
@@ -63,19 +56,31 @@ struct UserAttr: Codable {
     var createdAt: String
     var updatedAt: String
 }
-
+// Folders
 struct UserFolders: Codable {
     var data: [UserFolderData]
 }
+// One Folder
 struct UserFolder: Codable {
     var data: UserFolderData
     var meta: UserFolderMeta?
+}
+struct UserFolderRelationships: Codable {
+    var files: UserFolderRelationshipsFiles
+}
+struct UserFolderRelationshipsFiles: Codable {
+    var data: [UserFolderRelationshipsData]
+}
+struct UserFolderRelationshipsData: Codable {
+    var type: String
+    var id: String
 }
 
 struct UserFolderData: Codable {
     var type: String
     var id: String
     var attributes: UserFolderAttr
+    var relationships: UserFolderRelationships
 }
 struct UserFolderMeta: Codable {
     var zip: String
@@ -89,6 +94,9 @@ struct UserFolderAttr: Codable {
 // User files
 struct UserFiles: Codable {
     var data: [UserFilesData]
+}
+struct UserFile: Codable {
+    var data: UserFilesData
 }
 struct UserFilesData: Codable {
     var type: String

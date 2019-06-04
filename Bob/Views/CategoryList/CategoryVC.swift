@@ -102,7 +102,7 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
         tableCell.imageCategoryCell.af_setImage(withURL: urlImage)
         // style part
         tableCell.progressCategoryCell.tintColor = progressColor[indexPath.section]
-        tableCell.progressCategoryCell.trackTintColor = ColorConstant.Border.LIGHT
+        tableCell.progressCategoryCell.trackTintColor = ColorConstant.Border.BASE
         tableCell.layer.cornerRadius = 8
         tableCell.clipsToBounds = true
         tableCell.backgroundColor = .white

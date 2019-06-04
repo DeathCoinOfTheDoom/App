@@ -16,13 +16,9 @@ class CategoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        applyTabbarItems(self: self)
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        self.tabBarController?.tabBar.items?[0].title = "Accueil"
-        self.tabBarController?.tabBar.items?[1].title = "Mes dossiers"
-        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "icon-folder")
-        self.tabBarController?.tabBar.items?[2].title = "Profil"
-        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "icon-profile")
         HeaderBuilderBob.setTokenInHeader()
         UserService.getUserInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {

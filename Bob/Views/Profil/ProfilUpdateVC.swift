@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilUpdateVC: UIViewController {
+class ProfilUpdateVC: KeyboardController {
     @IBAction func userButtonModif(_ sender: Any) {
         self.hasModifications()
     }
@@ -21,6 +21,10 @@ class ProfilUpdateVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.applyDataToView(userInfos: userAttrBeforeModif)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     func sendUserchanges() {
         HeaderBuilderBob.setTokenInHeader()

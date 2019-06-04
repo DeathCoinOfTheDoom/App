@@ -76,7 +76,6 @@ extension FolderCreationJobVC: UITableViewDelegate, UITableViewDataSource {
         cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
         cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
         cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
-//        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

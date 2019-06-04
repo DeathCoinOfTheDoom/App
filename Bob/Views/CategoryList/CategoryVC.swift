@@ -12,20 +12,18 @@ class CategoryVC: UIViewController {
     lazy var userFiles = [UserFilesData]()
     // Static data
     let cellSpacingHeight: CGFloat = 10
-    
     let progressColor = [ColorConstant.Secondary.PINK, ColorConstant.Secondary.BLUE, ColorConstant.Secondary.YELLOW, ColorConstant.Secondary.GREEN]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
         self.tabBarController?.tabBar.items?[0].title = "Accueil"
         self.tabBarController?.tabBar.items?[1].title = "Mes dossiers"
         self.tabBarController?.tabBar.items?[1].image = UIImage(named: "icon-folder")
         self.tabBarController?.tabBar.items?[2].title = "Profil"
         self.tabBarController?.tabBar.items?[2].image = UIImage(named: "icon-profile")
-        let localStorageInstance = LocalStorage()
         HeaderBuilderBob.setTokenInHeader()
-        let userId = localStorageInstance.getUserInfos(key: "id")
-        
         UserService.getUserInfos(query: "user/\(userId)", header: HeaderBuilderBob.headers) { (userInfos, e) in
             guard e == nil else {
                 print(e!.localizedDescription)
@@ -37,7 +35,6 @@ class CategoryVC: UIViewController {
             }
             self.homeTitle.text = "Bonjour " + userInfos.attributes.firstName + ","
         }
-        
         CategoryService.all(query: "category", header: HeaderBuilderBob.headers) { (categories, error) in
             UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                 self.userFiles.append(contentsOf: userFiles)
@@ -50,6 +47,7 @@ class CategoryVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
@@ -60,12 +58,14 @@ class CategoryVC: UIViewController {
         titleFolderList.textColor = ColorConstant.Neutral.DARKEST
         subTitleFolderList.font = UIFont(name: Fonts.poppinsRegular, size: 14)
     }
+    
     func determineProgression(index: Int) -> Float {
         let total = self.categoriesTab[index].relationships.type.data.count
         var counter = 0
         let acceptedIds : [String] = self.categoriesTab[index].relationships.type.data.map({ (CategoryRelationshipsTypeData) -> String in
             return CategoryRelationshipsTypeData.id
         })
+        
         self.userFiles.forEach { (userFileData) in
             if (acceptedIds.contains(userFileData.relationships.type.data.id)) {
                 counter = counter + 1

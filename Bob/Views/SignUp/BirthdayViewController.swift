@@ -30,37 +30,12 @@ class BirthdayViewController: UIViewController {
     }
     @IBOutlet weak var BirthdayPicker: UITextField!
     @IBOutlet weak var BirthdayTitle: TitleLabel!
-    @IBAction func NextStepButton(_ sender: Any) {
-//        if let user = user {
-//        let parameters = [
-//            "phone_number": user.attributes.phoneNumber,
-//            "email": user.attributes.email!,
-//            "lastName": user.attributes.lastName!,
-//            "firstName": user.attributes.lastName!,
-//            "birthdate": user.attributes.birthdate!,
-//            ] as [String : Any]
-//            print("-----dans l'event")
-//            print("-----userID", user.id)
-//            UserService.update(query: "user/\(user.id)", payload: parameters, header: HeaderBuilderBob.headersPut) { (userModified, error) in
-//                if (error == nil) {
-//                    print("error", error!)
-//                }
-//                else {
-//                    print("userModified", userModified)
-//                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UINavigationController
-//                    self.present(nextViewController, animated:true, completion:nil)
-//                }
-//            }
-//        }
-    }
     
     lazy var formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         BirthdayTitle.text = "Dernière étape ! \n Quelle est votre date de naissance \(user?.attributes.firstName ?? "") ?"
-        
         let birthdayPicker = UIDatePicker()
         birthdayPicker.datePickerMode = UIDatePicker.Mode.date
         birthdayPicker.locale = Locale(identifier: "fr_FR")

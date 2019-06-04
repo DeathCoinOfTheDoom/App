@@ -95,7 +95,7 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
         let tableCell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryListCell", for: indexPath) as! CategoryCell
         // set pregress of the UiProgressBar
         tableCell.progressCategoryCell.progress = self.determineProgression(index: indexPath.section)
-        // dinamic content
+        // dynamic content
         tableCell.titleCategoryCell.text = self.categoriesTab[indexPath.section].attributes.title
         tableCell.descriptionCategoryCell.text = self.categoriesTab[indexPath.section].attributes.description
         let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!
@@ -115,4 +115,3 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
-

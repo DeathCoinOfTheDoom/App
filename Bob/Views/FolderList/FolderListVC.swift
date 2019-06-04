@@ -76,6 +76,8 @@ class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainTableView.delegate = self
+        self.mainTableView.dataSource = self
         applyTabbarItems(self: self)
         self.fetchData()
         self.configurationRefreshControl()
@@ -134,6 +136,12 @@ extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
             self.present(nextViewController, animated: true, completion: nil)
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "FolderDetailsVC") as! FolderDetailsVC
+        nextViewController.folderTitle = self.userFolders[indexPath.section].attributes.title
+        nextViewController.folderId = self.userFolders[indexPath.section].id
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
 

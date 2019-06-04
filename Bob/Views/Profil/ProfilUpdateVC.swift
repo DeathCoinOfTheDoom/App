@@ -16,6 +16,7 @@ class ProfilUpdateVC: KeyboardController {
     @IBOutlet weak var userEmailModif: Input!
     @IBOutlet weak var userFirstNameModif: Input!
     @IBOutlet weak var userLastNameModif: Input!
+    
     var userAttrBeforeModif = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class ProfilUpdateVC: KeyboardController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
     func sendUserchanges() {
         HeaderBuilderBob.setTokenInHeader()
         print("userAttrBeforeModif", userAttrBeforeModif)
@@ -58,6 +60,7 @@ class ProfilUpdateVC: KeyboardController {
         userFirstNameModif.text = userInfos.firstName
         userLastNameModif.text = userInfos.lastName
     }
+    
     func hasModifications() {
         if (userAttrBeforeModif.lastName != userLastNameModif.text || userAttrBeforeModif.firstName != userFirstNameModif.text || userAttrBeforeModif.email != userEmailModif.text || userAttrBeforeModif.birthdate != userBirthdayModif.text) {
             print("il y a eu des changements")

@@ -8,7 +8,6 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
             print("code", code)
         }
     }
-    
     // index of the selected item in collectionOfTextField
     var actualStep = 0
     // events

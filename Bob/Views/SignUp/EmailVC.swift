@@ -9,12 +9,13 @@
 import UIKit
 
 class EmailVC: UIViewController {
+    @IBOutlet weak var emailInput: Input!
     var user: User?
     
-    @IBOutlet weak var emailInput: Input!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BirthdayViewController {
             if var user = user {
@@ -23,5 +24,4 @@ class EmailVC: UIViewController {
             }
         }
     }
-
 }

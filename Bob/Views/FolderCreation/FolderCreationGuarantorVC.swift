@@ -32,6 +32,7 @@ class FolderCreationGuarantorVC: UIViewController {
     override func viewDidLoad() {
         self.folderCreationGuarantorTableView.delegate = self
         self.folderCreationGuarantorTableView.dataSource = self
+        self.navigationItem.title = folderTitle
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()

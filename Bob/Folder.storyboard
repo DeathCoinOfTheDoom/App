@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXf-nt-4yx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXf-nt-4yx">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -354,7 +355,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-p1-VjB">
-                                <rect key="frame" x="0.0" y="246" width="414" height="481"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationIdentityCell" id="2hH-S0-1zR" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -422,7 +423,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-vE-TLo" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="767" width="366" height="30"/>
+                                <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
                                     <segue destination="TlV-9U-3dj" kind="show" identifier="toFolderCreationJobVC" id="E8B-Ac-EBC"/>
@@ -488,7 +489,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-Zx-1Ku">
-                                <rect key="frame" x="0.0" y="246" width="414" height="481"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationJobCell" rowHeight="108" id="zKP-tu-sRy" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -556,7 +557,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hal-Fk-9JQ" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="767" width="366" height="30"/>
+                                <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
                                     <segue destination="fhE-UP-wDO" kind="show" identifier="toFolderCreationResidencyVC" id="FTc-rH-yEI"/>
@@ -621,7 +622,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="blE-w0-M7d">
-                                <rect key="frame" x="0.0" y="246" width="414" height="481"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationResidencyCell" rowHeight="49" id="pu0-Nc-it9" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -689,7 +690,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSX-CP-6BR" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="767" width="366" height="30"/>
+                                <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
                                     <segue destination="Sph-zZ-Eg1" kind="show" identifier="toFolderCreationGuarantorVC" id="Rgi-FX-Y3a"/>
@@ -754,7 +755,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-Hx-hsN">
-                                <rect key="frame" x="0.0" y="246" width="414" height="481"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationGuarantorCell" rowHeight="49" id="X4q-KG-vjv" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
@@ -822,7 +823,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-JZ-V0e" customClass="FilledButton" customModule="Bob" customModuleProvider="target">
-                                <rect key="frame" x="24" y="767" width="366" height="30"/>
+                                <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Suivant"/>
                                 <connections>
                                     <action selector="sendFilesButton:" destination="Sph-zZ-Eg1" eventType="touchUpInside" id="ke4-cy-KCE"/>
@@ -861,13 +862,16 @@
         <!--Navigation Controller-->
         <scene sceneID="Htx-8p-hQe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="UXf-nt-4yx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXf-nt-4yx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6gj-zv-3Z9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uyq-ZE-q2q">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="pUv-o0-gYj" kind="relationship" relationship="rootViewController" id="dSs-u6-t7k"/>
                     </connections>
@@ -896,9 +900,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="delete" width="48" height="48"/>
+        <image name="delete" width="96" height="96"/>
         <image name="delete-illu" width="158" height="158"/>
-        <image name="send" width="48" height="48"/>
+        <image name="send" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8vq-ZV-2gl"/>

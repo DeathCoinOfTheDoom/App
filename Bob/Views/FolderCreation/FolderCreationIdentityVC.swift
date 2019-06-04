@@ -32,7 +32,7 @@ class FolderCreationIdentityVC: UIViewController {
     override func viewDidLoad() {
         self.folderCreationIdentityTableView.delegate = self
         self.folderCreationIdentityTableView.dataSource = self
-        print("folderTitle", folderTitle)
+        self.navigationItem.title = folderTitle
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()

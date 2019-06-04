@@ -33,6 +33,7 @@ class FolderCreationJobVC: UIViewController {
     override func viewDidLoad() {
         self.folderCreationJobTableView.delegate = self
         self.folderCreationJobTableView.dataSource = self
+        self.navigationItem.title = folderTitle
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()

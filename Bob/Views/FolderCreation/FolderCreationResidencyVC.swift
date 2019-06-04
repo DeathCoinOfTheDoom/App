@@ -33,6 +33,7 @@ class FolderCreationResidencyVC: UIViewController {
     override func viewDidLoad() {
         self.folderCreationResidencyTableView.delegate = self
         self.folderCreationResidencyTableView.dataSource = self
+        self.navigationItem.title = folderTitle
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         HeaderBuilderBob.setTokenInHeader()

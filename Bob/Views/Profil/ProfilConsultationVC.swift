@@ -10,6 +10,11 @@ class ProfilConsultationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationController?.isNavigationBarHidden = true
+        
+//        self.tabBarItem.title = "Pouette"
+//        self.tabBarController?.tabBar.items?[1].title = "eeeeeeuuu"
+//        self.tabBarController?.tabBar.items?[2].title = "TOTOO"
+        
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")

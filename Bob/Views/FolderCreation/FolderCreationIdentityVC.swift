@@ -4,7 +4,6 @@ class FolderCreationIdentityVC: UIViewController {
     @IBOutlet weak var folderCreationIdentityTableView: UITableView!
     // Data from previous VC
     var folderTitle : String = ""
-    var folderId: String = ""
     // list of userFiles lazy displayed in the table cells
     lazy var userFiles = [UserFilesData]()
     // ids passed to the next view. Necessary to create the folder during the final step
@@ -19,7 +18,6 @@ class FolderCreationIdentityVC: UIViewController {
                 let displayVC = segue.destination as! FolderCreationJobVC
                 displayVC.previousVCIds = finalUserFilesIds
                 displayVC.folderTitle = self.folderTitle
-                displayVC.folderId = self.folderId
             }
         }
     }

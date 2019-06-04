@@ -10,18 +10,21 @@ class FolderCreationGuarantorVC: UIViewController {
     var userFilesDataIds : [String] = []
     // Data from previous VC
     var folderTitle : String = ""
-    var folderId: String = ""
     
     @IBAction func sendFilesButton(_ sender: Any) {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         let parameters = ["title": folderTitle, "user_id": userId, "files": finalUserFilesIds + previousVCIds, "_method": "put"] as [String : Any]
-        FolderService.modification(query: "folder/\(folderId)", payload: parameters, header: HeaderBuilderBob.headers) { (createdFolder, error) in
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
-            nextViewController.selectedIndex = 1
-            self.present(nextViewController, animated:true, completion:nil)
+        FolderService.creation(query: "folder", payload: ["user_id": userId, "title": folderTitle], header: HeaderBuilderBob.headers){ (folder, e) in
+            if let folder = folder {
+                FolderService.modification(query: "folder/\(folder.id)", payload: parameters, header: HeaderBuilderBob.headers) { (createdFolder, error) in
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
+                    nextViewController.selectedIndex = 1
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
+            }
         }
     }
     @IBOutlet weak var folderCreationGuarantorTableView: UITableView!

@@ -33,10 +33,25 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
                         nextViewController.user = user?.user
                         self.present(nextViewController, animated:true, completion:nil)
                     }
-                        // is a already knowned user
+                        // is a already known user
                     else {
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainTBVC") as! UITabBarController
+                        
+                        print("tabarbar---", nextViewController.tabBar.items)
+                        nextViewController.tabBar.tintColor = ColorConstant.Neutral.DARKEST
+//                        let firstItem = nextViewController.tabBar.items?[0]
+//                        firstItem?.title = "Accueil"
+//                        firstItem?.image = UIImage(named: "icon-home")
+                        
+                        let secondItem = nextViewController.tabBar.items?[1]
+                        secondItem?.title = "Mes dossiers"
+                        secondItem?.image = UIImage(named: "icon-folder")
+                        
+                        let thirdItem = nextViewController.tabBar.items?[2]
+                        thirdItem?.title = "Profil"
+                        thirdItem?.image = UIImage(named: "icon-profile")
+
                         self.present(nextViewController, animated:true, completion:nil)
                     }
                 }

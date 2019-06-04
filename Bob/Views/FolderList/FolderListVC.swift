@@ -4,21 +4,20 @@ import MessageUI
 class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func sendEmail(_ sender: Any) {
-        let mailComposeViewController = configureMailController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            print("error email")
-        }
     }
-    func configureMailController() -> MFMailComposeViewController {
+    func configureMailController(folderId: String) -> MFMailComposeViewController {
+        let localStorageInstance = LocalStorage()
+        let userId = localStorageInstance.getUserInfos(key: "id")
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self
-        
-        mailComposerVC.setToRecipients(["andrew@seemuapps.com"])
-        mailComposerVC.setSubject("Hello")
-        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
-        
+        print("folderId", folderId, "userId", userId)
+        FolderService.listingTest(query: "folder/\(folderId)?zip", header: HeaderBuilderBob.headers) { (userFolders, e) in
+            mailComposerVC.mailComposeDelegate = self
+            mailComposerVC.setToRecipients([""])
+            mailComposerVC.setSubject("")
+            if let meta = userFolders[0].meta {
+            mailComposerVC.setMessageBody("Trouvez le lien pour télécharger mon dossier ici: \(meta.zip)", isHTML: false)
+            }
+        }
         return mailComposerVC
     }
     private let refreshControl = UIRefreshControl()
@@ -116,7 +115,15 @@ extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
         cell.folderTitle.text = self.userFolders[indexPath.section].attributes.title
         cell.selectionStyle = .none
         self.applyCellStyle(tableCell: cell)
-        cell.actionBlock = {
+        cell.sendFolder = {
+            let mailComposeViewController = self.configureMailController(folderId: self.userFolders[indexPath.section].id)
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                print("error email")
+            }
+        }
+        cell.deleteFolder = {
             let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "DeleteFolderVC") as! DeleteFolderVC
             nextViewController.deleteFolderId = self.userFolders[indexPath.section].id
             self.present(nextViewController, animated: true, completion: nil)

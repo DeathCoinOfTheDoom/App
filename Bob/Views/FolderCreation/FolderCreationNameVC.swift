@@ -1,21 +1,19 @@
 import UIKit
 
 class FolderCreationNameVC: KeyboardController {
-    @IBAction func buttonFolderName(_ sender: Any) {
-        if (inputFolderName.text!.count > 0) {
-            let localStorageInstance = LocalStorage()
-            let userId = localStorageInstance.getUserInfos(key: "id")
-            FolderService.creation(query: "folder", payload: ["user_id": userId, "title": inputFolderName.text!], header: HeaderBuilderBob.headers){ (folder, e) in
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Folder", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FolderCreationIdentity") as! UINavigationController
-                let firstRenderedView = nextViewController.viewControllers.first as! FolderCreationIdentityVC
-                if (folder != nil) {
-                    firstRenderedView.folderTitle = folder!.attributes.title
-                    firstRenderedView.folderId = folder!.id
-                    self.present(nextViewController, animated:true, completion:nil)
-                }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "folderCreationIdentityVCSegue"){
+            if (inputFolderName.text!.count > 0) {
+                let displayVC = segue.destination as! FolderCreationIdentityVC
+                displayVC.folderTitle = inputFolderName.text!
             }
         }
+    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (inputFolderName.text!.count > 0) {
+            return true
+        }
+        return false
     }
     @IBOutlet weak var inputFolderName: Input!
     override func viewDidLoad() {

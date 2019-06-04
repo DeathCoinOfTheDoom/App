@@ -793,13 +793,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="DPy-BU-Rfr" kind="relationship" relationship="viewControllers" id="PBE-7D-C48"/>
-                        <segue destination="6Jz-LQ-zfy" kind="relationship" relationship="viewControllers" id="W0C-DD-zpS"/>
-                        <segue destination="VVg-1F-9vK" kind="relationship" relationship="viewControllers" id="fCY-sw-Omt"/>
+                        <segue destination="Nww-04-Nig" kind="relationship" relationship="viewControllers" id="bLV-DZ-r3R"/>
+                        <segue destination="qxN-HF-fAe" kind="relationship" relationship="viewControllers" id="rl4-Qs-YSM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAR-a0-oEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarItem title="Home" image="home-blue" landscapeImage="icon-home" largeContentSizeImage="icon-home" selectedImage="icon-home" id="zhk-5L-j0o"/>
-                <tabBarItem title="Dossier" image="folder-blue" largeContentSizeImage="folder-blue" selectedImage="icon-folder" id="Bk4-A1-GUg"/>
+                <tabBarItem title="Home" image="home-blue" landscapeImage="icon-profile" largeContentSizeImage="icon-profile" selectedImage="icon-profile" id="zhk-5L-j0o"/>
+                <tabBarItem title="Mes dossiers" image="home-blue" landscapeImage="icon-home" largeContentSizeImage="icon-home" selectedImage="icon-home" id="5EY-t0-d7h"/>
+                <tabBarItem title="Profile" image="home-blue" landscapeImage="icon-home" largeContentSizeImage="icon-home" selectedImage="icon-home" id="kaa-V0-mck"/>
             </objects>
             <point key="canvasLocation" x="3796" y="129.98500749625188"/>
         </scene>
@@ -826,6 +827,7 @@
         <scene sceneID="was-db-Feg">
             <objects>
                 <viewControllerPlaceholder storyboardName="Folder" id="Nww-04-Nig" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aXh-n7-TZv"/>
                     <navigationItem key="navigationItem" id="09y-6d-gvQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXQ-Rk-AOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -833,31 +835,15 @@
             <point key="canvasLocation" x="5388" y="695"/>
         </scene>
         <!--Profil-->
-        <scene sceneID="Jzk-dJ-DRz">
-            <objects>
-                <navigationController id="VVg-1F-9vK" userLabel="Profil" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profil" image="profil-blue" landscapeImage="profil-blue" largeContentSizeImage="profil-blue" selectedImage="icon-profile" id="IU9-Fd-bYu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpM-m3-cot">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="qxN-HF-fAe" kind="relationship" relationship="rootViewController" id="Ey9-QY-QmZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcm-FY-gLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5217" y="1615"/>
-        </scene>
-        <!--Profil-->
         <scene sceneID="FZL-Io-Vu7">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profil" id="qxN-HF-fAe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jSW-cR-vhK"/>
                     <navigationItem key="navigationItem" id="XSU-hl-02J"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQL-ng-IM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5901" y="1590"/>
+            <point key="canvasLocation" x="4900" y="1312"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fnf-bT-ze1">
@@ -964,26 +950,6 @@
             </objects>
             <point key="canvasLocation" x="8004" y="573"/>
         </scene>
-        <!--Créer un dossier-->
-        <scene sceneID="EhA-ef-qOU">
-            <objects>
-                <navigationController restorationIdentifier="FolderNavigationController" storyboardIdentifier="FolderNavigationController" title="Créer un dossier" automaticallyAdjustsScrollViewInsets="NO" id="6Jz-LQ-zfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mes dossiers" image="folder-blue" landscapeImage="folder-blue" largeContentSizeImage="folder-blue" selectedImage="folder-blue" id="th2-Wc-zrh"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zeg-ek-YpY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Nww-04-Nig" kind="relationship" relationship="rootViewController" id="1PN-2j-dIn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EwB-YS-LWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4900" y="573"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NUf-w0-v3D">
             <objects>
@@ -1050,11 +1016,8 @@
     <resources>
         <image name="Logo" width="191" height="140"/>
         <image name="chevron_right" width="18" height="18"/>
-        <image name="folder-blue" width="25" height="25"/>
         <image name="home-blue" width="25" height="25"/>
-        <image name="icon-folder" width="25" height="25"/>
         <image name="icon-home" width="25" height="25"/>
         <image name="icon-profile" width="25" height="25"/>
-        <image name="profil-blue" width="25" height="25"/>
     </resources>
 </document>

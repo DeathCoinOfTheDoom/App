@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TiG-3l-Y17">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3G-UR-FXT">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,7 +70,7 @@
                                 <rect key="frame" x="24" y="816" width="366" height="30"/>
                                 <state key="normal" title="Modifier"/>
                                 <connections>
-                                    <segue destination="uCY-pE-9Hl" kind="show" id="VQn-5Z-aQH"/>
+                                    <segue destination="uCY-pE-9Hl" kind="show" id="faQ-xF-846"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-xR-ahh" customClass="UnchangeableInputLabel" customModule="Bob" customModuleProvider="target">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4Q-1W-Fq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137.68115942029" y="-37.5"/>
+            <point key="canvasLocation" x="2047.826086956522" y="-37.5"/>
         </scene>
         <!--Modifier mon profil-->
         <scene sceneID="15S-Yo-5XP">
@@ -241,25 +241,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMw-4V-012" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902.8985507246377" y="-38.169642857142854"/>
+            <point key="canvasLocation" x="2813.04347826087" y="-38.169642857142854"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bz9-zZ-XGp">
+        <scene sceneID="K9n-c1-VeN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TiG-3l-Y17" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3G-UR-FXT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LLR-MZ-WK6">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yzQ-tn-Z38">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kJk-X2-XJS" kind="relationship" relationship="rootViewController" id="4pn-f0-Qec"/>
+                        <segue destination="kJk-X2-XJS" kind="relationship" relationship="rootViewController" id="UyA-p3-XQg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g2o-rX-H3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PrH-HH-TaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227.536231884058" y="-37.5"/>
+            <point key="canvasLocation" x="1137.68115942029" y="-37.5"/>
         </scene>
     </scenes>
     <resources>

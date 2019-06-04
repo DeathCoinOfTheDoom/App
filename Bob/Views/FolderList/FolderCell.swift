@@ -1,9 +1,13 @@
 import UIKit
 
 class FolderCell: UITableViewCell {
-    var actionBlock: (() -> Void)? = nil
-    @IBAction func cellButton(_ sender: Any) {
-        actionBlock?()
+    var deleteFolder: (() -> Void)? = nil
+    var sendFolder: (() -> Void)? = nil
+    @IBAction func cellButtonSend(_ sender: Any) {
+        sendFolder?()
+    }
+    @IBAction func cellButtonDelete(_ sender: Any) {
+        deleteFolder?()
     }
     @IBOutlet weak var folderCard: FolderCard!
     @IBOutlet weak var folderTitle: UILabel!

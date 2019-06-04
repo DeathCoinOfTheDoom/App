@@ -11,14 +11,12 @@ class FolderCreationJobVC: UIViewController {
     var userFilesDataIds : [String] = []
     // Data from previous VC
     var folderTitle : String = ""
-    var folderId: String = ""
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toFolderCreationResidencyVC"){
             if (finalUserFilesIds.count > 0) {
                 let displayVC = segue.destination as! FolderCreationResidencyVC
                 displayVC.previousVCIds =  self.previousVCIds + self.finalUserFilesIds
                 displayVC.folderTitle = self.folderTitle
-                displayVC.folderId = self.folderId
             }
         }
     }

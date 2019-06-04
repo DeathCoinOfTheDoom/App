@@ -75,6 +75,10 @@ struct UserFolderData: Codable {
     var type: String
     var id: String
     var attributes: UserFolderAttr
+    var meta: UserFolderMeta?
+}
+struct UserFolderMeta: Codable {
+    var zip: String
 }
 struct UserFolderAttr: Codable {
     var title: String

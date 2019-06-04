@@ -85,6 +85,7 @@
 		BCD6C86622A514F300B0E34E /* DeleteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86522A514F300B0E34E /* DeleteIcon.swift */; };
 		BCD6C86A22A5187600B0E34E /* FolderDeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86922A5187600B0E34E /* FolderDeleteVC.swift */; };
 		BCD6C86C22A51BC000B0E34E /* DeleteModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */; };
+		BCD6C87222A5B90300B0E34E /* FolderCreationTableViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C87122A5B90300B0E34E /* FolderCreationTableViewCard.swift */; };
 		BCD6C87422A5CE4800B0E34E /* SendIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD6C87322A5CE4800B0E34E /* SendIcon.swift */; };
 		BCE203922271B96200F2BC08 /* FolderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203912271B96200F2BC08 /* FolderCard.swift */; };
 		BCE203942271BA1B00F2BC08 /* ShadowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE203932271BA1B00F2BC08 /* ShadowCard.swift */; };
@@ -206,6 +207,7 @@
 		BCD6C86522A514F300B0E34E /* DeleteIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteIcon.swift; sourceTree = "<group>"; };
 		BCD6C86922A5187600B0E34E /* FolderDeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDeleteVC.swift; sourceTree = "<group>"; };
 		BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteModalButton.swift; sourceTree = "<group>"; };
+		BCD6C87122A5B90300B0E34E /* FolderCreationTableViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCreationTableViewCard.swift; sourceTree = "<group>"; };
 		BCD6C87322A5CE4800B0E34E /* SendIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendIcon.swift; sourceTree = "<group>"; };
 		BCE203912271B96200F2BC08 /* FolderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCard.swift; sourceTree = "<group>"; };
 		BCE203932271BA1B00F2BC08 /* ShadowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCard.swift; sourceTree = "<group>"; };
@@ -476,11 +478,12 @@
 			isa = PBXGroup;
 			children = (
 				BC205A9C2254A25A009DFE3B /* FolderCreationNameVC.swift */,
-				BC205A9E2254C189009DFE3B /* FolderCreationIdentityVC.swift */,
 				BC44EB672254DA4000FFA096 /* FolderCreationTableViewCell.swift */,
+				BC205A9E2254C189009DFE3B /* FolderCreationIdentityVC.swift */,
 				BC44EB692254F07500FFA096 /* FolderCreationJobVC.swift */,
 				BC44EB6B2254F48500FFA096 /* FolderCreationResidencyVC.swift */,
 				BC026DC1225500F500A220DC /* FolderCreationGuarantorVC.swift */,
+				BCD6C87122A5B90300B0E34E /* FolderCreationTableViewCard.swift */,
 			);
 			path = FolderCreation;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 			files = (
 				1612B8672254D91900314A4E /* CategoryCell.swift in Sources */,
 				160BDCA42201AD21005DF133 /* CategoryCard.swift in Sources */,
+				BCD6C87222A5B90300B0E34E /* FolderCreationTableViewCard.swift in Sources */,
 				BCD2D2CB220089EB00B528D1 /* Fonts.swift in Sources */,
 				576C5E5821FF67C90069CFBB /* AuthCodeVC.swift in Sources */,
 				BC44EB6C2254F48500FFA096 /* FolderCreationResidencyVC.swift in Sources */,
@@ -955,7 +959,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mcalibani@hotmail.fr (26GCKD6YNS)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -974,7 +978,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1016,7 +1020,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mcalibani@hotmail.fr (26GCKD6YNS)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1029,7 +1033,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1045,14 +1049,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R84DSX2NH2;
 				INFOPLIST_FILE = Bob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bob.Bob;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.mona.bob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -1066,14 +1070,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R84DSX2NH2;
 				INFOPLIST_FILE = Bob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bob.Bob;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.mona.bob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

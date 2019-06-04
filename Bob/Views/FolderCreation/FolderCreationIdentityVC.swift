@@ -63,15 +63,6 @@ extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-    // Set the spacing between sections
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
-    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90;
     }
@@ -79,6 +70,11 @@ extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
         let cell = self.folderCreationIdentityTableView.dequeueReusableCell(withIdentifier: "folderCreationIdentityCell", for: indexPath) as! FolderCreationTableViewCell
         let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.section].relationships.type.data.id);
         cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
+        cell.iconBgFolderCreationCategoryFile.rounded()
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
+//        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -96,13 +92,19 @@ extension FolderCreationIdentityVC: UITableViewDelegate, UITableViewDataSource {
             styleActiveCell(cell: cell)
         }
     }
+    
     func styleActiveCell (cell: FolderCreationTableViewCell) {
-        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.Green.Primary
-        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.White
+        cell.backgroundFolderCreationCategory.backgroundColor = UIColor(red:0.96, green:0.73, blue:0.82, alpha:1.0)
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = UIColor(red:0.93, green:0.58, blue:0.73, alpha:1.0)
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "check")
     }
+    
     func styleUnactiveCell (cell: FolderCreationTableViewCell) {
-        cell.backgroundFolderCreationCategory.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
-        cell.titleFolderCreationCategoryFile.textColor = UIColor.darkGray
+        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
+        cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
+        cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
+        cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
     }
 }
 

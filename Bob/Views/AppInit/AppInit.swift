@@ -1,11 +1,3 @@
-//
-//  AppInit.swift
-//  Bob
-//
-//  Created by Gérome Lacaux on 05/05/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class AppInit: UIViewController {

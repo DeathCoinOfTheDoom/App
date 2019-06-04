@@ -5,9 +5,6 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
     @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var titleFolderDetails: TitleLabel!
     @IBOutlet weak var descriptionFolderDetails: UILabel!
-    @IBAction func addDocument(_ sender: Any) {
-        
-    }
     @IBOutlet weak var titleLabel: UILabel!
     
     lazy var categoryDetails = [CategoryDetailsData]()
@@ -32,6 +29,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
         self.navigationController?.isNavigationBarHidden = false
         self.applyStyle()
     }
+    
     func fetchData() {
         if let folderCategoryNotNull = folderCategory {
         HeaderBuilderBob.setTokenInHeader()
@@ -40,8 +38,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
             CategoryService.details(query: "category/\(folderCategoryNotNull.id)/type", header: HeaderBuilderBob.headers) { (categoryDetails, error) in
                 UserService.getFiles(query: "user/\(userId)/file", header: HeaderBuilderBob.headers) { (userFiles, error) in
                     self.userFiles.append(contentsOf: userFiles)
-                    userFiles.forEach({ (userFilesData) in
-                        self.userFilesDataIds.append(userFilesData.relationships.type.data.id)
+                    userFiles.forEach({ (userFilesData) in self.userFilesDataIds.append(userFilesData.relationships.type.data.id)
                     })
                     self.categoryDetails.removeAll()
                     self.categoryDetails.append(contentsOf: self.categoryFilesExtended(categoryDetails: categoryDetails))
@@ -62,6 +59,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
         }
         return userFilesExtended
     }
+    
     func categoryWithUserKnownStatus(status: Bool, categoryDetails:CategoryDetailsData) -> CategoryDetailsData {
         var categoryDetailsExtended: CategoryDetailsData = categoryDetails
         categoryDetailsExtended.userAsDoneThisFile = status
@@ -75,6 +73,7 @@ class CategoryDetailsVC: CategoryDetailsImagePickerVC {
         self.view.backgroundColor = ColorConstant.Neutral.LIGHTER
         detailsTableView.backgroundColor = ColorConstant.Neutral.LIGHTER
     }
+    
     func applyCellStyle(tableCell: CategoryDetailsCell ,userAsDoneThisFile: Bool?) {
         tableCell.categoryDetailsCellIconBg.rounded()
         tableCell.backgroundColor = ColorConstant.Neutral.LIGHTER
@@ -110,10 +109,12 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.categoryDetails.count
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.indexOfClickedCell = indexPath.row
         self.chooseImage()
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = self.detailsTableView.dequeueReusableCell(withIdentifier: "CategoryDetailsCell", for: indexPath) as! CategoryDetailsCell
         tableCell.categoryDetailsCellTitle.text = self.categoryDetails[indexPath.row].attributes.title
@@ -122,6 +123,7 @@ extension CategoryDetailsVC: UITableViewDelegate, UITableViewDataSource {
         tableCell.selectionStyle = .none
         return tableCell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }

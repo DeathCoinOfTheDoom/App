@@ -3,7 +3,6 @@ import UIKit
 class AppInit: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     func dispatchView() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)

@@ -32,9 +32,7 @@ class ColorConstant: NSObject {
     }
     
     struct Border {
-        static let LIGHT : UIColor = UIColor(red:0.89, green:0.91, blue:0.92, alpha:1.0)
         static let BASE : UIColor = UIColor(red:0.89, green:0.91, blue:0.92, alpha:1.0)
-        static let LIGHTEST: UIColor = UIColor(red:0.89, green:0.91, blue:0.92, alpha:1.0)
     }
     
     struct Neutral {

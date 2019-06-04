@@ -22,6 +22,7 @@ class FolderCreationResidencyVC: UIViewController {
             }
         }
     }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if (finalUserFilesIds.count > 0) {
             return true
@@ -53,7 +54,6 @@ class FolderCreationResidencyVC: UIViewController {
             }
         }
     }
-
 }
 
 extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource {
@@ -63,7 +63,6 @@ extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90;
     }
@@ -75,7 +74,6 @@ extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource 
         cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
         cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
         cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
-//        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -94,7 +92,6 @@ extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource 
         }
     }
     func styleActiveCell (cell: FolderCreationTableViewCell) {
-        print("cell" , cell, "backgroundFolderCreationCategory", cell.backgroundFolderCreationCategory)
         cell.backgroundFolderCreationCategory.backgroundColor = UIColor(red:1.00, green:0.95, blue:0.77, alpha:1.0)
         cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
         cell.iconBgFolderCreationCategoryFile.backgroundColor = UIColor(red:0.98, green:0.85, blue:0.41, alpha:1.0)

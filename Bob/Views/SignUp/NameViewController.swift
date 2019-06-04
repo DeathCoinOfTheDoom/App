@@ -1,10 +1,10 @@
 import UIKit
 
 class NameViewController: UIViewController {
-    var user: User?
-    
     @IBOutlet weak var firstName: Input!
     @IBOutlet weak var lastName: Input!
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,5 +18,4 @@ class NameViewController: UIViewController {
             }
         }
     }
-
 }

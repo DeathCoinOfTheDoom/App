@@ -28,9 +28,11 @@ class PhoneStepVc: KeyboardController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         setInputPreferences()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
     func setInputPreferences(){
         phoneInput.setFlag(for: .FR)
         phoneInput.setCountries(including: [.FR, .ES, .IT, .BE, .LU, .DE])

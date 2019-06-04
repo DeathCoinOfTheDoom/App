@@ -6,15 +6,11 @@ class ProfilConsultationVC: UIViewController {
     @IBOutlet weak var emailProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var firstNameProfilConsultation: UnchangeableInputLabel!
     @IBOutlet weak var lastNameProfilConsultation: UnchangeableInputLabel!
+    
     var userInfos = UserInfosAttrView(email: "", firstName: "", lastName: "", birthdate: "", phoneNumber: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.isNavigationBarHidden = true
-        
-//        self.tabBarItem.title = "Pouette"
-//        self.tabBarController?.tabBar.items?[1].title = "eeeeeeuuu"
-//        self.tabBarController?.tabBar.items?[2].title = "TOTOO"
-        
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
@@ -35,12 +31,14 @@ class ProfilConsultationVC: UIViewController {
             self.applyDataToView(userInfos: userInfos.attributes)
         }
     }
+    
     func applyDataToView(userInfos: UserInfosAttr) {
         self.lastNameProfilConsultation.text = userInfos.lastName
         self.firstNameProfilConsultation.text = userInfos.firstName
         self.birthdayProfilConsultation.text = userInfos.birthdate
         self.emailProfilConsultation.text = userInfos.email
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ProfilUpdateVC {
             destination.userAttrBeforeModif = self.userInfos

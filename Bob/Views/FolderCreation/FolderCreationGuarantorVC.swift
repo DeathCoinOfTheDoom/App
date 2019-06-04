@@ -52,7 +52,6 @@ class FolderCreationGuarantorVC: UIViewController {
             }
         }
     }
-    
 }
 
 extension FolderCreationGuarantorVC: UITableViewDelegate, UITableViewDataSource {
@@ -72,7 +71,6 @@ extension FolderCreationGuarantorVC: UITableViewDelegate, UITableViewDataSource 
         cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
         cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
         cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
-//        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -84,7 +82,7 @@ extension FolderCreationGuarantorVC: UITableViewDelegate, UITableViewDataSource 
             finalUserFilesIds.remove(at: indexOfId!)
             styleUnactiveCell(cell: cell)
         }
-            // not in the array add the element and apply the selected style
+        // not in the array add the element and apply the selected style
         else {
             finalUserFilesIds.append(userFiles[indexPath.section].id)
             styleActiveCell(cell: cell)

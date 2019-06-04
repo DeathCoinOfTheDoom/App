@@ -23,8 +23,10 @@
 		164AF280229DE82100C58D62 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164AF27F229DE82100C58D62 /* EmailVC.swift */; };
 		1672267622A09E6400C0AD09 /* FolderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1672267522A09E6400C0AD09 /* FolderLayer.swift */; };
 		1679EB3B22A6D3C400DBBAD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679EB3A22A6D3C400DBBAD4 /* Utils.swift */; };
+		1679EB3E22A705F600DBBAD4 /* FolderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679EB3D22A705F600DBBAD4 /* FolderDetailsVC.swift */; };
+		1679EB4022A7063200DBBAD4 /* FolderCellVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679EB3F22A7063200DBBAD4 /* FolderCellVCTableViewCell.swift */; };
+		1679EB4222A718C200DBBAD4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1679EB4122A718C200DBBAD4 /* Card.swift */; };
 		1681A028228B1196007FD31C /* LoginLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A026228B1196007FD31C /* LoginLayer.swift */; };
-		1681A02A228B130E007FD31C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A029228B130E007FD31C /* LoginVC.swift */; };
 		1681A02C228B147D007FD31C /* AddCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */; };
 		1681A02E228B1498007FD31C /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681A02D228B1498007FD31C /* Type.swift */; };
 		1681CD092236ADBB00165029 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681CD082236ADBB00165029 /* Tip.swift */; };
@@ -135,8 +137,10 @@
 		164AF27F229DE82100C58D62 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
 		1672267522A09E6400C0AD09 /* FolderLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderLayer.swift; sourceTree = "<group>"; };
 		1679EB3A22A6D3C400DBBAD4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1679EB3D22A705F600DBBAD4 /* FolderDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDetailsVC.swift; sourceTree = "<group>"; };
+		1679EB3F22A7063200DBBAD4 /* FolderCellVCTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCellVCTableViewCell.swift; sourceTree = "<group>"; };
+		1679EB4122A718C200DBBAD4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1681A026228B1196007FD31C /* LoginLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayer.swift; sourceTree = "<group>"; };
-		1681A029228B130E007FD31C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1681A02B228B147D007FD31C /* AddCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollectionViewCell.swift; sourceTree = "<group>"; };
 		1681A02D228B1498007FD31C /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		1681CD082236ADBB00165029 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
@@ -310,6 +314,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		1679EB3C22A705CE00DBBAD4 /* FolderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1679EB3D22A705F600DBBAD4 /* FolderDetailsVC.swift */,
+				1679EB3F22A7063200DBBAD4 /* FolderCellVCTableViewCell.swift */,
+			);
+			path = FolderDetails;
+			sourceTree = "<group>";
+		};
 		1681CD0A223947BB00165029 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +425,7 @@
 		576C5E4F21FF66B60069CFBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1679EB3C22A705CE00DBBAD4 /* FolderDetails */,
 				16089F37227F7A4A00023A11 /* AppInit */,
 				16EDFDE2221DA7C600A00F2A /* CategoryDetails */,
 				160BDCA02201A6AF005DF133 /* CategoryList */,
@@ -454,7 +468,6 @@
 		576C5E5621FF67A00069CFBB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				1681A029228B130E007FD31C /* LoginVC.swift */,
 				160BDC9D2200A929005DF133 /* AuthCode */,
 				160BDC9C2200A5AD005DF133 /* PhoneStep */,
 				BCD2D2DC2201DDA000B528D1 /* NameViewController.swift */,
@@ -558,6 +571,7 @@
 				BCD6C86522A514F300B0E34E /* DeleteIcon.swift */,
 				BCD6C86B22A51BC000B0E34E /* DeleteModalButton.swift */,
 				BCD6C87322A5CE4800B0E34E /* SendIcon.swift */,
+				1679EB4122A718C200DBBAD4 /* Card.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -841,7 +855,9 @@
 				16EDFDE6221DAA5300A00F2A /* CategoryDetailsCard.swift in Sources */,
 				BCF5F12E2241ACAA007876C9 /* OnboardingPageVC.swift in Sources */,
 				BC205A9D2254A25A009DFE3B /* FolderCreationNameVC.swift in Sources */,
+				1679EB4022A7063200DBBAD4 /* FolderCellVCTableViewCell.swift in Sources */,
 				1608F3C9227358DB0074B6F3 /* Credential.swift in Sources */,
+				1679EB3E22A705F600DBBAD4 /* FolderDetailsVC.swift in Sources */,
 				BCF5F1302241ADC9007876C9 /* OnboardingVC.swift in Sources */,
 				BC52C1F1228EE59E00F0F32E /* TabBar.swift in Sources */,
 				BCD2D2D322008AD100B528D1 /* Input.swift in Sources */,
@@ -870,10 +886,10 @@
 				BCD6C86C22A51BC000B0E34E /* DeleteModalButton.swift in Sources */,
 				576C5E5F21FF6BC00069CFBB /* AllowedTextFieldValues.swift in Sources */,
 				BC44EB6A2254F07500FFA096 /* FolderCreationJobVC.swift in Sources */,
-				1681A02A228B130E007FD31C /* LoginVC.swift in Sources */,
 				BC51002022563BCB0066A2FB /* ProfilUpdateVC.swift in Sources */,
 				BCD6C86A22A5187600B0E34E /* FolderDeleteVC.swift in Sources */,
 				BC44EB652254D1C800FFA096 /* ProgressBar.swift in Sources */,
+				1679EB4222A718C200DBBAD4 /* Card.swift in Sources */,
 				BCFEFEA72255FC54003B7A71 /* UnchangeableInputLabel.swift in Sources */,
 				1608F3C7227204250074B6F3 /* KeyboardController.swift in Sources */,
 				16C632C5225204120060B326 /* QueryCallbackError.swift in Sources */,

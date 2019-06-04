@@ -22,7 +22,7 @@ class UnchangeableInputLabel : UITextField, UITextFieldDelegate {
     }
     
     func applyColor(color: UIColor) {
-        bottomBorder.backgroundColor = ColorConstant.Border.LIGHTEST
+        bottomBorder.backgroundColor = ColorConstant.Border.BASE
     }
     
     override func awakeFromNib() {

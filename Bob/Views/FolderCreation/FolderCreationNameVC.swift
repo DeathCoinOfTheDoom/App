@@ -9,6 +9,12 @@ class FolderCreationNameVC: KeyboardController {
             }
         }
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (inputFolderName.text!.count > 0) {
+            return true
+        }
+        return false
+    }
     @IBOutlet weak var inputFolderName: Input!
     override func viewDidLoad() {
         super.viewDidLoad()

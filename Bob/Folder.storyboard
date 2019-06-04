@@ -38,7 +38,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-SO-7zP" customClass="DeleteButton" customModule="Bob" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-SO-7zP" customClass="DeleteIcon" customModule="Bob" customModuleProvider="target">
                                                             <rect key="frame" x="302" y="23.5" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="TGS-fh-3tJ"/>
@@ -46,7 +46,18 @@
                                                             </constraints>
                                                             <state key="normal" image="delete"/>
                                                             <connections>
-                                                                <segue destination="Hyi-uY-QZs" kind="show" id="rCe-DT-tHu"/>
+                                                                <action selector="cellButton:" destination="JLb-dH-nlf" eventType="touchUpInside" id="Wjj-2k-Euc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-uI-UzL" customClass="SendIcon" customModule="Bob" customModuleProvider="target">
+                                                            <rect key="frame" x="254" y="23.5" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="Tdw-p3-9Xq"/>
+                                                                <constraint firstAttribute="height" constant="32" id="iyg-WH-7Ko"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="send"/>
+                                                            <connections>
+                                                                <action selector="sendEmail:" destination="pUv-o0-gYj" eventType="touchUpInside" id="BGr-NF-Inh"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -56,7 +67,9 @@
                                                         <constraint firstItem="JxY-SO-7zP" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="4Rr-9w-dOA"/>
                                                         <constraint firstAttribute="trailing" secondItem="JxY-SO-7zP" secondAttribute="trailing" constant="16" id="7Zc-gj-RvK"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="top" secondItem="CFh-cx-Uts" secondAttribute="top" constant="26" id="Nv0-OZ-HvE"/>
+                                                        <constraint firstItem="M8L-uI-UzL" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="ON6-ze-JyP"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="leading" secondItem="CFh-cx-Uts" secondAttribute="leading" constant="16" id="YIM-pg-34V"/>
+                                                        <constraint firstItem="JxY-SO-7zP" firstAttribute="leading" secondItem="M8L-uI-UzL" secondAttribute="trailing" constant="16" id="xq5-qs-1qu"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -86,7 +99,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-ro-PWk" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="filledflashFolderCreation:" destination="pUv-o0-gYj" eventType="touchUpInside" id="bZi-7e-Ixo"/>
                                 </connections>
@@ -119,7 +132,7 @@
         <!--Delete FolderVC-->
         <scene sceneID="twf-d0-sQo">
             <objects>
-                <viewController id="Hyi-uY-QZs" customClass="DeleteFolderVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DeleteFolderVC" storyboardIdentifier="DeleteFolderVC" id="Hyi-uY-QZs" customClass="DeleteFolderVC" customModule="Bob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVX-PV-0sg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +144,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
                                         <state key="normal" title="Annuler"/>
                                         <connections>
-                                            <action selector="CancelButton:" destination="Hyi-uY-QZs" eventType="touchUpInside" id="htU-PH-T7k"/>
+                                            <segue destination="pUv-o0-gYj" kind="custom" customClass="DismissSegue" customModule="Bob" customModuleProvider="target" id="8vq-ZV-2gl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFZ-Hk-8t7" customClass="DeleteModalButton" customModule="Bob" customModuleProvider="target">
@@ -139,6 +152,7 @@
                                         <state key="normal" title="Supprimer"/>
                                         <connections>
                                             <action selector="deleteButton:" destination="Hyi-uY-QZs" eventType="touchUpInside" id="Y7I-Wr-CJc"/>
+                                            <segue destination="pUv-o0-gYj" kind="custom" customClass="DismissSegue" customModule="Bob" customModuleProvider="target" id="Z9U-kM-Z1M"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -209,13 +223,12 @@
                                 <rect key="frame" x="24" y="728" width="366" height="30"/>
                                 <state key="normal" title="Créer un dossier"/>
                                 <connections>
-                                    <action selector="test:" destination="zWm-Qd-Hqj" eventType="touchUpInside" id="c8h-IU-OTF"/>
                                     <segue destination="qSy-ix-ilh" kind="show" id="XUw-42-AtF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-yI-hDg" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="Flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="emptyFlashFolderCreation:" destination="zWm-Qd-Hqj" eventType="touchUpInside" id="eih-qf-6JV"/>
                                 </connections>
@@ -339,28 +352,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-p1-VjB">
-                                <rect key="frame" x="24" y="246" width="366" height="530"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-p1-VjB">
+                                <rect key="frame" x="16" y="246" width="382" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationIdentityCell" rowHeight="49" id="2hH-S0-1zR" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="366" height="49"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="folderCreationIdentityCell" id="2hH-S0-1zR" customClass="FolderCreationTableViewCell" customModule="Bob" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hH-S0-1zR" id="4PM-WC-WxT">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZH-Kk-CMc" customClass="FolderCreationTableViewCard" customModule="Bob" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="0.0" width="334" height="49"/>
+                                                    <rect key="frame" x="16" y="16" width="350" height="58"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF4-G0-iHt">
-                                                            <rect key="frame" x="24" y="14" width="286" height="21"/>
+                                                            <rect key="frame" x="24" y="18.5" width="302" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2z4-Nc-84L">
-                                                            <rect key="frame" x="286" y="8.5" width="32" height="32"/>
+                                                            <rect key="frame" x="302" y="13" width="32" height="32"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-NG-hZ5">
                                                                     <rect key="frame" x="4" y="4" width="24" height="24"/>
@@ -392,10 +405,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="BZH-Kk-CMc" firstAttribute="top" secondItem="4PM-WC-WxT" secondAttribute="top" constant="16" id="EKT-U8-IlP"/>
+                                                <constraint firstAttribute="bottom" secondItem="BZH-Kk-CMc" secondAttribute="bottom" constant="16" id="QPe-kA-MDW"/>
                                                 <constraint firstItem="BZH-Kk-CMc" firstAttribute="leading" secondItem="4PM-WC-WxT" secondAttribute="leading" constant="16" id="YdG-uD-paO"/>
-                                                <constraint firstAttribute="bottom" secondItem="BZH-Kk-CMc" secondAttribute="bottom" id="Yyv-2u-xBu"/>
                                                 <constraint firstAttribute="trailing" secondItem="BZH-Kk-CMc" secondAttribute="trailing" constant="16" id="i6b-6z-1vS"/>
-                                                <constraint firstItem="BZH-Kk-CMc" firstAttribute="top" secondItem="4PM-WC-WxT" secondAttribute="top" id="nBl-0H-ZLI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -424,9 +437,9 @@
                             <constraint firstAttribute="trailing" secondItem="9aG-9g-KwO" secondAttribute="trailing" constant="24" id="88g-0C-F1j"/>
                             <constraint firstItem="YyR-xl-mKh" firstAttribute="leading" secondItem="sAV-fU-tMJ" secondAttribute="leadingMargin" constant="24" id="Fef-q0-r50"/>
                             <constraint firstItem="tTe-Mo-6jz" firstAttribute="bottom" secondItem="7tW-vE-TLo" secondAttribute="bottom" constant="16" id="HO0-qc-5ZM"/>
-                            <constraint firstItem="m8f-p1-VjB" firstAttribute="leading" secondItem="tTe-Mo-6jz" secondAttribute="leading" constant="24" id="Pap-vL-Fp4"/>
+                            <constraint firstItem="m8f-p1-VjB" firstAttribute="leading" secondItem="tTe-Mo-6jz" secondAttribute="leading" constant="16" id="Pap-vL-Fp4"/>
                             <constraint firstItem="7tW-vE-TLo" firstAttribute="top" secondItem="m8f-p1-VjB" secondAttribute="bottom" constant="40" id="QEp-ja-LDq"/>
-                            <constraint firstItem="tTe-Mo-6jz" firstAttribute="trailing" secondItem="m8f-p1-VjB" secondAttribute="trailing" constant="24" id="R6I-av-XV6"/>
+                            <constraint firstItem="tTe-Mo-6jz" firstAttribute="trailing" secondItem="m8f-p1-VjB" secondAttribute="trailing" constant="16" id="R6I-av-XV6"/>
                             <constraint firstItem="7tW-vE-TLo" firstAttribute="leading" secondItem="tTe-Mo-6jz" secondAttribute="leading" constant="24" id="T7n-qL-alI"/>
                             <constraint firstItem="tTe-Mo-6jz" firstAttribute="trailing" secondItem="dSm-Xd-sBV" secondAttribute="trailing" constant="24" id="Ufq-DP-nOX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YyR-xl-mKh" secondAttribute="trailing" constant="24" id="cay-wa-rbc"/>
@@ -881,8 +894,10 @@
     <resources>
         <image name="delete" width="48" height="48"/>
         <image name="delete-illu" width="158" height="158"/>
+        <image name="send" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Fl-XD-CWp"/>
+        <segue reference="Z9U-kM-Z1M"/>
     </inferredMetricsTieBreakers>
 </document>

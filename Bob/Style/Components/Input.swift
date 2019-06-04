@@ -1,15 +1,10 @@
-//
-//  Input.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 29/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 class Input : UITextField, UITextFieldDelegate {
+    // global variables
+    let padding = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.addTarget(self, action: #selector(onFocusIn), for: UIControl.Event.editingDidBegin)
@@ -29,7 +24,6 @@ class Input : UITextField, UITextFieldDelegate {
         applyColor(color: ColorConstant.Border.LIGHT)
     }
     
-    
     func applyColor(color: UIColor) {
         self.layer.borderColor = color.cgColor  // Set Border-Color
     }
@@ -38,16 +32,11 @@ class Input : UITextField, UITextFieldDelegate {
         didSet {
             if (hasError) {
                 self.layer.borderColor = ColorConstant.Error.ERROR.cgColor
-                
             } else {
                 self.layer.borderColor = ColorConstant.Neutral.LIGHT.cgColor
             }
         }
     }
-    
-    //Padding input
-    
-    let padding = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)

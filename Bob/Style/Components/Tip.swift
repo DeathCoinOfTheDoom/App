@@ -1,11 +1,3 @@
-//
-//  Tip.swift
-//  Bob
-//
-//  Created by Gérome Lacaux on 11/03/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

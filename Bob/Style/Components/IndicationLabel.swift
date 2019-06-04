@@ -1,11 +1,3 @@
-//
-//  IndicationLabel.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 29/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class IndicationLabel: UILabel {

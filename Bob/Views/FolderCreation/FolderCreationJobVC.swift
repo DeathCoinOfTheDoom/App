@@ -68,8 +68,7 @@ extension FolderCreationJobVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderCreationJobTableView.dequeueReusableCell(withIdentifier: "folderCreationJobCell", for: indexPath) as! FolderCreationTableViewCell
-        print("cell", cell)
-        let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.row].relationships.type.data.id);
+        let index = self.userFilesDataIds.firstIndex(of:userFiles[indexPath.section].relationships.type.data.id);
         cell.titleFolderCreationCategoryFile.text = self.categoryDetails[index!].attributes.title
         cell.iconBgFolderCreationCategoryFile.rounded()
         cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
@@ -81,14 +80,14 @@ extension FolderCreationJobVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.cellForRow(at: indexPath) as! FolderCreationTableViewCell
         cell.selectionStyle = .none
         // already in array delete the element
-        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.row].id)
+        let indexOfId = finalUserFilesIds.firstIndex(of: userFiles[indexPath.section].id)
         if ((indexOfId) != nil) {
             finalUserFilesIds.remove(at: indexOfId!)
             styleUnactiveCell(cell: cell)
         }
         // not in the array add the element and apply the selected style
         else {
-            finalUserFilesIds.append(userFiles[indexPath.row].id)
+            finalUserFilesIds.append(userFiles[indexPath.section].id)
             styleActiveCell(cell: cell)
         }
     }

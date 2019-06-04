@@ -1,17 +1,10 @@
-//
-//  EmptyButton.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 29/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
 class OutlinedButton : UIButton {
+    let screenScale = UIScreen.main.scale
+    
     required init?(coder aDecoder: NSCoder) {
-        let screenScale = UIScreen.main.scale
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 8.0
         self.layer.borderColor = ColorConstant.Primary.BASE.cgColor

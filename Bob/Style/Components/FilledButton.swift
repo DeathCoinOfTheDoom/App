@@ -1,12 +1,3 @@
-//
-//  FilledButton.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 29/01/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
-
 import Foundation
 import UIKit
 
@@ -22,4 +13,3 @@ class FilledButton : UIButton {
         self.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 }
-

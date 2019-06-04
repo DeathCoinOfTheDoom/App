@@ -41,7 +41,7 @@ class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
     func createFlashFolder() {
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
-        FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier oo"], header: HeaderBuilderBob.headers){ (folder, e) in
+        FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier par defaut"], header: HeaderBuilderBob.headers){ (folder, e) in
             FolderService.listing(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
                 self.userFolders.removeAll()
                 self.userFolders.append(contentsOf: userFolders)
@@ -76,6 +76,7 @@ class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        applyTabbarItems(self: self)
         self.fetchData()
         self.configurationRefreshControl()
     }

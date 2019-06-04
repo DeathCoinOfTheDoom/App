@@ -31,6 +31,14 @@ class ColorConstant: NSObject {
         static let BASE : UIColor = UIColor(red:0.25, green:0.76, blue:1.0, alpha:1.0)
     }
     
+    struct Secondary {
+        static let PINK : UIColor = UIColor(red:0.96, green:0.73, blue:0.82, alpha:1.0)
+        static let BLUE : UIColor = UIColor(red:0.70, green:0.92, blue:0.99, alpha:1.0)
+        static let YELLOW : UIColor = UIColor(red:1.00, green:0.95, blue:0.77, alpha:1.0)
+        static let GREEN : UIColor = UIColor(red:0.78, green:0.97, blue:0.89, alpha:1.0)
+        
+    }
+    
     struct Border {
         static let LIGHT : UIColor = UIColor(red:0.89, green:0.91, blue:0.92, alpha:1.0)
         static let BASE : UIColor = UIColor(red:0.89, green:0.91, blue:0.92, alpha:1.0)

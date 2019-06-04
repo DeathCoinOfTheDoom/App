@@ -9,7 +9,8 @@ class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         let mailComposerVC = MFMailComposeViewController()
-        FolderService.listing(query: "user/\(userId)/folder/\(folderId)?zip", header: HeaderBuilderBob.headers) { (userFolders, e) in
+        print("folderId", folderId, "userId", userId)
+        FolderService.listingTest(query: "folder/\(folderId)?zip", header: HeaderBuilderBob.headers) { (userFolders, e) in
             mailComposerVC.mailComposeDelegate = self
             mailComposerVC.setToRecipients([""])
             mailComposerVC.setSubject("")

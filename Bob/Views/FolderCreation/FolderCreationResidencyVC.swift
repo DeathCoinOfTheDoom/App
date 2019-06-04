@@ -62,15 +62,7 @@ extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-    // Set the spacing between sections
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10;
-    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90;
     }
@@ -82,7 +74,7 @@ extension FolderCreationResidencyVC: UITableViewDelegate, UITableViewDataSource 
         cell.iconFolderCreationCategoryFile.image = UIImage(named: "add")
         cell.titleFolderCreationCategoryFile.textColor = ColorConstant.Neutral.DARKEST
         cell.iconBgFolderCreationCategoryFile.backgroundColor = ColorConstant.Neutral.DARKEST
-        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
+//        cell.backgroundFolderCreationCategory.backgroundColor = ColorConstant.White
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

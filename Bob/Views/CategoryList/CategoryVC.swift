@@ -13,6 +13,8 @@ class CategoryVC: UIViewController {
     // Static data
     let cellSpacingHeight: CGFloat = 10
     
+    let progressColor = [ColorConstant.Secondary.PINK, ColorConstant.Secondary.BLUE, ColorConstant.Secondary.YELLOW, ColorConstant.Secondary.GREEN]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let localStorageInstance = LocalStorage()
@@ -98,6 +100,8 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
         let urlImage:URL = URL(string: self.categoriesTab[indexPath.section].attributes.icon)!
         tableCell.imageCategoryCell.af_setImage(withURL: urlImage)
         // style part
+        tableCell.progressCategoryCell.tintColor = progressColor[indexPath.section]
+        tableCell.progressCategoryCell.trackTintColor = ColorConstant.Border.LIGHT
         tableCell.layer.cornerRadius = 8
         tableCell.clipsToBounds = true
         tableCell.backgroundColor = .white

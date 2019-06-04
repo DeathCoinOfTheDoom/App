@@ -99,7 +99,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-ro-PWk" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="filledflashFolderCreation:" destination="pUv-o0-gYj" eventType="touchUpInside" id="bZi-7e-Ixo"/>
                                 </connections>
@@ -228,7 +228,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-yI-hDg" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="Flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="emptyFlashFolderCreation:" destination="zWm-Qd-Hqj" eventType="touchUpInside" id="eih-qf-6JV"/>
                                 </connections>
@@ -797,6 +797,6 @@
         <image name="send" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Fl-XD-CWp"/>
+        <segue reference="XUw-42-AtF"/>
     </inferredMetricsTieBreakers>
 </document>

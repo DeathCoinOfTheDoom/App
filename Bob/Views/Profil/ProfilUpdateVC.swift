@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilUpdateVC: UIViewController {
+class ProfilUpdateVC: KeyboardController {
     @IBAction func userButtonModif(_ sender: Any) {
         self.hasModifications()
     }

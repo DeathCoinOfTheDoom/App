@@ -38,7 +38,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-SO-7zP" customClass="DeleteButton" customModule="Bob" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-SO-7zP" customClass="DeleteIcon" customModule="Bob" customModuleProvider="target">
                                                             <rect key="frame" x="302" y="23.5" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="TGS-fh-3tJ"/>
@@ -49,6 +49,17 @@
                                                                 <action selector="cellButton:" destination="JLb-dH-nlf" eventType="touchUpInside" id="Wjj-2k-Euc"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-uI-UzL" customClass="SendIcon" customModule="Bob" customModuleProvider="target">
+                                                            <rect key="frame" x="254" y="23.5" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="Tdw-p3-9Xq"/>
+                                                                <constraint firstAttribute="height" constant="32" id="iyg-WH-7Ko"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="send"/>
+                                                            <connections>
+                                                                <action selector="sendEmail:" destination="pUv-o0-gYj" eventType="touchUpInside" id="BGr-NF-Inh"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.10832243799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
@@ -56,7 +67,9 @@
                                                         <constraint firstItem="JxY-SO-7zP" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="4Rr-9w-dOA"/>
                                                         <constraint firstAttribute="trailing" secondItem="JxY-SO-7zP" secondAttribute="trailing" constant="16" id="7Zc-gj-RvK"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="top" secondItem="CFh-cx-Uts" secondAttribute="top" constant="26" id="Nv0-OZ-HvE"/>
+                                                        <constraint firstItem="M8L-uI-UzL" firstAttribute="centerY" secondItem="CFh-cx-Uts" secondAttribute="centerY" id="ON6-ze-JyP"/>
                                                         <constraint firstItem="32S-JF-7JU" firstAttribute="leading" secondItem="CFh-cx-Uts" secondAttribute="leading" constant="16" id="YIM-pg-34V"/>
+                                                        <constraint firstItem="JxY-SO-7zP" firstAttribute="leading" secondItem="M8L-uI-UzL" secondAttribute="trailing" constant="16" id="xq5-qs-1qu"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -86,7 +99,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-ro-PWk" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="filledflashFolderCreation:" destination="pUv-o0-gYj" eventType="touchUpInside" id="bZi-7e-Ixo"/>
                                 </connections>
@@ -215,7 +228,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-yI-hDg" customClass="OutlinedButton" customModule="Bob" customModuleProvider="target">
                                 <rect key="frame" x="24" y="766" width="366" height="30"/>
-                                <state key="normal" title="Flash"/>
+                                <state key="normal" title="Dossier par défaut"/>
                                 <connections>
                                     <action selector="emptyFlashFolderCreation:" destination="zWm-Qd-Hqj" eventType="touchUpInside" id="eih-qf-6JV"/>
                                 </connections>
@@ -781,6 +794,7 @@
     <resources>
         <image name="delete" width="96" height="96"/>
         <image name="delete-illu" width="158" height="158"/>
+        <image name="send" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Fl-XD-CWp"/>

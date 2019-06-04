@@ -1,6 +1,26 @@
 import UIKit
+import MessageUI
 
-class FolderListVC: UIViewController {
+class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        let mailComposeViewController = configureMailController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            print("error email")
+        }
+    }
+    func configureMailController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        
+        mailComposerVC.setToRecipients(["andrew@seemuapps.com"])
+        mailComposerVC.setSubject("Hello")
+        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+        
+        return mailComposerVC
+    }
     private let refreshControl = UIRefreshControl()
     @IBAction func emptyFlashFolderCreation(_ sender: Any) {
         createFlashFolder()

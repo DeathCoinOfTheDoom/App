@@ -26,7 +26,7 @@ class ProfilConsultationVC: UIViewController {
             self.userInfos.phoneNumber = userInfos.attributes.phoneNumber
             self.userInfos.firstName = userInfos.attributes.firstName
             self.userInfos.birthdate = userInfos.attributes.birthdate
-            self.userInfos.email = userInfos.attributes.email ?? ""
+            self.userInfos.email = userInfos.attributes.email
             self.applyDataToView(userInfos: userInfos.attributes)
         }
     }

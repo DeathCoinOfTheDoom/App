@@ -1,19 +1,16 @@
-//
-//  FolderDeleteVC.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 03/06/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
-
 import UIKit
 
 class DeleteFolderVC: UIViewController {
-    
-    @IBAction func CancelButton(_ sender: Any) {
-    }
+    var deleteFolderId : String?
     
     @IBAction func deleteButton(_ sender: Any) {
+        if let deleteFolderId = deleteFolderId {
+            HeaderBuilderBob.setTokenInHeader()
+            FolderService.delete(query: "folder/\(deleteFolderId)", header: HeaderBuilderBob.headers) {
+//                let nextVC = self.navigationController?.viewControllers[0] as! FolderListVC
+//                nextVC.fetchData()
+            }
+        }
     }
     @IBOutlet weak var ModalIndicationLabel: UILabel!
     

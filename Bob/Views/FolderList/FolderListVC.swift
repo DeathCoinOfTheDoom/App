@@ -1,35 +1,20 @@
-//
-//  FolderCreationViewController.swift
-//  Bob
-//
-//  Created by Isabelle Melchiori on 02/04/2019.
-//  Copyright © 2019 Bob. All rights reserved.
-//
 import UIKit
 
 class FolderListVC: UIViewController {
-    
-    
+    private let refreshControl = UIRefreshControl()
     @IBAction func emptyFlashFolderCreation(_ sender: Any) {
-        let localStorageInstance = LocalStorage()
-        let userId = localStorageInstance.getUserInfos(key: "id")
-        FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier oo"], header: HeaderBuilderBob.headers){ (folder, e) in
-            UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
-                self.userFolders.removeAll()
-                self.userFolders.append(contentsOf: userFolders)
-                self.mainTableView.reloadData()
-                self.mainTableView.restore()
-            }
-            
-        }
-        
+        createFlashFolder()
     }
     
     @IBAction func filledflashFolderCreation(_ sender: Any) {
+        createFlashFolder()
+    }
+    
+    func createFlashFolder() {
         let localStorageInstance = LocalStorage()
         let userId = localStorageInstance.getUserInfos(key: "id")
         FolderService.creation(query: "folder", payload: ["user_id": userId, "default": "1", "title": "Dossier oo"], header: HeaderBuilderBob.headers){ (folder, e) in
-            UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+            FolderService.listing(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
                 self.userFolders.removeAll()
                 self.userFolders.append(contentsOf: userFolders)
                 self.mainTableView.reloadData()
@@ -37,48 +22,11 @@ class FolderListVC: UIViewController {
             }
         }
     }
-    
-    @IBAction func test(_ sender: Any) {
-        print("salut-------")
-    }
-    //    @IBAction func fillAction(_ sender: Any) {
-//        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
-//        mainTableView.reloadData()
-//        mainTableView.restore()
-//
-//    }
-//    @IBAction func emptyAction(_ sender: Any) {
-//
-//        values.removeAll()
-//        mainTableView.reloadData()
-//        mainTableView.setEmptyView(title: "cest vide", message: "vrmt vide")
-//    }
-    
-    @IBOutlet weak var mainTableView: UITableView!
-    
-//    @IBAction func fillAction(_ sender: Any) {
-//        values.append(contentsOf: ["un", "deux", "trois", "quatre"])
-//        mainTableView.reloadData()
-//        mainTableView.restore()
-//
-//    }
-//    @IBAction func emptyAction(_ sender: Any) {
-//
-//        values.removeAll()
-//        mainTableView.reloadData()
-//        mainTableView.setEmptyView(title: "cest vide", message: "vrmt vide")
-//    }
-    
-    let cellIdentifier = "basic_cell_identifier"
-    
-    lazy var userFolders = [UserFolderData]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func fetchData() {
         HeaderBuilderBob.setTokenInHeader()
         let localStorageInstance = LocalStorage()
-        let userId = localStorageInstance.getUserInfos(key: "id") 
-        UserService.getFolders(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
+        let userId = localStorageInstance.getUserInfos(key: "id")
+        FolderService.listing(query: "user/\(userId)/folder", header: HeaderBuilderBob.headers) { (userFolders, e) in
             if (userFolders.count == 0) {
                 self.userFolders.removeAll()
                 self.mainTableView.reloadData()
@@ -89,18 +37,38 @@ class FolderListVC: UIViewController {
                 self.mainTableView.reloadData()
                 self.mainTableView.restore()
             }
+            self.refreshControl.endRefreshing()
         }
     }
     
+    @IBOutlet weak var mainTableView: UITableView!
+    lazy var userFolders = [UserFolderData]()
+    let cellIdentifier = "basic_cell_identifier"
+    var selectedCellIndexPath: Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.fetchData()
+        self.configurationRefreshControl()
+    }
+    func configurationRefreshControl() {
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            mainTableView.refreshControl = refreshControl
+        } else {
+            mainTableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshFolderData(_:)), for: .valueChanged)
+        refreshControl.tintColor = ColorConstant.Primary.BASE
+    }
+    @objc private func refreshFolderData(_ sender: Any) {
+        fetchData()
+    }
     func applyCellStyle(tableCell: FolderCell) {
         tableCell.folderTitle.font = UIFont(name: Fonts.poppinsMedium, size: 14)
-//        tableCell.folderIconBg.rounded()
         tableCell.backgroundColor = ColorConstant.White
-//        tableCell.folderIcon.image = UIImage(named: "delete")
-//        tableCell.folderIconBg.backgroundColor = ColorConstant.Red
         tableCell.folderCard.backgroundColor = ColorConstant.White
     }
-    
 }
 
         
@@ -113,7 +81,6 @@ extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-//        headerView.backgroundColor = UIColor.clear
         return headerView
     }
     // Set the spacing between sections
@@ -126,32 +93,16 @@ extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FolderCell
-        cell.folderTitle.text = self.userFolders[indexPath.row].attributes.title
+        cell.folderTitle.text = self.userFolders[indexPath.section].attributes.title
         cell.selectionStyle = .none
         self.applyCellStyle(tableCell: cell)
-        
-        
+        cell.actionBlock = {
+            let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "DeleteFolderVC") as! DeleteFolderVC
+            nextViewController.deleteFolderId = self.userFolders[indexPath.section].id
+            self.present(nextViewController, animated: true, completion: nil)
+        }
         return cell
     }
-    
-    
-    
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return userFolders.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        mainTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-//        cell.textLabel?.text = self.userFolders[indexPath.row].attributes.title
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 90
-//    }
-    
 }
 
 

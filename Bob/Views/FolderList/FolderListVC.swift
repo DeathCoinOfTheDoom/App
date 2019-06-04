@@ -5,20 +5,29 @@ class FolderListVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func sendEmail(_ sender: Any) {
     }
-    func configureMailController(folderId: String) -> MFMailComposeViewController {
-        let localStorageInstance = LocalStorage()
-        let userId = localStorageInstance.getUserInfos(key: "id")
-        let mailComposerVC = MFMailComposeViewController()
-        print("folderId", folderId, "userId", userId)
-        FolderService.listingTest(query: "folder/\(folderId)?zip", header: HeaderBuilderBob.headers) { (userFolders, e) in
-            mailComposerVC.mailComposeDelegate = self
-            mailComposerVC.setToRecipients([""])
-            mailComposerVC.setSubject("")
-            if let meta = userFolders[0].meta {
-            mailComposerVC.setMessageBody("Trouvez le lien pour télécharger mon dossier ici: \(meta.zip)", isHTML: false)
+    func configureMailController(folderId: String) {
+        FolderService.one(query: "folder/\(folderId)?zip", header: HeaderBuilderBob.headers) { (userFolder, e) in
+            if let userFolder = userFolder {
+                if (userFolder.meta != nil) {
+                    self.displayEmail(zip: userFolder.meta!.zip)
+                }
             }
         }
-        return mailComposerVC
+    }
+    func displayEmail(zip: String) {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([""])
+        mailComposerVC.setSubject("")
+        mailComposerVC.setMessageBody("Trouvez le lien pour télécharger mon dossier ici: \(zip)", isHTML: false)
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposerVC, animated: true, completion: nil)
+        } else {
+            print("error email")
+        }
+    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     private let refreshControl = UIRefreshControl()
     @IBAction func emptyFlashFolderCreation(_ sender: Any) {
@@ -116,12 +125,7 @@ extension FolderListVC: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         self.applyCellStyle(tableCell: cell)
         cell.sendFolder = {
-            let mailComposeViewController = self.configureMailController(folderId: self.userFolders[indexPath.section].id)
-            if MFMailComposeViewController.canSendMail() {
-                self.present(mailComposeViewController, animated: true, completion: nil)
-            } else {
-                print("error email")
-            }
+            self.configureMailController(folderId: self.userFolders[indexPath.section].id)
         }
         cell.deleteFolder = {
             let nextViewController  = self.storyboard?.instantiateViewController(withIdentifier: "DeleteFolderVC") as! DeleteFolderVC

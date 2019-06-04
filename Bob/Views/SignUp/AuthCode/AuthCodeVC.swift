@@ -56,7 +56,6 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
         }
     }
     func increaseActualStep() {
-        print("actual increase", actualStep)
         if (actualStep <= collectionOfTextField.count) {
             actualStep += 1
         }
@@ -78,7 +77,6 @@ class AuthCodeVC: KeyboardController, AuthCodeTextFieldDelegate {
     
     func inputEnable(actualStep: Int){
         var actualStep = actualStep
-        print("actual enable", actualStep)
         for (index, textField) in collectionOfTextField.enumerated() {
             if (index == actualStep) {
                 textField.isEnabled = true

@@ -106,6 +106,7 @@ struct UserFilesData: Codable {
 }
 struct UserFilesAttr: Codable {
     var url: String
+    var title: String?
     var createdAt: String
     var updatedAt: String
 }

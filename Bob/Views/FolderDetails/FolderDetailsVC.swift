@@ -52,7 +52,7 @@ extension FolderDetailsVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.folderDetailsTableView.dequeueReusableCell(withIdentifier: "folderDetailsCell", for: indexPath) as! FolderDetailsCellVC
-        cell.folderDetailsLabel.text = userFiles[indexPath.section].relationships.type.data.id
+        cell.folderDetailsLabel.text = userFiles[indexPath.section].attributes.title ?? ""
         styleCell(cell: cell)
         let colors = [ColorConstant.Secondary.PINK,ColorConstant.Secondary.BLUE, ColorConstant.Secondary.YELLOW, ColorConstant.Secondary.GREEN]
         let ids = [["1","2","3"],["4", "5", "6", "7", "8", "9"],["10", "11", "12", "13", "14", "15"], ["16", "17", "18", "19", "20", "21"]]
